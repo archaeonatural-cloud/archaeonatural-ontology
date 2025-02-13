@@ -17,7 +17,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix crmdig: <https://transurbicide.gta.arch.ethz.ch/resource/crmdig:> .
-@prefix unesco: <http://vocabularies.unesco.org/thesaurus/> .
 @prefix pleiades: <https://pleiades.stoa.org/places/vocab#> .
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
 @base <https://www.poseidon-adna.org/#/> .
@@ -959,7 +958,6 @@ www:hasDOI rdf:type owl:DatatypeProperty ;
 
 ###  https://www.poseidon-adna.org/#hasDatingError
 www:hasDatingError rdf:type owl:DatatypeProperty ;
-                   rdfs:domain unesco:concept5166 ;
                    rdfs:range xsd:decimal ;
                    rdfs:comment "a dating error considering the Uncalibrated Dating"@en ;
                    rdfs:label "has dating error"@en .
@@ -1154,7 +1152,6 @@ www:hasURL rdf:type owl:DatatypeProperty ;
 ###  https://www.poseidon-adna.org/#hasUncalibratedDate
 www:hasUncalibratedDate rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf owl:topDataProperty ;
-                        rdfs:domain unesco:concept5166 ;
                         rdfs:range xsd:decimal ;
                         rdfs:comment "an uncalibrated date in BP obtained by a dating process"@en ;
                         rdfs:label "has uncalibrated dates"@en .
@@ -1301,52 +1298,6 @@ bibo:Periodical rdf:type owl:Class ;
                 rdfs:subClassOf bibo:Collection ;
                 rdfs:comment "A group of related documents issued at regular intervals."@en ,
                              "BIBO Periodical"@en .
-
-
-###  http://vocabularies.unesco.org/thesaurus/concept11907
-unesco:concept11907 rdf:type owl:Class ;
-                    rdfs:subClassOf unesco:concept302 ,
-                                    crm:E7_Activity ;
-                    rdfs:label "Unesco Thesaurus  Historical methods"@en .
-
-
-###  http://vocabularies.unesco.org/thesaurus/concept15172
-unesco:concept15172 rdf:type owl:Class ;
-                    rdfs:subClassOf unesco:concept431 ,
-                                    skos:Concept ;
-                    rdfs:comment "The biological characteristics which define humans as female or male."@en ;
-                    rdfs:label "Sex"@en .
-
-
-###  http://vocabularies.unesco.org/thesaurus/concept2676
-unesco:concept2676 rdf:type owl:Class ;
-                   rdfs:subClassOf unesco:concept5166 ;
-                   rdfs:label "Unesco Thesaurus Radiocarbon Dating"@en .
-
-
-###  http://vocabularies.unesco.org/thesaurus/concept302
-unesco:concept302 rdf:type owl:Class ;
-                  rdfs:subClassOf crm:E1_CRM_Entity ;
-                  rdfs:label "Unesco Thesaurus  History"@en .
-
-
-###  http://vocabularies.unesco.org/thesaurus/concept431
-unesco:concept431 rdf:type owl:Class ;
-                  rdfs:subClassOf crm:E28_Conceptual_Object ;
-                  rdfs:label "Sex distribution"@en .
-
-
-###  http://vocabularies.unesco.org/thesaurus/concept4526
-unesco:concept4526 rdf:type owl:Class ;
-                   rdfs:subClassOf unesco:concept11907 ;
-                   rdfs:comment "The science of computing time or periods of time and of assigning events to their true dates."@en ;
-                   rdfs:label "Unesco Thesaurus Chronology"@en .
-
-
-###  http://vocabularies.unesco.org/thesaurus/concept5166
-unesco:concept5166 rdf:type owl:Class ;
-                   rdfs:subClassOf unesco:concept4526 ;
-                   rdfs:label "Unesco Thesaurus Dating"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E11_Modification
@@ -1813,8 +1764,7 @@ www:BiologicalSample rdf:type owl:Class ;
 
 ###  https://www.poseidon-adna.org/#C14Dating
 www:C14Dating rdf:type owl:Class ;
-              rdfs:subClassOf unesco:concept2676 ,
-                              crm:E16_Measurement ;
+              rdfs:subClassOf crm:E16_Measurement ;
               rdfs:comment "Radiocarbon (C14) dating is a method for determining the age of an object containing organic material by using the properties of radiocarbon, a radioactive isotope of carbon."@en ;
               rdfs:label "C14 Dating"@en .
 
@@ -1872,8 +1822,7 @@ www:Dataset rdf:type owl:Class ;
 
 ###  https://www.poseidon-adna.org/#Dating
 www:Dating rdf:type owl:Class ;
-           rdfs:subClassOf unesco:concept5166 ,
-                           crm:E7_Activity ;
+           rdfs:subClassOf crm:E7_Activity ;
            rdfs:comment "The activity of dating a (aDNA) sample"@en ;
            rdfs:label "Dating"@en .
 
@@ -1914,7 +1863,7 @@ www:GeneticSex rdf:type owl:Class ;
                                                  www:GeneticSex_U
                                                )
                                    ] ;
-               rdfs:subClassOf unesco:concept15172 ;
+               rdfs:subClassOf skos:Concept ;
                rdfs:comment "genetic sex of the individual derived from this sample, only F, M or U because the EIGENSTRAT and PLINK formats only support these three, edge cases (e.g. XXY, XYY, X0) are undefined and should be grouped as F, M or U, with a Note added"@en ;
                rdfs:label "Genetic Sex"@en .
 
