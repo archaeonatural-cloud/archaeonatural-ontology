@@ -156,8 +156,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/creator
 dct:creator rdf:type owl:ObjectProperty ;
-            rdfs:domain <https://www.w3.org/2000/01/rdf-schema#Resource> ;
-            rdfs:range dct:Agent .
+            rdfs:domain <https://www.w3.org/2000/01/rdf-schema#Resource> .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of
@@ -364,7 +363,7 @@ prov:wasInformedBy rdf:type owl:ObjectProperty ;
 www:atPlace rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf crm:P89_falls_within ;
             rdfs:domain www:Site ;
-            rdfs:range pleiades:Place ;
+            rdfs:range www:Place ;
             rdfs:comment "at place"@en ,
                          "place a site is located in"@en .
 
@@ -520,9 +519,9 @@ www:hasLibraryStrandedness rdf:type owl:ObjectProperty ;
 ###  https://www.poseidon-adna.org/#hasPrimaryContact
 www:hasPrimaryContact rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf crm:P50_has_current_keeper ;
-                      rdfs:domain crm:E18_Physical_Thing ;
-                      rdfs:range crm:E21_Person ;
-                      rdfs:comment "relates a physical object to the person responsible for it"@en ;
+                      rdfs:domain www:aDNASample ;
+                      rdfs:range www:Person ;
+                      rdfs:comment "relates an aDNA sample to the person responsible for it"@en ;
                       rdfs:label "has primary contact"@en .
 
 
@@ -580,7 +579,7 @@ www:identical rdf:type owl:ObjectProperty ;
 ###  https://www.poseidon-adna.org/#inCountry
 www:inCountry rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf crm:P89_falls_within ;
-              rdfs:domain pleiades:Place ;
+              rdfs:domain www:Place ;
               rdfs:range www:Country ;
               rdfs:comment "country a location is located in"@en ;
               rdfs:label "in country"@en .
@@ -588,8 +587,8 @@ www:inCountry rdf:type owl:ObjectProperty ;
 
 ###  https://www.poseidon-adna.org/#inJournal
 www:inJournal rdf:type owl:ObjectProperty ;
-              rdfs:domain bibo:Document ;
-              rdfs:range bibo:Journal ;
+              rdfs:domain www:Literature ;
+              rdfs:range www:Journal ;
               rdfs:comment "in journal"@en ,
                            "links a literature publication event to the journal it is published in"@en .
 
@@ -727,7 +726,7 @@ www:preparedByPreparationPipeline rdf:type owl:ObjectProperty ;
 www:publishedInYear rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ,
                                        time:hasTime ;
-                    rdfs:domain bibo:Document ;
+                    rdfs:domain www:Literature ;
                     rdfs:range www:Year ;
                     rdfs:comment "links a literature publication event to the year it happened"@en ,
                                  "publishedInYear"@en .
@@ -736,7 +735,7 @@ www:publishedInYear rdf:type owl:ObjectProperty ;
 ###  https://www.poseidon-adna.org/#publishedSample
 www:publishedSample rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf crm:P70_documents ;
-                    rdfs:domain bibo:Document ;
+                    rdfs:domain www:Literature ;
                     rdfs:range www:Sample ;
                     rdfs:comment "links a literature to samples that are published by it"@en ;
                     rdfs:label "published sample"@en .
@@ -788,6 +787,15 @@ www:usedContaminationMeasure rdf:type owl:ObjectProperty ;
                              rdfs:range www:ContaminationMeasure ;
                              rdfs:comment "relates a contamination measurement event to the used contamination measure"@en ;
                              rdfs:label "used contamination measure"@en .
+
+
+###  https://www.poseidon-adna.org/#writtenBy
+www:writtenBy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dct:creator ;
+              rdfs:domain www:Literature ;
+              rdfs:range www:Person ;
+              rdfs:comment "relates a literature to its author"@en ;
+              rdfs:label "written by"@en .
 
 
 #################################################################
@@ -1953,6 +1961,13 @@ www:HaplogroupMeasurement rdf:type owl:Class ;
                           rdfs:label "Haplogroup Measurement"@en .
 
 
+###  https://www.poseidon-adna.org/#Journal
+www:Journal rdf:type owl:Class ;
+            rdfs:subClassOf bibo:Journal ;
+            rdfs:comment "Journal where literature is published"@en ;
+            rdfs:label "Journal"@en .
+
+
 ###  https://www.poseidon-adna.org/#LibraryCount
 www:LibraryCount rdf:type owl:Class ;
                  rdfs:subClassOf www:Count ;
@@ -1974,6 +1989,13 @@ www:LibraryStrandedness rdf:type owl:Class ;
                         rdfs:label "Library Strandedness"@en .
 
 
+###  https://www.poseidon-adna.org/#Literature
+www:Literature rdf:type owl:Class ;
+               rdfs:subClassOf bibo:Document ;
+               rdfs:comment "Literature, most of the times this is a scientific paper"@en ;
+               rdfs:label "Literature"@en .
+
+
 ###  https://www.poseidon-adna.org/#MTHaplogroupMeasurement
 www:MTHaplogroupMeasurement rdf:type owl:Class ;
                             rdfs:subClassOf www:HaplogroupMeasurement ;
@@ -1986,6 +2008,20 @@ www:Percentage rdf:type owl:Class ;
                rdfs:subClassOf crm:E16_Measurement ;
                rdfs:comment "Measurement obtaining a percentage value"@en ;
                rdfs:label "Percentage"@en .
+
+
+###  https://www.poseidon-adna.org/#Person
+www:Person rdf:type owl:Class ;
+           rdfs:subClassOf crm:E21_Person ;
+           rdfs:comment "A person, might have different roles like author of literature or primary contact for questions"@en ;
+           rdfs:label "Person"@en .
+
+
+###  https://www.poseidon-adna.org/#Place
+www:Place rdf:type owl:Class ;
+          rdfs:subClassOf pleiades:Place ;
+          rdfs:comment "unspecified location information for the sample, e.g. administrative or topographic region or mountains/rivers/lakes/cities nearby"@en ;
+          rdfs:label "Place"@en .
 
 
 ###  https://www.poseidon-adna.org/#PreparationPipeline
