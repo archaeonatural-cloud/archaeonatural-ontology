@@ -17,6 +17,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix crmdig: <https://transurbicide.gta.arch.ethz.ch/resource/crmdig:> .
+@prefix schema: <https://schema.org/> .
 @prefix pleiades: <https://pleiades.stoa.org/places/vocab#> .
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
 @base <https://www.poseidon-adna.org/#/> .
@@ -801,6 +802,12 @@ www:writtenBy rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://prismstandard.org/namespaces/1.2/basic/doi
+<http://prismstandard.org/namespaces/1.2/basic/doi> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf www:identifiedBy ;
+                                                    rdfs:range xsd:string .
+
+
 ###  http://www.cidoc-crm.org/cidoc-crm/P170i_time_is_defined_by
 crm:P170i_time_is_defined_by rdf:type owl:DatatypeProperty ;
                              rdfs:domain crm:E52_Time-Span ;
@@ -943,14 +950,16 @@ www:hasCount rdf:type owl:DatatypeProperty ;
 ###  https://www.poseidon-adna.org/#hasCountryInformation
 www:hasCountryInformation rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf www:hasAdditionalIdentificationInformation ;
+                          rdfs:domain www:Place ;
+                          rdfs:range xsd:string ;
                           rdfs:comment "country information helping to unambiguously identify a place"@en ;
                           rdfs:label "has country information"@en .
 
 
 ###  https://www.poseidon-adna.org/#hasDOI
 www:hasDOI rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf www:identifiedBy ;
-           rdfs:domain crm:E31_Document ;
+           rdfs:subPropertyOf <http://prismstandard.org/namespaces/1.2/basic/doi> ;
+           rdfs:domain www:Literature ;
            rdfs:range xsd:string ;
            rdfs:comment "the DOI allowing to identify a document"@en ;
            rdfs:label "has DOI"@en .
@@ -961,15 +970,6 @@ www:hasDatingError rdf:type owl:DatatypeProperty ;
                    rdfs:range xsd:decimal ;
                    rdfs:comment "a dating error considering the Uncalibrated Dating"@en ;
                    rdfs:label "has dating error"@en .
-
-
-###  https://www.poseidon-adna.org/#hasEDTFRepresentation
-www:hasEDTFRepresentation rdf:type owl:DatatypeProperty ;
-                          rdfs:subPropertyOf www:hasEDTFTemporalInformation ;
-                          rdfs:domain www:TimePeriod ;
-                          rdfs:range <http://id.loc.gov/datatypes/edtf/EDTF> ;
-                          rdfs:comment "has EDTF representation"@en ,
-                                       "links a time period to EDTF information of any type"@en .
 
 
 ###  https://www.poseidon-adna.org/#hasEDTFTemporalInformation
@@ -1090,7 +1090,7 @@ www:hasNumericValue rdf:type owl:DatatypeProperty ;
 ###  https://www.poseidon-adna.org/#hasORCID
 www:hasORCID rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf www:identifiedBy ;
-             rdfs:domain crm:E21_Person ;
+             rdfs:domain www:Person ;
              rdfs:range xsd:string ;
              rdfs:comment "the ORCID ID allowing to identify an author"@en ;
              rdfs:label "has ORCID"@en .
@@ -1125,7 +1125,7 @@ www:hasTextualValue rdf:type owl:DatatypeProperty ;
 ###  https://www.poseidon-adna.org/#hasTitle
 www:hasTitle rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf www:hasLabel ;
-             rdfs:domain crm:E31_Document ;
+             rdfs:domain www:Literature ;
              rdfs:range xsd:string ;
              rdfs:comment "the title of a document"@en ;
              rdfs:label "has title"@en .
@@ -1185,6 +1185,20 @@ www:measuredError rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000001
+obo:BFO_0000001 rdf:type owl:Class ;
+                rdfs:subClassOf <http://schema.org/Thing> ;
+                rdfs:comment "An entity is anything that exists or has existed or will exist."@en ;
+                rdfs:label "entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/GSSO_000114
+obo:GSSO_000114 rdf:type owl:Class ;
+                rdfs:subClassOf skos:Concept ;
+                rdfs:comment "Sex as determined by the presence and/or activation of particular genes or combinations of genes, without regard to phenotypic manifestations."@en ;
+                rdfs:label "genetic sex"@en .
+
 
 ###  http://purl.obolibrary.org/obo/PATO_0000001
 obo:PATO_0000001 rdf:type owl:Class ;
@@ -1300,6 +1314,13 @@ bibo:Periodical rdf:type owl:Class ;
                              "BIBO Periodical"@en .
 
 
+###  http://schema.org/Thing
+<http://schema.org/Thing> rdf:type owl:Class ;
+                          rdfs:subClassOf prov:Entity ;
+                          rdfs:comment "The most generic type of item."@en ;
+                          rdfs:label "Thing" .
+
+
 ###  http://www.cidoc-crm.org/cidoc-crm/E11_Modification
 crm:E11_Modification rdf:type owl:Class ;
                      rdfs:subClassOf crm:E7_Activity ;
@@ -1352,7 +1373,7 @@ The decision as to what is documented as a complete item, rather than by its par
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity
 crm:E1_CRM_Entity rdf:type owl:Class ;
-                  rdfs:subClassOf prov:Entity ;
+                  rdfs:subClassOf obo:BFO_0000001 ;
                   rdfs:comment """This class comprises all things in the universe of discourse of the CIDOC Conceptual Reference Model.
     It is an abstract concept providing for three general properties:
     1.	Identification by name or appellation, and in particular by a preferred identifier
@@ -1863,7 +1884,7 @@ www:GeneticSex rdf:type owl:Class ;
                                                  www:GeneticSex_U
                                                )
                                    ] ;
-               rdfs:subClassOf skos:Concept ;
+               rdfs:subClassOf obo:GSSO_000114 ;
                rdfs:comment "genetic sex of the individual derived from this sample, only F, M or U because the EIGENSTRAT and PLINK formats only support these three, edge cases (e.g. XXY, XYY, X0) are undefined and should be grouped as F, M or U, with a Note added"@en ;
                rdfs:label "Genetic Sex"@en .
 
@@ -2096,6 +2117,14 @@ www:aDNASampleRelation rdf:type owl:Class ;
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://schema.org/Female
+<http://schema.org/Female> rdf:type owl:NamedIndividual .
+
+
+###  http://schema.org/Male
+<http://schema.org/Male> rdf:type owl:NamedIndividual .
+
 
 ###  https://www.poseidon-adna.org/#GeneticSex_F
 www:GeneticSex_F rdf:type owl:NamedIndividual ,
