@@ -471,15 +471,6 @@ www:hasDatingType rdf:type owl:ObjectProperty ;
                              "the dating type that a dating is of"@en .
 
 
-###  https://www.poseidon-adna.org/#hasEndingYear
-www:hasEndingYear rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf time:hasEnd ;
-                  rdfs:domain www:TimePeriod ;
-                  rdfs:range www:Year ;
-                  rdfs:comment "the year that defines the end of a time period"@en ;
-                  rdfs:label "has ending year"@en .
-
-
 ###  https://www.poseidon-adna.org/#hasGeneticSex
 www:hasGeneticSex rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf crm:P2_has_type ;
@@ -549,15 +540,6 @@ www:hasSpatiotemporalInformation rdf:type owl:ObjectProperty ;
                                  rdfs:range www:SpatiotemporalInformation ;
                                  rdfs:comment "spatiotemporal information that is accociated with a sample"@en ;
                                  rdfs:label "has spatiotemporal information"@en .
-
-
-###  https://www.poseidon-adna.org/#hasStartingYear
-www:hasStartingYear rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf time:hasBeginning ;
-                    rdfs:domain www:TimePeriod ;
-                    rdfs:range www:Year ;
-                    rdfs:comment "the year that defines the begin of a time period"@en ;
-                    rdfs:label "has starting year"@en .
 
 
 ###  https://www.poseidon-adna.org/#hasUDGTreatment
