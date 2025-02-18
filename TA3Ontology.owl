@@ -1064,6 +1064,7 @@ prov:wasInformedBy rdf:type owl:ObjectProperty ;
 ###  http://prismstandard.org/namespaces/1.2/basic/doi
 <http://prismstandard.org/namespaces/1.2/basic/doi> rdf:type owl:DatatypeProperty ;
                                                     rdfs:subPropertyOf :identifiedBy ;
+                                                    rdfs:domain crm:E70_Thing ;
                                                     rdfs:range xsd:string .
 
 
