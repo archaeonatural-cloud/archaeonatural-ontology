@@ -155,7 +155,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://archaeonatural.cloud/ont/atPlace
 :atPlace rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf crm:P89_falls_within ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :Site ;
          rdfs:range :Place ;
          rdfs:comment "at place"@en ,
@@ -354,7 +354,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://archaeonatural.cloud/ont/inCountry
 :inCountry rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf crm:P89_falls_within ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:domain :Place ;
            rdfs:range :Country ;
            rdfs:comment "country a location is located in"@en ;
@@ -1257,7 +1257,7 @@ edtf:inEDTFDateTime rdf:type owl:DatatypeProperty ;
 
 ###  http://archaeonatural.cloud/ont/DiscoverySite
 :DiscoverySite rdf:type owl:Class ;
-               rdfs:subClassOf geosparql:SpatialObject ;
+               rdfs:subClassOf pleiades:Location ;
                rdfs:comment "Exact spatial location where a sample was found, defined by latitude and longitude WGS84 dd values"@en ;
                rdfs:label "Discovery Site"@en .
 
@@ -1417,8 +1417,7 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
 
 ###  http://archaeonatural.cloud/ont/Site
 :Site rdf:type owl:Class ;
-      rdfs:subClassOf crm:E27_Site ,
-                      pleiades:Location .
+      rdfs:subClassOf pleiades:Location .
 
 
 ###  http://archaeonatural.cloud/ont/SourceTissue
@@ -1817,7 +1816,7 @@ When used as a common E52 Time-Span for two events, it will nevertheless describ
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E53_Place
 crm:E53_Place rdf:type owl:Class ;
-              rdfs:subClassOf crm:E1_CRM_Entity ;
+              rdfs:subClassOf pleiades:Place ;
               rdfs:comment """This class comprises extents in the natural space where people live, in particular on the surface of the Earth, in the pure sense of physics: independent from temporal phenomena and matter. They may serve describing the physical location of things or phenomena or other areas of interest. Geometrically, instances of E53 Place constitute single contiguous areas or a finite aggregation of disjoint areas in space which are each individually contiguous. They may have fuzzy boundaries.
 The instances of E53 Place are usually determined by reference to the position of “immobile” objects such as buildings, cities, mountains, rivers, or dedicated geodetic marks, but may also be determined by reference to mobile objects. A Place can be determined by combining a frame of reference and a location with respect to this frame.
 It is sometimes argued that instances of E53 Place are best identified by global coordinates or absolute reference systems. However, relative references are often more relevant in the context of cultural documentation and tend to be more precise. In particular, people are often interested in position in relation to large, mobile objects, such as ships. For example, the Place at which Nelson died is known with reference to a large mobile object, i.e. H.M.S Victory. A resolution of this Place in terms of absolute coordinates would require knowledge of the movements of the vessel and the precise time of death, either of which may be revised, and the result would lack historical and cultural relevance.
@@ -1842,14 +1841,6 @@ The effects of an instance of E5 Event may not lead to relevant permanent change
 While instances of E4 Period always require some form of coherence between its constituent phenomena, in addition, the essential constituents of instances of E5 Event should contribute to an overall effect; for example, the statements made during a meeting and the listening of the audience.
 Viewed at a coarse level of detail, an instance of E5 Event may appear as if it had an ‘instantaneous’ overall effect, but any process or interaction of material nature in reality have an extent in time and space. At a fine level, instances of E5 Event may be analysed into component phenomena and phases within a space and timeframe, and as such can be seen as a period, regardless of the size of the phenomena. The reverse is not necessarily the case: not all instances of E4 Period give rise to a noteworthy overall effect and are thus not instances of E5 Event."""@en ;
              rdfs:label "Event"@en .
-
-
-###  http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence
-crm:E63_Beginning_of_Existence rdf:type owl:Class ;
-                               rdfs:subClassOf crm:E5_Event ;
-                               rdfs:comment """This class comprises events that bring into existence any instance of E77 Persistent Item.
-It may be used for temporal reasoning about things (intellectual products, physical items, groups of people, living beings) beginning to exist; it serves as a hook for both a terminus post quem and a terminus ante quem."""@en ;
-                               rdfs:label "Beginning of Existence"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E65_Creation
@@ -2070,13 +2061,14 @@ foaf:Person rdf:type owl:Class ;
 
 ###  https://pleiades.stoa.org/places/vocab#Location
 pleiades:Location rdf:type owl:Class ;
-                  rdfs:subClassOf geosparql:SpatialObject ;
-                  rdfs:label "Plaides Location"@en .
+                  rdfs:subClassOf crm:E27_Site ,
+                                  geosparql:SpatialObject ;
+                  rdfs:label "Pleiades Location"@en .
 
 
 ###  https://pleiades.stoa.org/places/vocab#Place
 pleiades:Place rdf:type owl:Class ;
-               rdfs:subClassOf crm:E53_Place ;
+               rdfs:subClassOf crm:E1_CRM_Entity ;
                rdfs:comment "Places are instances of skos:Concept as well as contexts for Locations and Names."@en ,
                             "Pleiades Place"@en .
 
