@@ -931,24 +931,6 @@ prov:wasInformedBy rdf:type owl:ObjectProperty ;
           rdfs:label "has lab number"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasLatitude
-:hasLatitude rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf :hasAdditionalIdentificationInformation ;
-             rdfs:domain :Site ;
-             rdfs:range xsd:decimal ;
-             rdfs:comment "(rounded) latitude value helping to unambiguously identify a site"@en ;
-             rdfs:label "has latitude"@en .
-
-
-###  http://archaeonatural.cloud/ont/hasLongitude
-:hasLongitude rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf :hasAdditionalIdentificationInformation ;
-              rdfs:domain :Site ;
-              rdfs:range xsd:decimal ;
-              rdfs:comment "(rounded) longitude value helping to unambiguously identify a site" ;
-              rdfs:label "has longitude"@en .
-
-
 ###  http://archaeonatural.cloud/ont/hasNote
 :hasNote rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf crm:P3_has_note ;
@@ -1141,7 +1123,7 @@ prov:startedAtTime rdf:type owl:DatatypeProperty ;
 ###  http://xmlns.com/foaf/0.1/name
 foaf:name rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf :hasLabel ;
-          rdfs:domain owl:Thing ;
+          rdfs:domain foaf:Agent ;
           rdfs:range xsd:string ;
           rdfs:comment "A name for some thing."@en ;
           rdfs:label "name"@en .
