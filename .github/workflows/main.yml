@@ -34,7 +34,7 @@ jobs:
          mkdir docs2
          cd docs2
          echo "Generating documentation for Core ontology"
-         pylode -i ../TA3Ontology.owl -o index.html
+         pylode -i ../archaeonatural.ttl -o index.html
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
