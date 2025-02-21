@@ -1321,7 +1321,7 @@ www:EndogenousDNA rdf:type owl:Class ;
 ###  http://archaeonatural.cloud/ont/GeneticSex
 www:GeneticSex rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Class ;
-                                     owl:oneOf ( www:GeneticSex_Unknown
+                                     owl:oneOf ( <http://archaeonatural.cloud/ont/GeneticSex/Unknown>
                                                  <http://schema.org/Female>
                                                  <http://schema.org/Male>
                                                )
@@ -1348,8 +1348,8 @@ www:GenomicLibrary rdf:type owl:Class ;
 ###  http://archaeonatural.cloud/ont/GenotypePloidy
 www:GenotypePloidy rdf:type owl:Class ;
                    owl:equivalentClass [ rdf:type owl:Class ;
-                                         owl:oneOf ( www:GenotypePloidy_diploid
-                                                     www:GenotypePloidy_haploid
+                                         owl:oneOf ( <http://archaeonatural.cloud/ont/GenotypePloidy/diploid>
+                                                     <http://archaeonatural.cloud/ont/GenotypePloidy/haploid>
                                                    )
                                        ] ;
                    rdfs:subClassOf obo:PATO_0001374 ,
@@ -1390,10 +1390,10 @@ www:LibraryCount rdf:type owl:Class ;
 ###  http://archaeonatural.cloud/ont/LibraryStrandedness
 www:LibraryStrandedness rdf:type owl:Class ;
                         owl:equivalentClass [ rdf:type owl:Class ;
-                                              owl:oneOf ( www:LibraryStrandedness_ds
-                                                          www:LibraryStrandedness_mixed
-                                                          www:LibraryStrandedness_other
-                                                          www:LibraryStrandedness_ss
+                                              owl:oneOf ( <http://archaeonatural.cloud/ont/LibraryStrandedness/ds>
+                                                          <http://archaeonatural.cloud/ont/LibraryStrandedness/mixed>
+                                                          <http://archaeonatural.cloud/ont/LibraryStrandedness/other>
+                                                          <http://archaeonatural.cloud/ont/LibraryStrandedness/ss>
                                                         )
                                             ] ;
                         rdfs:subClassOf skos:Concept ;
@@ -1480,10 +1480,10 @@ www:SourceTissue rdf:type owl:Class ;
 ###  http://archaeonatural.cloud/ont/SourceTissueType
 www:SourceTissueType rdf:type owl:Class ;
                      owl:equivalentClass [ rdf:type owl:Class ;
-                                           owl:oneOf ( www:SourceTissueType_Hair
-                                                       www:SourceTissueType_Petrous
-                                                       www:SourceTissueType_Tooth
-                                                       www:SourceTissueType_otherBone
+                                           owl:oneOf ( <http://archaeonatural.cloud/ont/SourceTissueType/Hair>
+                                                       <http://archaeonatural.cloud/ont/SourceTissueType/Petrous>
+                                                       <http://archaeonatural.cloud/ont/SourceTissueType/Tooth>
+                                                       <http://archaeonatural.cloud/ont/SourceTissueType/otherBone>
                                                      )
                                          ] ;
                      rdfs:subClassOf skos:Concept ;
@@ -1511,10 +1511,10 @@ www:TimePeriod rdf:type owl:Class ;
 ###  http://archaeonatural.cloud/ont/UDGTreatment
 www:UDGTreatment rdf:type owl:Class ;
                  owl:equivalentClass [ rdf:type owl:Class ;
-                                       owl:oneOf ( www:UDGTreatment_half
-                                                   www:UDGTreatment_minus
-                                                   www:UDGTreatment_mixed
-                                                   www:UDGTreatment_plus
+                                       owl:oneOf ( <http://archaeonatural.cloud/ont/LibraryStrandedness/mixed>
+                                                   <http://archaeonatural.cloud/ont/UDGTreatment/half>
+                                                   <http://archaeonatural.cloud/ont/UDGTreatment/minus>
+                                                   <http://archaeonatural.cloud/ont/UDGTreatment/plus>
                                                  )
                                      ] ;
                  rdfs:subClassOf skos:Concept ;
@@ -2147,68 +2147,64 @@ crmdig:D7_Digital_Machine_Event rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://archaeonatural.cloud/ont/GeneticSex_Unknown
-www:GeneticSex_Unknown rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/GeneticSex/Unknown
+<http://archaeonatural.cloud/ont/GeneticSex/Unknown> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/GenotypePloidy_diploid
-www:GenotypePloidy_diploid rdf:type owl:NamedIndividual ,
-                                    www:GenotypePloidy .
+###  http://archaeonatural.cloud/ont/GenotypePloidy/diploid
+<http://archaeonatural.cloud/ont/GenotypePloidy/diploid> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/GenotypePloidy_haploid
-www:GenotypePloidy_haploid rdf:type owl:NamedIndividual ,
-                                    www:GenotypePloidy .
+###  http://archaeonatural.cloud/ont/GenotypePloidy/haploid
+<http://archaeonatural.cloud/ont/GenotypePloidy/haploid> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/LibraryStrandedness_ds
-www:LibraryStrandedness_ds rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/LibraryStrandedness/ds
+<http://archaeonatural.cloud/ont/LibraryStrandedness/ds> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/LibraryStrandedness_mixed
-www:LibraryStrandedness_mixed rdf:type owl:NamedIndividual ,
-                                       www:LibraryStrandedness .
+###  http://archaeonatural.cloud/ont/LibraryStrandedness/mixed
+<http://archaeonatural.cloud/ont/LibraryStrandedness/mixed> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/LibraryStrandedness_other
-www:LibraryStrandedness_other rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/LibraryStrandedness/other
+<http://archaeonatural.cloud/ont/LibraryStrandedness/other> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/LibraryStrandedness_ss
-www:LibraryStrandedness_ss rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/LibraryStrandedness/ss
+<http://archaeonatural.cloud/ont/LibraryStrandedness/ss> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/SourceTissueType_Hair
-www:SourceTissueType_Hair rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/SourceTissueType/Hair
+<http://archaeonatural.cloud/ont/SourceTissueType/Hair> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/SourceTissueType_Petrous
-www:SourceTissueType_Petrous rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/SourceTissueType/Petrous
+<http://archaeonatural.cloud/ont/SourceTissueType/Petrous> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/SourceTissueType_Tooth
-www:SourceTissueType_Tooth rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/SourceTissueType/Tooth
+<http://archaeonatural.cloud/ont/SourceTissueType/Tooth> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/SourceTissueType_otherBone
-www:SourceTissueType_otherBone rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/SourceTissueType/otherBone
+<http://archaeonatural.cloud/ont/SourceTissueType/otherBone> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/UDGTreatment_half
-www:UDGTreatment_half rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/UDGTreatment/half
+<http://archaeonatural.cloud/ont/UDGTreatment/half> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/UDGTreatment_minus
-www:UDGTreatment_minus rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/UDGTreatment/minus
+<http://archaeonatural.cloud/ont/UDGTreatment/minus> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/UDGTreatment_mixed
-www:UDGTreatment_mixed rdf:type owl:NamedIndividual ,
-                                www:UDGTreatment .
+###  http://archaeonatural.cloud/ont/UDGTreatment/mixed
+<http://archaeonatural.cloud/ont/UDGTreatment/mixed> rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/UDGTreatment_plus
-www:UDGTreatment_plus rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/UDGTreatment/plus
+<http://archaeonatural.cloud/ont/UDGTreatment/plus> rdf:type owl:NamedIndividual .
 
 
 ###  http://schema.org/Female
