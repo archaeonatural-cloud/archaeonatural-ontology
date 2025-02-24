@@ -1181,50 +1181,50 @@ edtf:inEDTFDateTime rdf:type owl:DatatypeProperty ;
 ###  http://archaeology.link/ontology#Actor
 lado:Actor rdf:type owl:Class ;
            rdfs:subClassOf crm:E39_Actor ;
-           rdfs:label "Actor as a Concept"@en .
+           rdfs:label "LADO Actor as a Concept"@en .
 
 
 ###  http://archaeology.link/ontology#ActorEntity
 lado:ActorEntity rdf:type owl:Class ;
                  rdfs:subClassOf lado:Actor ;
-                 rdfs:label "Actor Entity"@en .
+                 rdfs:label "LADO Actor Entity"@en .
 
 
 ###  http://archaeology.link/ontology#DiscoverySite
 lado:DiscoverySite rdf:type owl:Class ;
                    rdfs:subClassOf pleiades:Location ;
-                   rdfs:label "Discovery Site"@en .
+                   rdfs:label "LADO Discovery Site"@en .
 
 
 ###  http://archaeology.link/ontology#KilnRegion
 lado:KilnRegion rdf:type owl:Class ;
                 rdfs:subClassOf pleiades:Location ;
-                rdfs:label "Kiln Region"@en .
+                rdfs:label "LADO Kiln Region"@en .
 
 
 ###  http://archaeology.link/ontology#Location
 lado:Location rdf:type owl:Class ;
               rdfs:subClassOf pleiades:Location ;
-              rdfs:label "Location"@en .
+              rdfs:label "LADO Location"@en .
 
 
 ###  http://archaeology.link/ontology#Place
 lado:Place rdf:type owl:Class ;
            rdfs:subClassOf crm:E53_Place ;
            dc:description "place as a concept, just a label"@en ;
-           rdfs:label "Place as a Concept"@en .
+           rdfs:label "LADO Place as a Concept"@en .
 
 
 ###  http://archaeology.link/ontology#ProductionCentre
 lado:ProductionCentre rdf:type owl:Class ;
                       rdfs:subClassOf pleiades:Location ;
-                      rdfs:label "Production Centre"@en .
+                      rdfs:label "LADO Production Centre"@en .
 
 
 ###  http://archaeology.link/ontology#RepositoryLocation
 lado:RepositoryLocation rdf:type owl:Class ;
                         rdfs:subClassOf pleiades:Location ;
-                        rdfs:label "Repository Location"@en .
+                        rdfs:label "LADO Repository Location"@en .
 
 
 ###  http://archaeonatural.cloud/ont/BiologicalSample
@@ -1565,7 +1565,7 @@ www:aDNASampleRelation rdf:type owl:Class ;
 obo:BFO_0000001 rdf:type owl:Class ;
                 rdfs:subClassOf <http://schema.org/Thing> ;
                 rdfs:comment "An entity is anything that exists or has existed or will exist."@en ;
-                rdfs:label "entity"@en .
+                rdfs:label "BFO entity"@en .
 
 
 ###  http://purl.obolibrary.org/obo/GSSO_000114
@@ -1579,63 +1579,63 @@ obo:GSSO_000114 rdf:type owl:Class ;
 obo:PATO_0000001 rdf:type owl:Class ;
                  rdfs:subClassOf crm:E1_CRM_Entity ;
                  rdfs:comment "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entitie"@en ;
-                 rdfs:label "quality"@en .
+                 rdfs:label "PATO quality"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0000025
 obo:PATO_0000025 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0000141 ;
                  rdfs:comment "A single physical entity inhering in an bearer by virtue of the bearer's quantities or relative ratios of subparts."@en ;
-                 rdfs:label "composition"@en .
+                 rdfs:label "PATO composition"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0000051
 obo:PATO_0000051 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0001241 ;
                  rdfs:comment "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure."@en ;
-                 rdfs:label "morphology"@en .
+                 rdfs:label "PATO morphology"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0000141
 obo:PATO_0000141 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0000051 ;
                  rdfs:comment "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form."@en ;
-                 rdfs:label "structure"@en .
+                 rdfs:label "PATO structure"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0001020
 obo:PATO_0001020 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0000141 ;
                  rdfs:comment "A structural quality inhering in a bearer by virtue of whether the bearer has been harmed or injured or spoiled."@en ;
-                 rdfs:label "damage"@en .
+                 rdfs:label "PATO damage"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0001241
 obo:PATO_0001241 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0000001 ;
                  rdfs:comment "A quality which inheres in a continuant."@en ;
-                 rdfs:label "physical object quality"@en .
+                 rdfs:label "PATO physical object quality"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0001374
 obo:PATO_0001374 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0001396 ;
                  rdfs:comment "A cellular quality inhering in a bearer by virtue of the bearer's number of homologous sets of chromosomes in the nucleus or primary chromosome-containing compartment of the cell, each set essentially coding for all the biological traits of the organism."@en ;
-                 rdfs:label "ploidy"@en .
+                 rdfs:label "PATO ploidy"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0001396
 obo:PATO_0001396 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0070044 ;
                  rdfs:comment "A monadic quality of continuant that exists at the cellular level of organisation."@en ;
-                 rdfs:label "cellular quality"@en .
+                 rdfs:label "PATO cellular quality"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0015031
 obo:PATO_0015031 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0000025 ;
                  rdfs:comment "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entity."@en ;
-                 rdfs:label "contamination"@en ;
+                 rdfs:label "PATO contamination"@en ;
                  skos:altLabel "degree of contamination"@en .
 
 
@@ -1643,7 +1643,7 @@ obo:PATO_0015031 rdf:type owl:Class ;
 obo:PATO_0070044 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0001241 ;
                  rdfs:comment "A quality of continuant that exist at the anatomical level of organisation and anything under it. This includes, but is not limited to, cells , tissues, and components."@en ;
-                 rdfs:label "anatomical structure quality"@en .
+                 rdfs:label "PATO anatomical structure quality"@en .
 
 
 ###  http://purl.obolibrary.org/obo/UBERON_0000479
@@ -1658,7 +1658,7 @@ dct:Agent rdf:type owl:Class ;
           owl:equivalentClass foaf:Agent ;
           rdfs:subClassOf crm:E77_Persistent_Item ;
           rdfs:comment "A resource that acts or has the power to act."@en ;
-          rdfs:label "Agent"@en .
+          rdfs:label "DC Agent"@en .
 
 
 ###  http://purl.org/ontology/bibo/Collection
@@ -1704,7 +1704,7 @@ This class includes the production of an item from raw materials and other so fa
 Since the distinction between modification and production is not always clear, modification is regarded as the more generally applicable concept. This implies that some items may be consumed or destroyed in an instance of E11 Modification, and that others may be produced as a result of it. An event should also be documented using an instance of E81 Transformation if it results in the destruction of one or more objects and the simultaneous production of others using parts or material from the originals. In this case, the new items have separate identities.
 An activity undertaken on an object which was designed to alter it, but which, in fact, it did not in any seemingly significant way (such as the application of a solvent during conservation which failed to dissolve any part of the object), is still considered as an instance of E11 Modification. Typically, any such activity will leave at least forensic traces of evidence on the object.
 If the instance of E29 Design or Procedure utilized for the modification prescribes the use of specific materials, they should be documented using property P68 foresees use of (use foreseen by): E57 Material of E29 Design or Procedure, rather than via P126 employed (was employed in): E57 Material."""@en ;
-                     rdfs:label "Modification"@en .
+                     rdfs:label "E11 Modification"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment
@@ -1714,7 +1714,7 @@ crm:E13_Attribute_Assignment rdf:type owl:Class ;
 For example, the class describes the actions of people making propositions and statements during certain scientific/scholarly procedures, e.g. the person and date when a condition statement was made, an identifier was assigned, the museum object was measured, etc. Which kinds of such assignments and statements need to be documented explicitly in structures of a schema rather than free text, depends on whether this information should be accessible by structured queries.
 This class allows for the documentation of how the respective assignment came about, and whose opinion it was. Note that all instances of properties described in a knowledge base are the opinion of someone. Per default, they are the opinion of the team maintaining the knowledge base. This fact must not individually be registered for all instances of properties provided by the maintaining team, because it would result in an endless recursion of whose opinion was the description of an opinion. Therefore, the use of instances of E13 Attribute Assignment marks the fact that the maintaining team is in general neutral to the validity of the respective assertion, but registers someone else’s opinion and how it came about.
 All properties assigned in such an action can also be seen as directly relating the respective pair of items or concepts. Multiple use of instances of E13 Attribute Assignment may possibly lead to a collection of contradictory values."""@en ;
-                             rdfs:label "Attribute Assignment"@en .
+                             rdfs:label "E13 Attribute Assignment"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E16_Measurement
@@ -1723,7 +1723,7 @@ crm:E16_Measurement rdf:type owl:Class ;
                     rdfs:comment """This class comprises actions measuring physical properties and other values that can be determined by a systematic, objective procedure of direct observation of particular states of physical reality.
 An instance of E16 Measurement may use simple counting or tools, such as yardsticks or radiation detection devices. The interest is in the method and care applied, so that the reliability of the result may be judged at a later stage, or research continued on the associated documents. The date of the event is important for dimensions, which may change value over time, such as the length of an object subject to shrinkage. Methods and devices employed should be associated with instances of E16 Measurement by properties such as P33 used specific technique: E29 Design or Procedure, P125 used object of type: E55 Type, P16 used specific object (was used for): E70 Thing, whereas basic techniques such as \"carbon-14 dating\" should be encoded using P2 has type (is type of): E55 Type. Details of methods and devices reused or reusable in other instances of E16 Measurement should be documented for these entities rather than the measurements themselves, whereas details of particular execution may be documented by free text or by instantiating adequate sub-activities, if the detail may be of interest for an overarching query.
 Regardless whether a measurement is made by an instrument or by human senses, it represents the initial transition from physical reality to information without any other documented information object in between within the reasoning chain that would represent the result of the interaction of the observer or device with reality. Therefore, determining properties of an instance of E90 Symbolic Object is regarded as an instance of E13 Attribute Assignment, which may be inferred from observing and measuring representative carriers. In the case that the carrier can be named, the property P16 used specific object (was used for) should be used to indicate the instance(s) of E18 Physical Thing that was used as the empirical basis for the attribute assignment. For instance, inferring properties of depicted items using image material, such as satellite images, is not regarded as an instance of E16 Measurement, but as a subsequent instance of E13 Attribute Assignment. Rather, only the production of the images, understood as arrays of radiation intensities, is regarded as an instance of E16 Measurement. The same reasoning holds for other sensor data."""@en ;
-                    rdfs:label "Measurement"@en .
+                    rdfs:label "E16 Measurement"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing
@@ -1756,10 +1756,10 @@ crm:E1_CRM_Entity rdf:type owl:Class ;
     3.	Attachment of free text for the expression of anything not captured by formal properties
     With the exception of E59 Primitive Value, all other classes within the CRM are directly or indirectly specialisations of E1 CRM Entity.
     """ ;
-                  rdfs:label "CRM Entity"@en ,
-                             "CRM Entität"@de ,
+                  rdfs:label "CRM Entität"@de ,
                              "CRM Сущность"@ru ,
                              "CRM实体"@zh ,
+                             "E1 CRM Entity"@en ,
                              "Entidade CRM"@pt ,
                              "Entité CRM"@fr ,
                              "Οντότητα CIDOC CRM"@el .
@@ -1780,7 +1780,7 @@ crm:E21_Person rdf:type owl:Class ;
                rdfs:comment """This class comprises real persons who live or are assumed to have lived.
 Legendary figures that may have existed, such as Ulysses and King Arthur, fall into this class if the documentation refers to them as historical figures. In cases where doubt exists as to whether several persons are in fact identical, multiple instances can be created and linked to indicate their relationship. The CIDOC CRM does not propose a specific form to support reasoning about possible identity.
 In a bibliographic context, a name presented following the conventions usually employed for personal names will be assumed to correspond to an actual real person (an instance of E21 Person), unless evidence is available to indicate that this is not the case. The fact that a persona may erroneously be classified as an instance of E21 Person does not imply that the concept comprises personae."""@en ;
-               rdfs:label "Person"@en .
+               rdfs:label "E21 Person"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E26_Physical_Feature
@@ -1830,7 +1830,7 @@ crm:E2_Temporal_Entity rdf:type owl:Class ;
                        rdfs:subClassOf crm:E1_CRM_Entity ;
                        rdfs:comment """This class comprises all phenomena, such as the instances of E4 Periods and E5 Events, which happen over a limited extent in time. This extent in time must be contiguous, i.e., without gaps. In case the defining kinds of phenomena for an instance of E2 Temporal Entity cease to happen, and occur later again at another time, we regard that the former instance of E2 Temporal Entity has ended and a new instance has come into existence. In more intuitive terms, the same event cannot happen twice.
 In some contexts, such phenomena are also called perdurants. This class is disjoint from E77 Persistent Item and is an abstract class that typically has no direct instances. E2 Temporal Entity is specialized into E4 Period, which applies to a particular geographic area (defined with a greater or lesser degree of precision), and E3 Condition State, which applies to instances of E18 Physical Thing."""@en ;
-                       rdfs:label "Temporal Entity"@en .
+                       rdfs:label "E2 Temporal Entity"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E31_Document
@@ -1846,7 +1846,7 @@ crm:E39_Actor rdf:type owl:Class ;
               rdfs:subClassOf prov:Agent ;
               rdfs:comment """This class comprises people, either individually or in groups, who have the potential to perform intentional actions of kinds for which someone may be held responsible.
 The CRM does not attempt to model the inadvertent actions of such actors. Individual people should be documented as instances of E21 Person, whereas groups should be documented as instances of either E74 Group or its subclass E40 Legal Body."""@en ;
-              rdfs:label "Actor"@en .
+              rdfs:label "E39 Actor"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E4_Period
@@ -1860,7 +1860,7 @@ E4 Period is a subclass of E2 Temporal Entity and of E92 Spacetime Volume. The l
 Typical use of this class in cultural heritage documentation is for documenting cultural and artistic periods. There are two different conceptualisations of ‘artistic style’, defined either by physical features or by historical context. For example, “Impressionism” can be viewed as a period in the European sphere of influence lasting from approximately 1870 to 1905 during which paintings with particular characteristics were produced by a group of artists that included (among others) Monet, Renoir, Pissarro, Sisley and Degas. Alternatively, it can be regarded as a style applicable to all paintings sharing the characteristics of the works produced by the Impressionist painters, regardless of historical context. The first interpretation is an instance of E4 Period, and the second defines morphological object types that fall under E55 Type.
 A geopolitical unit as a specific case of an instance of E4 Period is the set of activities and phenomena related to the claim of power, the consequences of belonging to a jurisdictional area and an administrative system that establishes a geopolitical unit. Examples from the modern period are countries or administrative areas of countries such as districts whose actions and structures define activities and phenomena in the area that they intend to govern. The borders of geopolitical units are often defined in contracts or treaties although they may deviate from the actual practice. The spatiotemporal properties of Geopolitical units can be modelled through the properties inherited from E92 Spacetime Volume.
 Another specific case of an instance of E4 Period is the actual extent of the set of activities and phenomena as evidenced by their physical traces that define a settlement, such as the populated period of Nineveh."""@en ;
-              rdfs:label "Period"@en .
+              rdfs:label "E4 Period"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span
@@ -1871,7 +1871,7 @@ Instances of E52 Time-Span have no semantic connotations about phenomena happeni
 Some instances of E52 Time-Span may be defined as the actual, in principle observable, temporal extent of instances of E2 Temporal Entity via the property P4 has time-span (is time-span of): E52 Time-Span. They constitute phenomenal time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013). Since our knowledge of history is imperfect and physical phenomena are fuzzy in nature, the extent of phenomenal time-spans can only be described in approximation. An extreme case of approximation, might, for example, define an instance of E52 Time-Span having unknown beginning, end and duration. It may, nevertheless, be associated with other descriptions by which people can infer knowledge about it, such as in relative chronologies.
 Some instances of E52 may be defined precisely as representing a declaration of a temporal extent, as, for instance, done in a business contract. They constitute declarative time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013) and can be described via the property E61 Time Primitive P170 defines time (time is defined by): E52 Time-Span.
 When used as a common E52 Time-Span for two events, it will nevertheless describe them as being simultaneous, even if nothing else is known."""@en ;
-                  rdfs:label "Time-Span"@en .
+                  rdfs:label "E52 Time-Span"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E53_Place
@@ -1881,7 +1881,7 @@ crm:E53_Place rdf:type owl:Class ;
 The instances of E53 Place are usually determined by reference to the position of “immobile” objects such as buildings, cities, mountains, rivers, or dedicated geodetic marks, but may also be determined by reference to mobile objects. A Place can be determined by combining a frame of reference and a location with respect to this frame.
 It is sometimes argued that instances of E53 Place are best identified by global coordinates or absolute reference systems. However, relative references are often more relevant in the context of cultural documentation and tend to be more precise. In particular, people are often interested in position in relation to large, mobile objects, such as ships. For example, the Place at which Nelson died is known with reference to a large mobile object, i.e. H.M.S Victory. A resolution of this Place in terms of absolute coordinates would require knowledge of the movements of the vessel and the precise time of death, either of which may be revised, and the result would lack historical and cultural relevance.
 Any instance of E18 Physical Thing can serve as a frame of reference for an instance of E53 Place. This may be documented using the property P157 is at rest relative to (provides reference space for)."""@en ;
-              rdfs:label "Place"@en .
+              rdfs:label "E53 Place"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E55_Type
@@ -1900,14 +1900,14 @@ While the continuous growth of a tree lacks the limits characteristic of an even
 The effects of an instance of E5 Event may not lead to relevant permanent changes of properties or relations of the items involved in it, for example an unrecorded performance. Of course, in order to be documented, some kind of evidence for an event must exist, be it witnesses, traces or products of the event.
 While instances of E4 Period always require some form of coherence between its constituent phenomena, in addition, the essential constituents of instances of E5 Event should contribute to an overall effect; for example, the statements made during a meeting and the listening of the audience.
 Viewed at a coarse level of detail, an instance of E5 Event may appear as if it had an ‘instantaneous’ overall effect, but any process or interaction of material nature in reality have an extent in time and space. At a fine level, instances of E5 Event may be analysed into component phenomena and phases within a space and timeframe, and as such can be seen as a period, regardless of the size of the phenomena. The reverse is not necessarily the case: not all instances of E4 Period give rise to a noteworthy overall effect and are thus not instances of E5 Event."""@en ;
-             rdfs:label "Event"@en .
+             rdfs:label "E5 Event"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E65_Creation
 crm:E65_Creation rdf:type owl:Class ;
                  rdfs:subClassOf crm:E7_Activity ;
                  rdfs:comment "This class comprises events that result in the creation of conceptual items or immaterial products, such as legends, poems, texts, music, images, movies, laws, types, etc."@en ;
-                 rdfs:label "Creation"@en .
+                 rdfs:label "E65 Creation"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E70_Thing
@@ -1952,7 +1952,7 @@ Instances of E77 Persistent Item may be present or be part of interactions in di
 The more specific criteria that determine the identity of instances of subclasses of E77 Persistent Item may vary considerably and are described or referred to in the respective scope notes. The decision about which exact criteria to use depends on whether the observable behaviour of the respective part of reality such confined conforms to the reasoning the user is interested in. For example, a building can be regarded as no longer existing if it is dismantled and the materials reused in a different configuration. On the other hand, human beings go through radical and profound changes during their life-span, affecting both material composition and form, yet preserve their identity by other criteria, such as being bodily separated from other persons. Similarly, inanimate objects may be subject to exchange of parts and matter. On the opposite, the identity of a (version of a) text of a scientific publication is given by the exact arrangement of its relevant symbols.
 The main classes of objects that fall outside the scope of the E77 Persistent Item class are temporal objects such as periods, events and acts, and descriptive properties.
 An instance of E77 Persistent Item does not require actual knowledge of the identifying features of the instance being currently known. There may be cases, where the actual identifying features of an instance of E77 Persistent Item are not decidable at a particular state of knowledge."""@en ;
-                        rdfs:label "Persistent Item"@en .
+                        rdfs:label "E77 Persistent Item"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E7_Activity
@@ -1960,7 +1960,7 @@ crm:E7_Activity rdf:type owl:Class ;
                 rdfs:subClassOf prov:Activity ;
                 rdfs:comment """This class comprises actions intentionally carried out by instances of E39 Actor that result in changes of state in the cultural, social, or physical systems documented.
 This notion includes complex, composite, and long-lasting actions such as the building of a settlement or a war, as well as simple, short-lived actions such as the opening of a door."""@en ;
-                rdfs:label "Activity"@en .
+                rdfs:label "E7 Activity"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object
@@ -1985,28 +1985,28 @@ In some cases, the content of an instance of E90 Symbolic Object may completely 
 crm:E92_Spacetime_Volume rdf:type owl:Class ;
                          rdfs:subClassOf crm:E1_CRM_Entity ;
                          rdfs:comment "This class comprises 4-dimensional point sets (volumes) in physical spacetime (in contrast to mathematical models of it) regardless of their true geometric forms. They may derive their identity from being the extent of a material phenomenon or from being the interpretation of an expression defining an extent in spacetime. Intersections of instances of E92 Spacetime Volume, E53 Place, and E52 Time-Span are also regarded as instances of E92 Spacetime Volume. An instance of E92 Spacetime Volume is either contiguous or composed of a finite number of contiguous subsets. Its boundaries may be fuzzy due to the properties of the phenomena it derives from or due to the limited precision up to which defining expression can be identified with a real extent in spacetime. The duration of existence of an instance of E92 Spacetime Volume is its projection on time."@en ;
-                         rdfs:label "Spacetime Volume"@en .
+                         rdfs:label "E92 Spacetime Volume"@en .
 
 
 ###  http://www.opengis.net/ont/geosparql#Feature
 geosparql:Feature rdf:type owl:Class ;
                   rdfs:subClassOf geosparql:SpatialObject ;
                   rdfs:comment "A discrete spatial phenomenon in a universe of discourse."@en ;
-                  rdfs:label "Feature"@en .
+                  rdfs:label "GeoSPARQL Feature"@en .
 
 
 ###  http://www.opengis.net/ont/geosparql#Geometry
 geosparql:Geometry rdf:type owl:Class ;
                    rdfs:subClassOf geosparql:SpatialObject ;
                    rdfs:comment "A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS)."@en ;
-                   rdfs:label "Geometry"@en .
+                   rdfs:label "GeoSPARQL Geometry"@en .
 
 
 ###  http://www.opengis.net/ont/geosparql#SpatialObject
 geosparql:SpatialObject rdf:type owl:Class ;
                         rdfs:subClassOf crm:E53_Place ;
                         rdfs:comment "Anything spatial (being or having a shape, position or an extent)."@en ;
-                        rdfs:label "Spatial Object"@en .
+                        rdfs:label "GeoSPARQL Spatial Object"@en .
 
 
 ###  http://www.opengis.net/ont/sf#Geometry
@@ -2019,7 +2019,7 @@ The instantiable subclasses of Geometry are restricted to 0, 1 and 2-dimensional
 The interpretation of the coordinates is subject to the coordinate reference systems associated to the point. All coordinates within a geometry object should be in the same coordinate reference systems. Each coordinate shall be unambiguously associated to a coordinate reference system either directly or through its containing geometry. The z coordinate of a point is typically, but not necessarily, represents altitude or elevation. The m coordinate represents a measurement.
 
 All Geometry classes described in this specification are defined so that instances of Geometry are topologically closed, i.e. all represented geometries include their boundary as point sets. This does not affect their representation, and open versions of the same classes may be used in other circumstances, such as topological representations."""@en ;
-            rdfs:label "Geometry"@en .
+            rdfs:label "SF Geometry"@en .
 
 
 ###  http://www.opengis.net/ont/sf#Point
@@ -2028,7 +2028,7 @@ sf:Point rdf:type owl:Class ;
          rdfs:comment """A Point is a 0-dimensional geometric object and represents a single location in coordinate space. 
 A Point has an x-coordinate value, a y-coordinate value. If called for by the associated Spatial Reference System, it may also have coordinate values for z and m.
 The boundary of a Point is the empty set."""@en ;
-         rdfs:label "Point"@en .
+         rdfs:label "SF Point"@en .
 
 
 ###  http://www.w3.org/2002/07/owl#Thing
@@ -2044,78 +2044,78 @@ skos:Concept rdf:type owl:Class ;
 time:Instant rdf:type owl:Class ;
              rdfs:subClassOf time:TemporalEntity ;
              rdfs:comment "A temporal entity with zero extent or duration"@en ;
-             rdfs:label "Time Instant"@en .
+             rdfs:label "TIME Instant"@en .
 
 
 ###  http://www.w3.org/2006/time#Interval
 time:Interval rdf:type owl:Class ;
               rdfs:subClassOf time:TemporalEntity ;
               rdfs:comment "A temporal entity with an extent or duration"@en ;
-              rdfs:label "Time Interval"@en .
+              rdfs:label "TIME Interval"@en .
 
 
 ###  http://www.w3.org/2006/time#TemporalEntity
 time:TemporalEntity rdf:type owl:Class ;
                     rdfs:subClassOf crm:E1_CRM_Entity ;
                     rdfs:comment "A temporal interval or instant."@en ;
-                    rdfs:label "Temporal Entity"@en .
+                    rdfs:label "TIME Temporal Entity"@en .
 
 
 ###  http://www.w3.org/ns/prov#Activity
 prov:Activity rdf:type owl:Class ;
               rdfs:subClassOf crm:E5_Event ;
-              rdfs:label "Activity"@en .
+              rdfs:label "PROV-O Activity"@en .
 
 
 ###  http://www.w3.org/ns/prov#Agent
 prov:Agent rdf:type owl:Class ;
            rdfs:subClassOf foaf:Agent ;
-           rdfs:label "Agent"@en .
+           rdfs:label "PROV-O Agent"@en .
 
 
 ###  http://www.w3.org/ns/prov#Entity
 prov:Entity rdf:type owl:Class ;
             rdfs:subClassOf <https://www.w3.org/2000/01/rdf-schema#Resource> ;
-            rdfs:label "Entity"@en .
+            rdfs:label "PROV-O Entity"@en .
 
 
 ###  http://www.w3.org/ns/prov#Organization
 prov:Organization rdf:type owl:Class ;
                   rdfs:subClassOf foaf:Organization ;
-                  rdfs:label "Organization"@en .
+                  rdfs:label "PROV-O Organization"@en .
 
 
 ###  http://www.w3.org/ns/prov#Person
 prov:Person rdf:type owl:Class ;
             rdfs:subClassOf foaf:Person ;
-            rdfs:label "Person"@en .
+            rdfs:label "PROV-O Person"@en .
 
 
 ###  http://www.w3.org/ns/prov#SoftwareAgent
 prov:SoftwareAgent rdf:type owl:Class ;
                    rdfs:subClassOf crm:E39_Actor ;
-                   rdfs:label "Software Agent"@en .
+                   rdfs:label "PROV-O Software Agent"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
 foaf:Agent rdf:type owl:Class ;
            rdfs:subClassOf crm:E77_Persistent_Item ;
            rdfs:comment "An agent (eg. person, group, software or physical artifact)."@en ;
-           rdfs:label "Agent"@en .
+           rdfs:label "FOAF Agent"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/Organization
 foaf:Organization rdf:type owl:Class ;
                   rdfs:subClassOf crm:E39_Actor ;
                   rdfs:comment "An organization."@en ;
-                  rdfs:label "Organization"@en .
+                  rdfs:label "FOAF Organization"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
 foaf:Person rdf:type owl:Class ;
             rdfs:subClassOf crm:E39_Actor ;
             rdfs:comment "A person."@en ;
-            rdfs:label "Person"@en .
+            rdfs:label "FOAF Person"@en .
 
 
 ###  https://pleiades.stoa.org/places/vocab#Location
@@ -2138,14 +2138,14 @@ crmdig:D10_Software_Execution rdf:type owl:Class ;
                               rdfs:comment """his class comprises events by which a digital device runs a software program or a series of
 computing operations on a digital object as a single task, which is completely determined by its
 digital input, the software and the generic properties of the device."""@en ;
-                              rdfs:label "Software Execution"@en .
+                              rdfs:label "D10 Software Execution"@en .
 
 
 ###  https://transurbicide.gta.arch.ethz.ch/resource/crmdig:D7_Digital_Machine_Event
 crmdig:D7_Digital_Machine_Event rdf:type owl:Class ;
                                 rdfs:subClassOf crm:E11_Modification ;
                                 rdfs:comment "This class comprises events that happen on physical digital devices following a human activity that intentionally caused its immediate or delayed initiation and results in the creation of a new instance of D1 Digital Object on behalf of the human actor. The input of a D7 Digital Machine Event may be parameter settings and/or data to be processed. Some D7 Digital Machine Events may form part of a wider E65 Creation event. In this case, all machine output of the partial events is regarded as creation of the overall activity."@en ;
-                                rdfs:label "Digital Machine Event"@en .
+                                rdfs:label "D7 Digital Machine Event"@en .
 
 
 ###  https://www.w3.org/2000/01/rdf-schema#Resource
