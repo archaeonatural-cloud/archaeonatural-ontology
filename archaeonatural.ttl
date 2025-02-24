@@ -596,11 +596,15 @@ www:writtenBy rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/creator
 dct:creator rdf:type owl:ObjectProperty ;
-            rdfs:domain <https://www.w3.org/2000/01/rdf-schema#Resource> .
+            rdfs:range dct:Agent ;
+            rdfs:comment "An entity responsible for making the resource."@en ;
+            rdfs:label "Creator"@en .
 
 
 ###  http://purl.org/dc/terms/isPartOf
-dct:isPartOf rdf:type owl:ObjectProperty .
+dct:isPartOf rdf:type owl:ObjectProperty ;
+             rdfs:comment "A related resource in which the described resource is physically or logically included."@en ;
+             rdfs:label "Is Part Of"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of
