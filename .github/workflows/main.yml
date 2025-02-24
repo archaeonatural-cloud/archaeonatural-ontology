@@ -35,6 +35,9 @@ jobs:
          cd docs2
          echo "Generating documentation for Core ontology"
          pylode -i ../archaeonatural.ttl -o index.html
+         wget https://raw.githubusercontent.com/situx/widoco_classtree/refs/heads/master/classtreedoc.py
+         python3 classtreedoc.py -i index.html -o content.html
+         rm classtreedoc.py
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
