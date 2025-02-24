@@ -381,6 +381,7 @@ www:inCountry rdf:type owl:ObjectProperty ;
 
 ###  http://archaeonatural.cloud/ont/inJournal
 www:inJournal rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dct:isPartOf ;
               rdfs:domain www:Literature ;
               rdfs:range www:Journal ;
               rdfs:comment "links a literature publication event to the journal it is published in"@en ;
@@ -484,6 +485,7 @@ www:other rdf:type owl:ObjectProperty ;
 
 ###  http://archaeonatural.cloud/ont/partOfGeneticSourceAccession
 www:partOfGeneticSourceAccession rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf dct:isPartOf ;
                                  rdfs:domain www:GeneticSourceAccession ;
                                  rdfs:range www:GeneticSourceAccession ;
                                  rdfs:comment "links genetic source accessions in case multiples are given arranged by descending specificity (e.g. project id > sample id > sequencing run id)"@en ;
@@ -501,7 +503,7 @@ www:partOfGenomicLibrary rdf:type owl:ObjectProperty ;
 
 ###  http://archaeonatural.cloud/ont/partOfGroup
 www:partOfGroup rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:subPropertyOf dct:isPartOf ;
                 rdfs:domain www:Sample ;
                 rdfs:range www:Group ;
                 rdfs:comment "relates a sample to its population/group"@en ;
@@ -595,6 +597,10 @@ www:writtenBy rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/terms/creator
 dct:creator rdf:type owl:ObjectProperty ;
             rdfs:domain <https://www.w3.org/2000/01/rdf-schema#Resource> .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dct:isPartOf rdf:type owl:ObjectProperty .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of
