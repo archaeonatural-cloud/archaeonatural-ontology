@@ -261,9 +261,10 @@ function generateClassTree(titleattarr, superatt, classOrProp) {
             }
         }
         counter++;
-        console.log(classTree["core"]["data"])
+        
     });
     }
+    console.log(classTree["core"]["data"])
     //console.log(classTree)
     return classTree;
 }
