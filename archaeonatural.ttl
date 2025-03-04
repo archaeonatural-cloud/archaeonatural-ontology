@@ -1422,7 +1422,7 @@ www:Literature rdf:type owl:Class ;
 www:MTHaplogroupMeasurement rdf:type owl:Class ;
                             rdfs:subClassOf www:HaplogroupMeasurement ;
                             rdfs:comment "Measurement of the mitochondrial haplogroup derived for the sample as specified on phylotree.org and as reported by the Haplofind or Haplogrep software tools"@en ;
-                            rdfs:label "MT Haplogroup Measurement"@en .
+                            rdfs:label "MT-Haplogroup Measurement"@en .
 
 
 ###  http://archaeonatural.cloud/ont/Percentage
@@ -1572,7 +1572,7 @@ obo:BFO_0000001 rdf:type owl:Class ;
 obo:GSSO_000114 rdf:type owl:Class ;
                 rdfs:subClassOf skos:Concept ;
                 rdfs:comment "Sex as determined by the presence and/or activation of particular genes or combinations of genes, without regard to phenotypic manifestations."@en ;
-                rdfs:label "genetic sex"@en .
+                rdfs:label "GSSO genetic sex"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0000001
