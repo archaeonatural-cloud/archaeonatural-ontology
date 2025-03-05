@@ -1192,7 +1192,7 @@ lado:Location rdf:type owl:Class ;
 
 ###  http://archaeology.link/ontology#Place
 lado:Place rdf:type owl:Class ;
-           rdfs:subClassOf crm:E53_Place ;
+           rdfs:subClassOf pleiades:Place ;
            dc:description "place as a concept, just a label"@en ;
            rdfs:label "LADO Place as a Concept"@en .
 
@@ -1255,7 +1255,7 @@ www:Count rdf:type owl:Class ;
 
 ###  http://archaeonatural.cloud/ont/Country
 www:Country rdf:type owl:Class ;
-            rdfs:subClassOf crm:E53_Place ;
+            rdfs:subClassOf lado:Place ;
             rdfs:comment "Country according to ISO 3166"@en ;
             rdfs:label "Country"@en .
 
@@ -1423,7 +1423,7 @@ www:Person rdf:type owl:Class ;
 
 ###  http://archaeonatural.cloud/ont/Place
 www:Place rdf:type owl:Class ;
-          rdfs:subClassOf pleiades:Place ;
+          rdfs:subClassOf lado:Place ;
           rdfs:comment "unspecified location information for the sample, e.g. administrative or topographic region or mountains/rivers/lakes/cities nearby"@en ;
           rdfs:label "Place"@en .
 
