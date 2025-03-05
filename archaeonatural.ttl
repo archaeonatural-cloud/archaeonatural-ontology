@@ -811,15 +811,6 @@ prov:wasInformedBy rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://archaeonatural.cloud/ont/hasAdditionalIdentificationInformation
-www:hasAdditionalIdentificationInformation rdf:type owl:DatatypeProperty ;
-                                           rdfs:subPropertyOf owl:topDataProperty ;
-                                           rdfs:domain owl:Thing ;
-                                           rdfs:range rdfs:Literal ;
-                                           rdfs:comment "additional information needed to unambiguously identify an object, the label itself might not be enough for a site or place due to multiple instances having the same label"@en ;
-                                           rdfs:label "has additional indentification information"@en .
-
-
 ###  http://archaeonatural.cloud/ont/hasAlternativeID
 www:hasAlternativeID rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf www:identifiedBy ;
@@ -852,15 +843,6 @@ www:hasCount rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:integer ;
              rdfs:comment "a count of instances"@en ;
              rdfs:label "has count"@en .
-
-
-###  http://archaeonatural.cloud/ont/hasCountryInformation
-www:hasCountryInformation rdf:type owl:DatatypeProperty ;
-                          rdfs:subPropertyOf www:hasAdditionalIdentificationInformation ;
-                          rdfs:domain www:Place ;
-                          rdfs:range xsd:string ;
-                          rdfs:comment "country information helping to unambiguously identify a place"@en ;
-                          rdfs:label "has country information"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasDOI
@@ -1693,7 +1675,7 @@ bibo:Periodical rdf:type owl:Class ;
 <http://schema.org/Thing> rdf:type owl:Class ;
                           rdfs:subClassOf prov:Entity ;
                           rdfs:comment "The most generic type of item."@en ;
-                          rdfs:label "Thing" .
+                          rdfs:label "Thing"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E11_Modification
