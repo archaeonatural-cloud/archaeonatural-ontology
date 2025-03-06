@@ -1632,7 +1632,7 @@ obo:PATO_0070044 rdf:type owl:Class ;
 obo:UBERON_0000479 rdf:type owl:Class ;
                    rdfs:subClassOf crm:E20_Biological_Object ;
                    rdfs:comment "Multicellular anatomical structure that consists of many cells of one or a few types, arranged in an extracellular matrix such that their long-range organisation is at least partly a repetition of their short-range organisation."@en ;
-                   rdfs:label "tissue"@en .
+                   rdfs:label "UBERON tissue"@en .
 
 
 ###  http://purl.org/dc/terms/Agent
