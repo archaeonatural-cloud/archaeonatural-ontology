@@ -36,7 +36,7 @@ jobs:
          echo "Generating documentation for Core ontology"
          pylode -i ../archaeonatural.ttl -o index.html
          wget https://raw.githubusercontent.com/situx/widoco_classtree/refs/heads/master/classtreedoc.py
-         python3 classtreedoc.py -i index.html -o content.html
+         python3 classtreedoc.py -i index.html -o content.html -t "Archaeonatural Ontology"
          rm classtreedoc.py
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
