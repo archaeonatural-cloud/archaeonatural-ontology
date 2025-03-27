@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Archaeo-Natural Ontology (ArNO)
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Mattis
+    family-names: thor Straten
+    email: mts@cs.uni-kiel.de
+    affiliation: Kiel University
+    orcid: 'https://orcid.org/0009-0005-1140-3352'
+  - given-names: Florian
+    family-names: Thiery
+    email: florian.thiery@leiza.de
+    affiliation: Leibniz-Zentrum für Archäologie (LEIZA)
+    orcid: 'https://orcid.org/0000-0002-3246-3531'
+repository-code: >-
+  https://github.com/archaeonatural-cloud/archaeonatural-ontology
+url: >-
+  https://archaeonatural-cloud.github.io/archaeonatural-ontology/
+license: CC-BY-4.0
+commit: 21701d93b0dbc71ee6116448351c62f091fd3f3b
+version: '0.1'
+date-released: '2025-03-24'
