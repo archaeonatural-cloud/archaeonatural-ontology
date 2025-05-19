@@ -1174,13 +1174,13 @@ lado:ActorEntity rdf:type owl:Class ;
 
 ###  http://archaeology.link/ontology#DiscoverySite
 lado:DiscoverySite rdf:type owl:Class ;
-                   rdfs:subClassOf pleiades:Location ;
+                   rdfs:subClassOf lado:Location ;
                    rdfs:label "LADO Discovery Site"@en .
 
 
 ###  http://archaeology.link/ontology#KilnRegion
 lado:KilnRegion rdf:type owl:Class ;
-                rdfs:subClassOf pleiades:Location ;
+                rdfs:subClassOf lado:Location ;
                 rdfs:label "LADO Kiln Region"@en .
 
 
@@ -1199,13 +1199,13 @@ lado:Place rdf:type owl:Class ;
 
 ###  http://archaeology.link/ontology#ProductionCentre
 lado:ProductionCentre rdf:type owl:Class ;
-                      rdfs:subClassOf pleiades:Location ;
+                      rdfs:subClassOf lado:KilnRegion ;
                       rdfs:label "LADO Production Centre"@en .
 
 
 ###  http://archaeology.link/ontology#RepositoryLocation
 lado:RepositoryLocation rdf:type owl:Class ;
-                        rdfs:subClassOf pleiades:Location ;
+                        rdfs:subClassOf lado:Location ;
                         rdfs:label "LADO Repository Location"@en .
 
 
