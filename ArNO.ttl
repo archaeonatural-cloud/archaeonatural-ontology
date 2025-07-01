@@ -337,13 +337,13 @@ www:hasSNPCount rdf:type owl:ObjectProperty ;
                 rdfs:label "has SNP count"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasSourceTissueType
-www:hasSourceTissueType rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf crm:P2_has_type ;
-                        rdfs:domain www:SourceTissue ;
-                        rdfs:range www:SourceTissueType ;
-                        rdfs:comment "relates a source tissue to the respective material type it is made of"@en ;
-                        rdfs:label "has source tissue type"@en .
+###  http://archaeonatural.cloud/ont/hasSourceMaterial
+www:hasSourceMaterial rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf crm:P2_has_type ;
+                      rdfs:domain www:SourceTissue ;
+                      rdfs:range www:SourceMaterial ;
+                      rdfs:comment "relates a source tissue  to the respective material type it consists of"@en ;
+                      rdfs:label "has source material"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasSpatiotemporalInformation
@@ -1470,25 +1470,25 @@ www:Site rdf:type owl:Class ;
          rdfs:label "Site"@en .
 
 
+###  http://archaeonatural.cloud/ont/SourceMaterial
+www:SourceMaterial rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:oneOf ( <http://archaeonatural.cloud/ont/SourceTissueType/Hair>
+                                                     <http://archaeonatural.cloud/ont/SourceTissueType/Petrous>
+                                                     <http://archaeonatural.cloud/ont/SourceTissueType/Tooth>
+                                                     <http://archaeonatural.cloud/ont/SourceTissueType/otherBone>
+                                                   )
+                                       ] ;
+                   rdfs:subClassOf skos:Concept ;
+                   rdfs:comment "sampled material"@en ;
+                   rdfs:label "Source Material"@en .
+
+
 ###  http://archaeonatural.cloud/ont/SourceTissue
 www:SourceTissue rdf:type owl:Class ;
                  rdfs:subClassOf obo:UBERON_0000479 ;
                  rdfs:comment "skeletal element, tissue or other material sampled, the specific bone should be reported after an underscore (e.g. bone_phalanx)"@en ;
                  rdfs:label "Source Tissue"@en .
-
-
-###  http://archaeonatural.cloud/ont/SourceTissueType
-www:SourceTissueType rdf:type owl:Class ;
-                     owl:equivalentClass [ rdf:type owl:Class ;
-                                           owl:oneOf ( <http://archaeonatural.cloud/ont/SourceTissueType/Hair>
-                                                       <http://archaeonatural.cloud/ont/SourceTissueType/Petrous>
-                                                       <http://archaeonatural.cloud/ont/SourceTissueType/Tooth>
-                                                       <http://archaeonatural.cloud/ont/SourceTissueType/otherBone>
-                                                     )
-                                         ] ;
-                     rdfs:subClassOf skos:Concept ;
-                     rdfs:comment "type of material sampled"@en ;
-                     rdfs:label "Source Tissue Type"@en .
 
 
 ###  http://archaeonatural.cloud/ont/SpatiotemporalInformation
