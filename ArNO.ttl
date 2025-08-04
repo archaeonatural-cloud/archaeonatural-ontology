@@ -150,6 +150,15 @@ xsd:gYear rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://archaeology.link/ontology#PlaceOfInterest
+lado:PlaceOfInterest rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf geosparql:hasGeometry ;
+                     rdfs:domain geosparql:Feature ;
+                     rdfs:range geosparql:Geometry ;
+                     rdfs:comment "c.f. https://www.ogc.org/standards/geosparql, 1.0, OGC GeoSPARQL - A Geographic Query Language for RDF Data, 11-052r4, Annex B, B.1"@en ;
+                     rdfs:label "place of interest"@en .
+
+
 ###  http://archaeology.link/ontology#hasEntity
 lado:hasEntity rdf:type owl:ObjectProperty ;
                rdfs:domain lado:Actor ;
@@ -213,6 +222,14 @@ www:datingInformation rdf:type owl:ObjectProperty ;
                       rdfs:label "dating information"@en .
 
 
+###  http://archaeonatural.cloud/ont/externalIdentifier
+www:externalIdentifier rdf:type owl:ObjectProperty ;
+                       rdfs:domain owl:Thing ;
+                       rdfs:range <https://www.w3.org/2000/01/rdf-schema#Resource> ;
+                       rdfs:comment "links a node to a resource in the LOD cloud"@en ;
+                       rdfs:label "external identifier"@en .
+
+
 ###  http://archaeonatural.cloud/ont/first
 www:first rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf www:relatedToaDNASample ;
@@ -227,14 +244,6 @@ www:foundAtDiscoverySite rdf:type owl:ObjectProperty ;
                          rdfs:range www:DiscoverySite ;
                          rdfs:comment "discovery site where a sample was found"@en ;
                          rdfs:label "found at disovery site"@en .
-
-
-###  http://archaeonatural.cloud/ont/fromDataset
-www:fromDataset rdf:type owl:ObjectProperty ;
-                rdfs:domain www:Sample ;
-                rdfs:range www:Dataset ;
-                rdfs:comment "links a sample to the datasets it is originally from"@en ;
-                rdfs:label "from dataset"@en .
 
 
 ###  http://archaeonatural.cloud/ont/fromGeneticSourceAccession
@@ -326,6 +335,15 @@ www:hasPrimaryContact rdf:type owl:ObjectProperty ;
                       rdfs:range www:Person ;
                       rdfs:comment "relates an aDNA sample to the person responsible for it"@en ;
                       rdfs:label "has primary contact"@en .
+
+
+###  http://archaeonatural.cloud/ont/hasRepresentativePoint
+www:hasRepresentativePoint rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf lado:PlaceOfInterest ;
+                           rdfs:domain geosparql:Feature ;
+                           rdfs:range geosparql:Geometry ;
+                           rdfs:comment "connects a spatial object to its representative point, might be an averaged representation for higher-level concepts"@en ;
+                           rdfs:label "has representative point"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasSNPCount
@@ -516,16 +534,6 @@ www:preparedByPreparationPipeline rdf:type owl:ObjectProperty ;
                                   rdfs:range www:PreparationPipeline ;
                                   rdfs:comment "realtes an aDNA sample with the computational pipeline used to create it"@en ;
                                   rdfs:label "prepared by preparation pipeline"@en .
-
-
-###  http://archaeonatural.cloud/ont/publishedInYear
-www:publishedInYear rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty ,
-                                       time:hasTime ;
-                    rdfs:domain www:Literature ;
-                    rdfs:range www:Year ;
-                    rdfs:comment "links a literature publication event to the year it happened"@en ;
-                    rdfs:label "published in year"@en .
 
 
 ###  http://archaeonatural.cloud/ont/publishedSample
@@ -884,7 +892,6 @@ www:hasEDTFTimePeriod rdf:type owl:DatatypeProperty ;
 www:hasEDTFYear rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf www:hasEDTFTemporalInformation ,
                                    edtf:inEDTFDateTime ;
-                rdfs:domain www:Year ;
                 rdfs:range <http://id.loc.gov/datatypes/edtf/EDTF> ;
                 rdfs:comment "EDTF year description assigned to a year"@en ;
                 rdfs:label "has EDTF year"@en .
@@ -1038,7 +1045,6 @@ www:hasValue rdf:type owl:DatatypeProperty ;
 
 ###  http://archaeonatural.cloud/ont/hasVersion
 www:hasVersion rdf:type owl:DatatypeProperty ;
-               rdfs:domain www:Dataset ;
                rdfs:range rdfs:Literal ;
                rdfs:comment "denotes the version (package version in Poseidon) of a dataset"@en ;
                rdfs:label "has version"@en .
@@ -1118,6 +1124,12 @@ time:inXSDgYear rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:gYear ;
                 rdfs:comment "Position of an instant, expressed using xsd:gYear"@en ;
                 rdfs:label "in XSD gYear"@en .
+
+
+###  http://www.w3.org/2006/time#year
+time:year rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Year position in a calendar-clock system. The range of this property is not specified, so can be replaced by any specific representation of a calendar year from any calendar."@en ;
+          rdfs:label "year"@en .
 
 
 ###  http://www.w3.org/ns/prov#endedAtTime
@@ -1274,13 +1286,6 @@ www:Damage rdf:type owl:Class ;
                            obo:PATO_0001020 ;
            rdfs:label "% damage on the 5' end for the main shotgun library used for sequencing and/or capture, in case of multiple libraries a value from the merged read alignment should be reported"@en ,
                       "Damage"@en .
-
-
-###  http://archaeonatural.cloud/ont/Dataset
-www:Dataset rdf:type owl:Class ;
-            rdfs:subClassOf crm:E73_Information_Object ;
-            rdfs:comment "This class describes a dataset that a data may be related to"@en ;
-            rdfs:label "Dataset"@en .
 
 
 ###  http://archaeonatural.cloud/ont/Dating
@@ -1529,14 +1534,6 @@ www:YHaplogroupMeasurement rdf:type owl:Class ;
                            rdfs:label "Y-Haplogroup Measurement"@en .
 
 
-###  http://archaeonatural.cloud/ont/Year
-www:Year rdf:type owl:Class ;
-         rdfs:subClassOf crm:E52_Time-Span ,
-                         time:Instant ;
-         rdfs:comment "Simplest time entity defined by a  year in BC/AD"@en ;
-         rdfs:label "Year"@en .
-
-
 ###  http://archaeonatural.cloud/ont/aDNASample
 www:aDNASample rdf:type owl:Class ;
                rdfs:subClassOf www:BiologicalSample ;
@@ -1549,6 +1546,18 @@ www:aDNASampleRelation rdf:type owl:Class ;
                        rdfs:subClassOf crm:E1_CRM_Entity ;
                        rdfs:comment "This Reification Class is used  to store attributes of the relationship between aDNA samples"@en ;
                        rdfs:label "aDNA sample relation"@en .
+
+
+###  http://archaeonatural.cloud/ont/externalIdentifierType
+www:externalIdentifierType rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                 owl:oneOf ( www:Geonames
+                                                             www:Wikidata
+                                                           )
+                                               ] ;
+                           rdfs:subClassOf skos:Concept ;
+                           rdfs:comment "typing of external ressources"@en ;
+                           rdfs:label "External Identifier Type"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000001
@@ -2146,6 +2155,16 @@ crmdig:D7_Digital_Machine_Event rdf:type owl:Class ;
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://archaeonatural.cloud/ont/Geonames
+www:Geonames rdf:type owl:NamedIndividual ,
+                      www:externalIdentifierType .
+
+
+###  http://archaeonatural.cloud/ont/Wikidata
+www:Wikidata rdf:type owl:NamedIndividual ,
+                      www:externalIdentifierType .
+
 
 ###  http://archaeonatural.cloud/ont/GeneticSex/Unknown
 <http://archaeonatural.cloud/ont/GeneticSex/Unknown> rdf:type owl:NamedIndividual .
