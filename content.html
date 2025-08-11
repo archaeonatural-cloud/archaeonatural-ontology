@@ -278,14 +278,10 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
       <li><a href="#CaptureType">Capture Type</a></li>
       <li><a href="#Contamination">Contamination</a></li>
       <li><a href="#ContaminationMeasure">Contamination Measure</a></li>
-      <li><a href="#Count">Count</a></li>
       <li><a href="#Country">Country</a></li>
-      <li><a href="#Damage">Damage</a></li>
       <li><a href="#Dating">Dating</a></li>
-      <li><a href="#DatingMedian">Dating Median</a></li>
       <li><a href="#DatingType">Dating Type</a></li>
       <li><a href="#DiscoverySite">Discovery Site</a></li>
-      <li><a href="#EndogenousDNA">Endogenous DNA</a></li>
       <li><a href="#GeneticSex">Genetic Sex</a></li>
       <li><a href="#GeneticSourceAccession">Genetic Source Accession</a></li>
       <li><a href="#GenomicLibrary">Genomic Library</a></li>
@@ -293,23 +289,19 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
       <li><a href="#Group">Group</a></li>
       <li><a href="#HaplogroupMeasurement">Haplogroup Measurement</a></li>
       <li><a href="#Journal">Journal</a></li>
-      <li><a href="#LibraryCount">Library Count</a></li>
       <li><a href="#LibraryStrandedness">Library Strandedness</a></li>
       <li><a href="#Literature">Literature</a></li>
       <li><a href="#MT-HaplogroupMeasurement">MT-Haplogroup Measurement</a></li>
-      <li><a href="#Percentage">Percentage</a></li>
       <li><a href="#Person">Person</a></li>
       <li><a href="#Place">Place</a></li>
       <li><a href="#PreparationPipeline">Preparation Pipeline</a></li>
-      <li><a href="#SNPCount">SNP Count</a></li>
-      <li><a href="#SNPCoverage">SNP Coverage</a></li>
       <li><a href="#Sample">Sample</a></li>
       <li><a href="#Site">Site</a></li>
       <li><a href="#SourceTissue">Source Tissue</a></li>
       <li><a href="#SourceTissueType">Source Tissue Type</a></li>
-      <li><a href="#SpatiotemporalInformation">Spatiotemporal Information</a></li>
       <li><a href="#TimePeriod">Time Period</a></li>
       <li><a href="#UDGTreatment">UDG Treatment</a></li>
+      <li><a href="#UnknownEntity">Unknown Entity</a></li>
       <li><a href="#Y-HaplogroupMeasurement">Y-Haplogroup Measurement</a></li>
       <li><a href="#ancientDNASample">ancient DNA Sample</a></li>
       <li><a href="#aDNAsamplerelation">aDNA sample relation</a></li>
@@ -320,7 +312,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
       <li><a href="http://purl.obolibrary.org/obo/PATO_0000025">obo:PATO_0000025</a></li>
       <li><a href="http://purl.obolibrary.org/obo/PATO_0000051">obo:PATO_0000051</a></li>
       <li><a href="http://purl.obolibrary.org/obo/PATO_0000141">obo:PATO_0000141</a></li>
-      <li><a href="http://purl.obolibrary.org/obo/PATO_0001020">obo:PATO_0001020</a></li>
       <li><a href="http://purl.obolibrary.org/obo/PATO_0001241">obo:PATO_0001241</a></li>
       <li><a href="http://purl.obolibrary.org/obo/PATO_0001374">obo:PATO_0001374</a></li>
       <li><a href="http://purl.obolibrary.org/obo/PATO_0001396">obo:PATO_0001396</a></li>
@@ -509,9 +500,9 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://archaeology.link/ontology#RepositoryLocation">lado:RepositoryLocation</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://archaeology.link/ontology#KilnRegion">lado:KilnRegion</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://archaeology.link/ontology#DiscoverySite">lado:DiscoverySite</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://archaeology.link/ontology#KilnRegion">lado:KilnRegion</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://archaeology.link/ontology#RepositoryLocation">lado:RepositoryLocation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -628,8 +619,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <th>In domain of</th>
                 <td>
                     <a href="#hasgeneticsex">has genetic sex</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#ofsourcetissue">of source tissue</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#datedby">dated by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#ofsourcetissue">of source tissue</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -653,13 +644,16 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E16_Measurement">crm:E16_Measurement</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Dating">Dating</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
-                <th>In range of</th>
+                <th>In domain of</th>
                 <td>
-                    <a href="#hasC14dating">has C14 dating</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasuncalibrateddate">has uncalibrated date</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#c14datinginformation">c14 dating information</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#haslabnumber">has lab number</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasdatingerror">has dating error</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -721,6 +715,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <th>In domain of</th>
                 <td>
                     <a href="#usedcontaminationmeasure">used contamination measure</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hascontaminationerror">has contamination error</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#measuredcontamination">measured contamination</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -752,44 +747,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <th>In range of</th>
                 <td>
                     <a href="#usedcontaminationmeasure">used contamination measure</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="Count">
-        <h3>
-          Count<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Count" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/Count</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>Simple measurements of obtaining a number of units.</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E16_Measurement">crm:E16_Measurement</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Sub-classes</th>
-                <td>
-                    <a href="#LibraryCount">Library Count</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#SNPCount">SNP Count</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#hascount">has count</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#counted">counted</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -830,31 +787,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </tr>
         </table>
     </div>
-    <div class="entity class" id="Damage">
-        <h3>
-          Damage<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Damage" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/Damage</code></td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="http://purl.obolibrary.org/obo/PATO_0001020">obo:PATO_0001020</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#Percentage">Percentage</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#measureddamage">measured damage</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="Dating">
         <h3>
           Dating<sup title="class" class="sup-c">c</sup>
@@ -878,12 +810,16 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 </td>
             </tr>
             <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#C14Dating">C14 Dating</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>In domain of</th>
                 <td>
                     <a href="#observedtimeperiod">observed time period</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#datinginformation">dating information</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasdatingmedian">has dating median</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasC14dating">has C14 dating</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasdatingtype">has dating type</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -891,36 +827,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
                 <th>In range of</th>
                 <td>
                     <a href="#datedby">dated by</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="DatingMedian">
-        <h3>
-          Dating Median<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DatingMedian" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/DatingMedian</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>median age of the sample in years BC/AD, for C14-dated samples median, for contextually dated samples simple mid-point of the archaeological intervals, 2000 for modern samples</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E16_Measurement">crm:E16_Measurement</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
-                    <a href="#hasdatingmedian">has dating median</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -991,36 +897,6 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             </tr>
         </table>
     </div>
-    <div class="entity class" id="EndogenousDNA">
-        <h3>
-          Endogenous DNA<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#EndogenousDNA" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/EndogenousDNA</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>% endogenous DNA as estimated from SG libraries (before capture) as for example estimated by EAGER, not on target and no quality filter</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#Percentage">Percentage</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#measuredendogenousDNA">measured endogenous DNA</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="GeneticSex">
         <h3>
           Genetic Sex<sup title="class" class="sup-c">c</sup>
@@ -1082,8 +958,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#partofgeneticsourceaccession">part of genetic source accession</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#fromgeneticsourceaccession">from genetic source accession</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#partofgeneticsourceaccession">part of genetic source accession</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1205,14 +1081,13 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#Y-HaplogroupMeasurement">Y-Haplogroup Measurement</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#MT-HaplogroupMeasurement">MT-Haplogroup Measurement</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Y-HaplogroupMeasurement">Y-Haplogroup Measurement</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#hashaplogroup">has haplogroup</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#measuredhaplogroup">measured haplogroup</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -1244,36 +1119,6 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
                 <th>In range of</th>
                 <td>
                     <a href="#injournal">in journal</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="LibraryCount">
-        <h3>
-          Library Count<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#LibraryCount" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/LibraryCount</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>number of libraries produced for the sample</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#Count">Count</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#haslibrarycount">has library count</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1333,10 +1178,11 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="#injournal">in journal</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#publishedinyear">published in year</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hastitle">has title</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#hasDOI">has DOI</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#publishedsample">published sample</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hastitle">has title</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#injournal">in journal</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#writtenby">written by</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -1372,44 +1218,6 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             </tr>
         </table>
     </div>
-    <div class="entity class" id="Percentage">
-        <h3>
-          Percentage<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Percentage" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/Percentage</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>Measurement obtaining a percentage value</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E16_Measurement">crm:E16_Measurement</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Sub-classes</th>
-                <td>
-                    <a href="#EndogenousDNA">Endogenous DNA</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#Damage">Damage</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#haspercentage">has percentage</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#measuredpercentage">measured percentage</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="Person">
         <h3>
           Person<sup title="class" class="sup-c">c</sup>
@@ -1441,8 +1249,8 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#writtenby">written by</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasprimarycontact">has primary contact</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#writtenby">written by</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1513,67 +1321,6 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             </tr>
         </table>
     </div>
-    <div class="entity class" id="SNPCount">
-        <h3>
-          SNP Count<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SNPCount" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/SNPCount</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>number of non-missing SNPs for the sample, counted on the SNP-set stored in the Poseidon package</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#Count">Count</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#hasSNPcount">has SNP count</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="SNPCoverage">
-        <h3>
-          SNP Coverage<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SNPCoverage" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/SNPCoverage</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>average X-fold coverage across targeted SNP sites after quality filtering</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E16_Measurement">crm:E16_Measurement</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#measuredSNPcoverage">measured SNP coverage</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasaveragevalue">has average value</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="Sample">
         <h3>
           Sample<sup title="class" class="sup-c">c</sup>
@@ -1605,9 +1352,9 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#partofgroup">part of group</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasspatiotemporalinformation">has spatiotemporal information</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#foundatdisoverysite">found at disovery site</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#partofgroup">part of group</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#samplemeasurements">sample measurements</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#hascollectionID">has collection ID</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
@@ -1716,38 +1463,6 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             </tr>
         </table>
     </div>
-    <div class="entity class" id="SpatiotemporalInformation">
-        <h3>
-          Spatiotemporal Information<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SpatiotemporalInformation" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/SpatiotemporalInformation</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>Information containing of time period and geolocation information, thus forming a point in a 4-dimensional spatiotemporal feature space</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geosparql:SpatialObject</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume">crm:E92_Spacetime_Volume</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In range of</th>
-                <td>
-                    <a href="#hasspatiotemporalinformation">has spatiotemporal information</a><sup class="sup-op" title="object property">op</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="TimePeriod">
         <h3>
           Time Period<sup title="class" class="sup-c">c</sup>
@@ -1769,12 +1484,6 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
                 <td>
                     <a href="http://www.w3.org/2006/time#Interval">time:Interval</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span">crm:E52_Time-Span</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#hasEDTFtimeperiod">has EDTF time period</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1811,6 +1520,30 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
                 <th>In range of</th>
                 <td>
                     <a href="#hasUDGtreatment">has UDG treatment</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="UnknownEntity">
+        <h3>
+          Unknown Entity<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#UnknownEntity" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://archaeonatural.cloud/ont/Unknown</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Entity type for blank nodes created for missing data values to allow transitive information modelling - e.g., connect Discovery Site and Location via a blank node Site if there is no Site information in the data</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity">crm:E1_CRM_Entity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1870,28 +1603,29 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="#measuredendogenousDNA">measured endogenous DNA</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#haslibrarycount">has library count</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#hasgenotypeploidy">has genotype ploidy</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#haslibrarystrandedness">has library strandedness</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasUDGtreatment">has UDG treatment</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#fromgeneticsourceaccession">from genetic source accession</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#partofgenomiclibrary">part of genomic library</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasprimarycontact">has primary contact</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hascapturetype">has capture type</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#preparedbypreparationpipeline">prepared by preparation pipeline</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#relatedtoaDNAsample">related to aDNA sample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#fromgeneticsourceaccession">from genetic source accession</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hascapturetype">has capture type</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#measureddamage">measured damage</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#measuredSNPcoverage">measured SNP coverage</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#haslibrarystrandedness">has library strandedness</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasSNPcount">has SNP count</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#relatestoaDNAsample">relates to aDNA sample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasprimarycontact">has primary contact</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#partofgenomiclibrary">part of genomic library</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#measuredendogenousDNA">measured endogenous DNA</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#measuredSNPcoverage">measured SNP coverage</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#relatedtoaDNAsample">related to aDNA sample</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#measureddamage">measured damage</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#relatestoaDNAsample">relates to aDNA sample</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasSNPcount">has SNP count</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#relatedbyaDNAsample">related by  aDNA sample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#measuredMT-haplogroup">measured MT-haplogroup</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#measuredY-haplogroup">measured Y-haplogroup</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#measuredhaplogroup">measured haplogroup</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#haslibrarycount">has library count</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1921,14 +1655,16 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             <tr>
                 <th>In domain of</th>
                 <td>
+                    <a href="#relatedbyaDNAsample">related by  aDNA sample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#aDNAsamplerelationshipproperties">aDNA sample relationship properties</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#hasrelationshiptype">has relationship type</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#relatestoaDNAsample">relates to aDNA sample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasrelationshipdegree">has relationship degree</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#relatedtoaDNAsample">related to aDNA sample</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#relatestoaDNAsample">relates to aDNA sample</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1958,8 +1694,8 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             <tr>
                 <th>Members</th>
                 <td>
-                    <a href="http://archaeonatural.cloud/ont/Wikidata">www:Wikidata</a><br/>
-                    <a href="http://archaeonatural.cloud/ont/Geonames">www:Geonames</a><br/>
+                    <a href="http://archaeonatural.cloud/ExternalIdentifier_Wikidata">http://archaeonatural.cloud/ExternalIdentifier_Wikidata</a><br/>
+                    <a href="http://archaeonatural.cloud/ont_Geonames">http://archaeonatural.cloud/ont_Geonames</a><br/>
                 </td>
             </tr>
         </table>
@@ -2139,38 +1875,7 @@ for Poseidon it should follow the geographic-temporal nomenclature proposed by E
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://purl.obolibrary.org/obo/PATO_0001020">obo:PATO_0001020</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.obolibrary.org/obo/PATO_0000025">obo:PATO_0000025</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="PATOdamage">
-        <h3>
-          PATO damage<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#PATOdamage" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://purl.obolibrary.org/obo/PATO_0001020</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>A structural quality inhering in a bearer by virtue of whether the bearer has been harmed or injured or spoiled.</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="http://purl.obolibrary.org/obo/PATO_0000141">obo:PATO_0000141</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Sub-classes</th>
-                <td>
-                    <a href="#Damage">Damage</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2637,31 +2342,24 @@ Regardless whether a measurement is made by an instrument or by human senses, it
                 <th>Sub-classes</th>
                 <td>
                     <a href="#HaplogroupMeasurement">Haplogroup Measurement</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#C14Dating">C14 Dating</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#Percentage">Percentage</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#SNPCoverage">SNP Coverage</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#DatingMedian">Dating Median</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#Count">Count</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Contamination">Contamination</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#haslabnumber">has lab number</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#measurederror">measured error</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#hastextualvalue">has textual value</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#hasvalue">has value</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#hasnumericvalue">has numeric value</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P39_measured">crm:P39_measured</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasnumericvalue">has numeric value</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="PhysicalThing">
+    <div class="entity class" id="E18PhysicalThing">
         <h3>
-          Physical Thing<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#PhysicalThing" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E18 Physical Thing<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E18PhysicalThing" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -2694,25 +2392,27 @@ The CIDOC CRM is generally not concerned with amounts of matter in fluid or gase
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of">crm:P46i_forms_part_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper">crm:P49_has_former_or_current_keeper</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">crm:P46_is_composed_of</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location">crm:P53_has_former_or_current_location</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper">crm:P50_has_current_keeper</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of">crm:P46i_forms_part_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of">crm:P46i_forms_part_of</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#measuredpercentage">measured percentage</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P39_measured">crm:P39_measured</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">crm:P46_is_composed_of</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="PhysicalObject">
+    <div class="entity class" id="E19PhysicalObject">
         <h3>
-          Physical Object<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#PhysicalObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E19 Physical Object<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E19PhysicalObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -2773,21 +2473,24 @@ The decision as to what is documented as a complete item, rather than by its par
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="http://purl.obolibrary.org/obo/PATO_0000001">obo:PATO_0000001</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#UnknownEntity">Unknown Entity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span">crm:E52_Time-Span</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#aDNAsamplerelation">aDNA sample relation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item">crm:E77_Persistent_Item</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity">crm:E2_Temporal_Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume">crm:E92_Spacetime_Volume</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://pleiades.stoa.org/places/vocab#Place">pleiades:Place</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.obolibrary.org/obo/PATO_0000001">obo:PATO_0000001</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item">crm:E77_Persistent_Item</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume">crm:E92_Spacetime_Volume</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">crm:P2_has_type</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#haserror">has error</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#hasnote">has note</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P3_has_note">crm:P3_has_note</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">crm:P2_has_type</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2799,10 +2502,10 @@ The decision as to what is documented as a complete item, rather than by its par
             </tr>
         </table>
     </div>
-    <div class="entity class" id="BiologicalObject">
+    <div class="entity class" id="E20BiologicalObject">
         <h3>
-          Biological Object<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#BiologicalObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E20 Biological Object<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E20BiologicalObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -2825,15 +2528,15 @@ Artificial objects that incorporate biological elements, such as Victorian butte
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E21_Person">crm:E21_Person</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.obolibrary.org/obo/UBERON_0000479">obo:UBERON_0000479</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#BiologicalSample">Biological Sample</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E21_Person">crm:E21_Person</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#haskeywords">has keywords</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#haskeyword">has keyword</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2871,10 +2574,10 @@ In a bibliographic context, a name presented following the conventions usually e
             </tr>
         </table>
     </div>
-    <div class="entity class" id="PhysicalFeature">
+    <div class="entity class" id="E26PhysicalFeature">
         <h3>
-          Physical Feature<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#PhysicalFeature" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E26 Physical Feature<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E26PhysicalFeature" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -2904,10 +2607,10 @@ This definition coincides with the definition of “fiat objects”, with the ex
             </tr>
         </table>
     </div>
-    <div class="entity class" id="E27_Site">
+    <div class="entity class" id="E27Site">
         <h3>
-          Site<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E27_Site" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E27 Site<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E27Site" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -2936,10 +2639,10 @@ Instances of E27 Site are composed of relatively immobile material items and fea
             </tr>
         </table>
     </div>
-    <div class="entity class" id="ConceptualObject">
+    <div class="entity class" id="E28ConceptualObject">
         <h3>
-          Conceptual Object<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#ConceptualObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E28 Conceptual Object<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E28ConceptualObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -2963,18 +2666,18 @@ They cannot be destroyed. They exist as long as they can be found on at least on
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object">crm:E89_Propositional_Object</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object">crm:E90_Symbolic_Object</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Group">Group</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E55_Type">crm:E55_Type</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object">crm:E89_Propositional_Object</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object">crm:E90_Symbolic_Object</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="DesignorProcedure">
+    <div class="entity class" id="E29DesignorProcedure">
         <h3>
-          Design or Procedure<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DesignorProcedure" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E29 Design or Procedure<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E29DesignorProcedure" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -3039,10 +2742,10 @@ In some contexts, such phenomena are also called perdurants. This class is disjo
             </tr>
         </table>
     </div>
-    <div class="entity class" id="Document">
+    <div class="entity class" id="E31Document">
         <h3>
-          Document<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Document" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E31 Document<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E31Document" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -3099,13 +2802,14 @@ The CRM does not attempt to model the inadvertent actions of such actors. Indivi
                 <td>
                     <a href="http://archaeology.link/ontology#Actor">lado:Actor</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://xmlns.com/foaf/0.1/Organization">foaf:Organization</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/prov#SoftwareAgent">prov:SoftwareAgent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper">crm:P50_has_current_keeper</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper">crm:P49_has_former_or_current_keeper</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -3136,8 +2840,8 @@ Another specific case of an instance of E4 Period is the actual extent of the se
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity">crm:E2_Temporal_Entity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume">crm:E92_Spacetime_Volume</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity">crm:E2_Temporal_Entity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -3178,12 +2882,6 @@ When used as a common E52 Time-Span for two events, it will nevertheless describ
                 <th>Sub-classes</th>
                 <td>
                     <a href="#TimePeriod">Time Period</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P170i_time_is_defined_by">crm:P170i_time_is_defined_by</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3234,10 +2932,10 @@ Any instance of E18 Physical Thing can serve as a frame of reference for an inst
             </tr>
         </table>
     </div>
-    <div class="entity class" id="Type">
+    <div class="entity class" id="E55Type">
         <h3>
-          Type<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Type" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E55 Type<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E55Type" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -3261,12 +2959,6 @@ E55 Type provides an interface to domain specific ontologies and thesauri. These
                 <th>Sub-classes</th>
                 <td>
                     <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>In domain of</th>
-                <td>
-                    <a href="#hastypeexpression">has type expression</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -3341,10 +3033,10 @@ Viewed at a coarse level of detail, an instance of E5 Event may appear as if it 
             </tr>
         </table>
     </div>
-    <div class="entity class" id="E70_Thing">
+    <div class="entity class" id="E70Thing">
         <h3>
-          Thing<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E70_Thing" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E70 Thing<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E70Thing" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -3367,8 +3059,8 @@ They may be intellectual products or physical things. They may, for instance, ha
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing">crm:E71_Human-Made_Thing</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object">crm:E72_Legal_Object</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing">crm:E71_Human-Made_Thing</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -3379,10 +3071,10 @@ They may be intellectual products or physical things. They may, for instance, ha
             </tr>
         </table>
     </div>
-    <div class="entity class" id="Human-MadeThing">
+    <div class="entity class" id="E71Human-MadeThing">
         <h3>
-          Human-Made Thing<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Human-MadeThing" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E71 Human-Made Thing<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E71Human-MadeThing" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -3410,10 +3102,10 @@ These items are either intellectual products or human-made physical things, and 
             </tr>
         </table>
     </div>
-    <div class="entity class" id="LegalObject">
+    <div class="entity class" id="E72LegalObject">
         <h3>
-          Legal Object<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#LegalObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E72 Legal Object<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E72LegalObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -3442,10 +3134,10 @@ This is generally true for all instances of E18 Physical Thing. In the case of i
             </tr>
         </table>
     </div>
-    <div class="entity class" id="InformationObject">
+    <div class="entity class" id="E73InformationObject">
         <h3>
-          Information Object<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#InformationObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E73 Information Object<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E73InformationObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -3463,15 +3155,15 @@ Instances of E73 Information Object of a linguistic nature should be declared as
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object">crm:E89_Propositional_Object</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object">crm:E90_Symbolic_Object</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object">crm:E89_Propositional_Object</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure">crm:E29_Design_or_Procedure</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E31_Document">crm:E31_Document</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure">crm:E29_Design_or_Procedure</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -3511,9 +3203,9 @@ An instance of E77 Persistent Item does not require actual knowledge of the iden
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="http://purl.org/dc/terms/Agent">dct:Agent</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E70_Thing">crm:E70_Thing</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/dc/terms/Agent">dct:Agent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -3550,18 +3242,18 @@ This notion includes complex, composite, and long-lasting actions such as the bu
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">crm:E13_Attribute_Assignment</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#Dating">Dating</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E65_Creation">crm:E65_Creation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E11_Modification">crm:E11_Modification</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">crm:E13_Attribute_Assignment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Dating">Dating</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="PropositionalObject">
+    <div class="entity class" id="E89PropositionalObject">
         <h3>
-          Propositional Object<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#PropositionalObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E89 Propositional Object<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E89PropositionalObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -3595,10 +3287,10 @@ This class also comprises items that are “about” something in the sense of a
             </tr>
         </table>
     </div>
-    <div class="entity class" id="SymbolicObject">
+    <div class="entity class" id="E90SymbolicObject">
         <h3>
-          Symbolic Object<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SymbolicObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          E90 Symbolic Object<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#E90SymbolicObject" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -3616,8 +3308,8 @@ In some cases, the content of an instance of E90 Symbolic Object may completely 
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object">crm:E28_Conceptual_Object</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object">crm:E72_Legal_Object</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object">crm:E28_Conceptual_Object</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -3654,7 +3346,6 @@ In some cases, the content of an instance of E90 Symbolic Object may completely 
                 <th>Sub-classes</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E4_Period">crm:E4_Period</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#SpatiotemporalInformation">Spatiotemporal Information</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3728,9 +3419,9 @@ In some cases, the content of an instance of E90 Symbolic Object may completely 
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geosparql:hasGeometry</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://archaeology.link/ontology#PlaceOfInterest">lado:PlaceOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="#hasrepresentativepoint">has representative point</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://archaeology.link/ontology#PlaceOfInterest">lado:PlaceOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geosparql:hasGeometry</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3761,16 +3452,15 @@ In some cases, the content of an instance of E90 Symbolic Object may completely 
                 <th>Sub-classes</th>
                 <td>
                     <a href="https://pleiades.stoa.org/places/vocab#Location">pleiades:Location</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#SpatiotemporalInformation">Spatiotemporal Information</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.opengis.net/ont/geosparql#Geometry">geosparql:Geometry</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#Feature">geosparql:Feature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#Geometry">geosparql:Geometry</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#asWKT">geosparql:asWKT</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#asGeoJSON">geosparql:asGeoJSON</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#asWKT">geosparql:asWKT</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3853,15 +3543,15 @@ The boundary of a Point is the empty set.</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#DatingType">Dating Type</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#GeneticSourceAccession">Genetic Source Accession</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#CaptureType">Capture Type</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#LibraryStrandedness">Library Strandedness</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#ExternalIdentifierType">External Identifier Type</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.obolibrary.org/obo/GSSO_000114">obo:GSSO_000114</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#GeneticSourceAccession">Genetic Source Accession</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#UDGTreatment">UDG Treatment</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#GenotypePloidy">Genotype Ploidy</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#SourceTissueType">Source Tissue Type</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#UDGTreatment">UDG Treatment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#DatingType">Dating Type</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ExternalIdentifierType">External Identifier Type</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3892,14 +3582,15 @@ The boundary of a Point is the empty set.</p>
                 <th>In domain of</th>
                 <td>
                     <a href="http://www.w3.org/2006/time#inXSDgYear">time:inXSDgYear</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime">edtf:inEDTFDateTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
                     <a href="http://www.w3.org/2006/time#hasEnd">time:hasEnd</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasmedian">has median</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/2006/time#hasBeginning">time:hasBeginning</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#publishedinyear">published in year</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -3965,17 +3656,16 @@ The boundary of a Point is the empty set.</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/2006/time#Interval">time:Interval</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#SpatiotemporalInformation">Spatiotemporal Information</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
                     <a href="http://www.w3.org/2006/time#hasEnd">time:hasEnd</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasmedian">has median</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/2006/time#hasBeginning">time:hasBeginning</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="#hasEDTFtemporalinformation">has EDTF temporal information</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -4012,17 +3702,17 @@ The boundary of a Point is the empty set.</p>
                 <th>In domain of</th>
                 <td>
                     <a href="http://www.w3.org/ns/prov#wasAssociatedWith">prov:wasAssociatedWith</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/prov#endedAtTime">prov:endedAtTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="http://www.w3.org/ns/prov#wasInformedBy">prov:wasInformedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/prov#startedAtTime">prov:startedAtTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#wasInformedBy">prov:wasInformedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/prov#used">prov:used</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#endedAtTime">prov:endedAtTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.w3.org/ns/prov#wasInformedBy">prov:wasInformedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/prov#wasGeneratedBy">prov:wasGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#wasInformedBy">prov:wasInformedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -4058,9 +3748,9 @@ The boundary of a Point is the empty set.</p>
             <tr>
                 <th>In range of</th>
                 <td>
+                    <a href="http://www.w3.org/ns/prov#wasAttributedTo">prov:wasAttributedTo</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/prov#wasAssociatedWith">prov:wasAssociatedWith</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/prov#actedOnBehalfOf">prov:actedOnBehalfOf</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/prov#wasAttributedTo">prov:wasAttributedTo</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -4090,16 +3780,16 @@ The boundary of a Point is the empty set.</p>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.w3.org/ns/prov#wasAttributedTo">prov:wasAttributedTo</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/prov#wasGeneratedBy">prov:wasGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/prov#wasDerivedFrom">prov:wasDerivedFrom</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#wasGeneratedBy">prov:wasGeneratedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#wasAttributedTo">prov:wasAttributedTo</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://www.w3.org/ns/prov#used">prov:used</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/prov#wasDerivedFrom">prov:wasDerivedFrom</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#used">prov:used</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -4280,9 +3970,9 @@ The boundary of a Point is the empty set.</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="http://archaeology.link/ontology#Location">lado:Location</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#DiscoverySite">Discovery Site</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Site">Site</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://archaeology.link/ontology#Location">lado:Location</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -4414,51 +4104,38 @@ digital input, the software and the generic properties of the device.</p>
         <li><a href="#interactswith">interacts with</a></li>
         <li><a href="#atplace">at place</a></li>
         <li><a href="#atsite">at site</a></li>
-        <li><a href="#counted">counted</a></li>
+        <li><a href="#closematch">close match</a></li>
         <li><a href="#datedby">dated by</a></li>
         <li><a href="#datinginformation">dating information</a></li>
         <li><a href="#externalidentifier">external identifier</a></li>
-        <li><a href="#first">first</a></li>
         <li><a href="#foundatdisoverysite">found at disovery site</a></li>
         <li><a href="#fromgeneticsourceaccession">from genetic source accession</a></li>
-        <li><a href="#hasC14dating">has C14 dating</a></li>
         <li><a href="#hascapturetype">has capture type</a></li>
-        <li><a href="#hasdatingmedian">has dating median</a></li>
         <li><a href="#hasdatingtype">has dating type</a></li>
         <li><a href="#hasgeneticsex">has genetic sex</a></li>
         <li><a href="#hasgenotypeploidy">has genotype ploidy</a></li>
-        <li><a href="#haslibrarycount">has library count</a></li>
         <li><a href="#haslibrarystrandedness">has library strandedness</a></li>
+        <li><a href="#hasmedian">has median</a></li>
         <li><a href="#hasprimarycontact">has primary contact</a></li>
         <li><a href="#hasrepresentativepoint">has representative point</a></li>
-        <li><a href="#hasSNPcount">has SNP count</a></li>
         <li><a href="#hassourcetissuetype">has source tissue type</a></li>
-        <li><a href="#hasspatiotemporalinformation">has spatiotemporal information</a></li>
         <li><a href="#hasUDGtreatment">has UDG treatment</a></li>
-        <li><a href="#identical">identical</a></li>
         <li><a href="#incountry">in country</a></li>
         <li><a href="#injournal">in journal</a></li>
         <li><a href="#measuredcontamination">measured contamination</a></li>
-        <li><a href="#measureddamage">measured damage</a></li>
-        <li><a href="#measuredendogenousDNA">measured endogenous DNA</a></li>
         <li><a href="#measuredhaplogroup">measured haplogroup</a></li>
         <li><a href="#measuredMT-haplogroup">measured MT-haplogroup</a></li>
-        <li><a href="#measuredpercentage">measured percentage</a></li>
-        <li><a href="#measuredSNPcoverage">measured SNP coverage</a></li>
         <li><a href="#measuredY-haplogroup">measured Y-haplogroup</a></li>
         <li><a href="#observedtimeperiod">observed time period</a></li>
         <li><a href="#ofsourcetissue">of source tissue</a></li>
-        <li><a href="#other">other</a></li>
         <li><a href="#partofgeneticsourceaccession">part of genetic source accession</a></li>
         <li><a href="#partofgenomiclibrary">part of genomic library</a></li>
         <li><a href="#partofgroup">part of group</a></li>
         <li><a href="#preparedbypreparationpipeline">prepared by preparation pipeline</a></li>
+        <li><a href="#publishedinyear">published in year</a></li>
         <li><a href="#publishedsample">published sample</a></li>
-        <li><a href="#relatedtoaDNAsample">related to aDNA sample</a></li>
+        <li><a href="#relatedbyaDNAsample">related by  aDNA sample</a></li>
         <li><a href="#relatestoaDNAsample">relates to aDNA sample</a></li>
-        <li><a href="#second">second</a></li>
-        <li><a href="#sixthtotenth">sixth to tenth</a></li>
-        <li><a href="#thirdtofifth">third to fifth</a></li>
         <li><a href="#usedcontaminationmeasure">used contamination measure</a></li>
         <li><a href="#writtenby">written by</a></li>
         <li><a href="#Creator">Creator</a></li>
@@ -4476,6 +4153,7 @@ digital input, the software and the generic properties of the device.</p>
         <li><a href="#documents">documents</a></li>
         <li><a href="#fallswithin">falls within</a></li>
         <li><a href="#hasgeometry">has geometry</a></li>
+        <li><a href="#Hasclosematch">Has close match</a></li>
         <li><a href="#hasbeginning">has beginning</a></li>
         <li><a href="#hasend">has end</a></li>
         <li><a href="#hastime">has time</a></li>
@@ -4661,31 +4339,37 @@ digital input, the software and the generic properties of the device.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="counted">
-        <h3>counted<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#counted" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+    <div class="entity property" id="closematch">
+        <h3>close match<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#closematch" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/counted</code></td>
+                <td><code>http://archaeonatural.cloud/ont/closeMatch</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>counting a countable number of elements/parts of a physical thing</p>
+                    <p>Matches nodes in the created namespace to nodes from other terminologies</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P39_measured">crm:P39_measured</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="http://www.w3.org/2004/02/skos/core#closeMatch">skos:closeMatch</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="#Count">Count</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -4777,29 +4461,6 @@ digital input, the software and the generic properties of the device.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="first">
-        <h3>first<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#first" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/first</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>The two individuals are closely related – a first degree relationship (e.g. siblings, parent-offspring)</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#relatedtoaDNAsample">related to aDNA sample</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="foundatdisoverysite">
         <h3>found at disovery site<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#foundatdisoverysite" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
@@ -4870,41 +4531,6 @@ digital input, the software and the generic properties of the device.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasC14dating">
-        <h3>has C14 dating<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasC14dating" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasC14Dating</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>assigned C14 dating information if a dating is a radiocarbon dating</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#datinginformation">dating information</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Dating">Dating</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://archaeonatural.cloud/ont/C14Dating">www:C14Dating</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="hascapturetype">
         <h3>has capture type<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#hascapturetype" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
@@ -4940,41 +4566,6 @@ digital input, the software and the generic properties of the device.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasdatingmedian">
-        <h3>has dating median<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasdatingmedian" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasDatingMedian</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>the median date observed by a dating process</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#datinginformation">dating information</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Dating">Dating</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://archaeonatural.cloud/ont/DatingMedian">www:DatingMedian</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="hasdatingtype">
         <h3>has dating type<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#hasdatingtype" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
@@ -4993,8 +4584,8 @@ digital input, the software and the generic properties of the device.</p>
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">crm:P2_has_type</a><sup class="sup-op" title="object property">op</sup>
                     <a href="#datinginformation">dating information</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">crm:P2_has_type</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -5081,41 +4672,6 @@ digital input, the software and the generic properties of the device.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="haslibrarycount">
-        <h3>has library count<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#haslibrarycount" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasLibraryCount</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>relating the number of libraries produced for an aDNA sample to the respective sample</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#counted">counted</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#LibraryCount">Library Count</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://archaeonatural.cloud/ont/aDNASample">www:aDNASample</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="haslibrarystrandedness">
         <h3>has library strandedness<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#haslibrarystrandedness" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
@@ -5147,6 +4703,41 @@ digital input, the software and the generic properties of the device.</p>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://archaeonatural.cloud/ont/LibraryStrandedness">www:LibraryStrandedness</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmedian">
+        <h3>has median<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasmedian" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://archaeonatural.cloud/ont/hasMedian</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Median of a temporal entity.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topObjectProperty">owl:topObjectProperty</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -5221,41 +4812,6 @@ digital input, the software and the generic properties of the device.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasSNPcount">
-        <h3>has SNP count<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasSNPcount" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasSNPCount</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>number of non-missing SNPs to an aDNA sample</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#counted">counted</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#SNPCount">SNP Count</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://archaeonatural.cloud/ont/aDNASample">www:aDNASample</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="hassourcetissuetype">
         <h3>has source tissue type<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#hassourcetissuetype" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
@@ -5291,35 +4847,6 @@ digital input, the software and the generic properties of the device.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasspatiotemporalinformation">
-        <h3>has spatiotemporal information<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasspatiotemporalinformation" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasSpatiotemporalInformation</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>spatiotemporal information that is accociated with a sample</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Sample">Sample</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://archaeonatural.cloud/ont/SpatiotemporalInformation">www:SpatiotemporalInformation</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="hasUDGtreatment">
         <h3>has UDG treatment<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#hasUDGtreatment" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
@@ -5351,29 +4878,6 @@ digital input, the software and the generic properties of the device.</p>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://archaeonatural.cloud/ont/UDGTreatment">www:UDGTreatment</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="identical">
-        <h3>identical<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#identical" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/identical</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>The two samples are from the same individual or from identical twins</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#relatedtoaDNAsample">related to aDNA sample</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
         </table>
@@ -5483,76 +4987,6 @@ digital input, the software and the generic properties of the device.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="measureddamage">
-        <h3>measured damage<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#measureddamage" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/measuredDamage</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>measured % damage on the 5' end for the main shotgun library for an aDNA sample</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#measuredpercentage">measured percentage</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Damage">Damage</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://archaeonatural.cloud/ont/aDNASample">www:aDNASample</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="measuredendogenousDNA">
-        <h3>measured endogenous DNA<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#measuredendogenousDNA" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/measuredEndogenousDNA</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>measured % endogenous DNA for an aDNA sample</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#measuredpercentage">measured percentage</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#EndogenousDNA">Endogenous DNA</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://archaeonatural.cloud/ont/aDNASample">www:aDNASample</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="measuredhaplogroup">
         <h3>measured haplogroup<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#measuredhaplogroup" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
@@ -5615,70 +5049,6 @@ digital input, the software and the generic properties of the device.</p>
                     <a href="#MT-HaplogroupMeasurement">MT-Haplogroup Measurement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
-        </table>
-    </div>
-    <div class="entity property" id="measuredpercentage">
-        <h3>measured percentage<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#measuredpercentage" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/measuredPercentage</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>measuring a percentage value for a physical object</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P39_measured">crm:P39_measured</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#Percentage">Percentage</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing">crm:E18_Physical_Thing</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="measuredSNPcoverage">
-        <h3>measured SNP coverage<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#measuredSNPcoverage" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/measuredSNPCoverage</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>measured average X-fold coverage across targeted SNP sites for an aDNA sample</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/P39_measured">crm:P39_measured</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#SNPCoverage">SNP Coverage</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
@@ -5714,6 +5084,12 @@ digital input, the software and the generic properties of the device.</p>
                     <a href="#Y-HaplogroupMeasurement">Y-Haplogroup Measurement</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://archaeonatural.cloud/ont/aDNASample">www:aDNASample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
         </table>
     </div>
     <div class="entity property" id="observedtimeperiod">
@@ -5734,8 +5110,8 @@ digital input, the software and the generic properties of the device.</p>
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.w3.org/2006/time#hasTime">time:hasTime</a><sup class="sup-op" title="object property">op</sup>
                     <a href="#datinginformation">dating information</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="http://www.w3.org/2006/time#hasTime">time:hasTime</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -5777,29 +5153,6 @@ digital input, the software and the generic properties of the device.</p>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://archaeonatural.cloud/ont/SourceTissue">www:SourceTissue</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="other">
-        <h3>other<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#other" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/other</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>Any other kind of relationship not covered by the aforementioned categories</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#relatedtoaDNAsample">related to aDNA sample</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
         </table>
@@ -5857,6 +5210,7 @@ digital input, the software and the generic properties of the device.</p>
             <tr>
                 <th>Super-properties</th>
                 <td>
+                    <a href="http://purl.org/dc/terms/isPartOf">dct:isPartOf</a><sup class="sup-op" title="object property">op</sup>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of">crm:P46i_forms_part_of</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
@@ -5938,6 +5292,35 @@ digital input, the software and the generic properties of the device.</p>
             </tr>
         </table>
     </div>
+    <div class="entity property" id="publishedinyear">
+        <h3>published in year<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#publishedinyear" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://archaeonatural.cloud/ont/publishedInYear</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Connects a publication to the year it was published</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Literature">Literature</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="publishedsample">
         <h3>published sample<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#publishedsample" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
@@ -5973,45 +5356,14 @@ digital input, the software and the generic properties of the device.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="relatedtoaDNAsample">
-        <h3>related to aDNA sample<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#relatedtoaDNAsample" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+    <div class="entity property" id="relatedbyaDNAsample">
+        <h3>related by  aDNA sample<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#relatedbyaDNAsample" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/relatedToaDNASample</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>relates an aDNA sample to other samples that are related/identical to this sample
-since the object property itself cannot be associated with attributes, a Reification Class "aDNASampleRelation" is used to store them</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#ancientDNASample">ancient DNA Sample</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://archaeonatural.cloud/ont/aDNASampleRelation">www:aDNASampleRelation</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://archaeonatural.cloud/ont/aDNASample">www:aDNASample</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="relatestoaDNAsample">
-        <h3>relates to aDNA sample<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#relatestoaDNAsample" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/relatesToaDNASample</code></td>
+                <td><code>http://archaeonatural.cloud/ont/relatedByaDNASample</code></td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -6033,71 +5385,32 @@ since the object property itself cannot be associated with attributes, a Reifica
             </tr>
         </table>
     </div>
-    <div class="entity property" id="second">
-        <h3>second<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#second" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+    <div class="entity property" id="relatestoaDNAsample">
+        <h3>relates to aDNA sample<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#relatestoaDNAsample" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/second</code></td>
+                <td><code>http://archaeonatural.cloud/ont/relatesToaDNASample</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>A second degree relationship (e.g. cousins, grandparent to grandchild)</p>
+                    <p>relates an aDNA sample to other samples that are related/identical to this sample
+since the object property itself cannot be associated with attributes, a Reification Class "aDNASampleRelation" is used to store them</p>
                 </td>
             </tr>
             <tr>
-                <th>Super-properties</th>
+                <th>Domain(s)</th>
                 <td>
-                    <a href="#relatedtoaDNAsample">related to aDNA sample</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="sixthtotenth">
-        <h3>sixth to tenth<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#sixthtotenth" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/sixthToTenth</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>A sixth to tenth degree relationship</p>
+                    <a href="#ancientDNASample">ancient DNA Sample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
-                <th>Super-properties</th>
+                <th>Range(s)</th>
                 <td>
-                    <a href="#relatedtoaDNAsample">related to aDNA sample</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="thirdtofifth">
-        <h3>third to fifth<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#thirdtofifth" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/thirdToFifth</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>A third to fifth degree relationship (e.g. great-grandparent to great-grandchild)</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#relatedtoaDNAsample">related to aDNA sample</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="http://archaeonatural.cloud/ont/aDNASampleRelation">www:aDNASampleRelation</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -6208,6 +5521,18 @@ since the object property itself cannot be associated with attributes, a Reifica
                 <th>Description</th>
                 <td>
                     <p>A related resource in which the described resource is physically or logically included.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -6363,6 +5688,18 @@ This property is transitive and asymmetric.</p>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of">crm:P46i_forms_part_of</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing">crm:E18_Physical_Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing">crm:E18_Physical_Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
         </table>
     </div>
     <div class="entity property" id="formspartof">
@@ -6439,6 +5776,18 @@ This property is a shortcut for the more detailed path from E18 Physical Thing t
                 <th>Super-properties</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper">crm:P49_has_former_or_current_keeper</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing">crm:E18_Physical_Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E39_Actor">crm:E39_Actor</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -6584,6 +5933,35 @@ This property is transitive and reflexive.</p>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://www.opengis.net/ont/geosparql#Geometry">geosparql:Geometry</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Hasclosematch">
+        <h3>Has close match<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#Hasclosematch" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2004/02/skos/core#closeMatch</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of "compound errors" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -6895,49 +6273,105 @@ This property is transitive and reflexive.</p>
 <section id="datatypeproperties">
     <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+        <li><a href="#c14datinginformation">c14 dating information</a></li>
+        <li><a href="#aDNAsamplerelationshipproperties">aDNA sample relationship properties</a></li>
         <li><a href="#hasalternativeID">has alternative ID</a></li>
-        <li><a href="#hasaveragevalue">has average value</a></li>
         <li><a href="#hascollectionID">has collection ID</a></li>
-        <li><a href="#hascount">has count</a></li>
+        <li><a href="#hascontaminationerror">has contamination error</a></li>
         <li><a href="#hasDOI">has DOI</a></li>
         <li><a href="#hasdatingerror">has dating error</a></li>
-        <li><a href="#hasEDTFtemporalinformation">has EDTF temporal information</a></li>
-        <li><a href="#hasEDTFtimeperiod">has EDTF time period</a></li>
-        <li><a href="#hasEDTFyear">has EDTF year</a></li>
-        <li><a href="#hashaplogroup">has haplogroup</a></li>
+        <li><a href="#haserror">has error</a></li>
         <li><a href="#hasID">has ID</a></li>
         <li><a href="#hasISOcode">has ISO code</a></li>
-        <li><a href="#haskeywords">has keywords</a></li>
-        <li><a href="#haslabel">has label</a></li>
+        <li><a href="#haskeyword">has keyword</a></li>
         <li><a href="#haslabnumber">has lab number</a></li>
+        <li><a href="#haslabel">has label</a></li>
+        <li><a href="#haslibrarycount">has library count</a></li>
         <li><a href="#hasnote">has note</a></li>
         <li><a href="#hasnumericvalue">has numeric value</a></li>
         <li><a href="#hasORCID">has ORCID</a></li>
-        <li><a href="#haspercentage">has percentage</a></li>
+        <li><a href="#hasrelationshipdegree">has relationship degree</a></li>
         <li><a href="#hasrelationshiptype">has relationship type</a></li>
+        <li><a href="#hasSNPcount">has SNP count</a></li>
         <li><a href="#hastextualvalue">has textual value</a></li>
         <li><a href="#hastitle">has title</a></li>
-        <li><a href="#hastypeexpression">has type expression</a></li>
         <li><a href="#hasURL">has URL</a></li>
-        <li><a href="#hasuncalibrateddates">has uncalibrated dates</a></li>
+        <li><a href="#hasuncalibrateddate">has uncalibrated date</a></li>
         <li><a href="#hasvalue">has value</a></li>
-        <li><a href="#hasversion">has version</a></li>
         <li><a href="#identifiedby">identified by</a></li>
-        <li><a href="#measurederror">measured error</a></li>
+        <li><a href="#measureddamage">measured damage</a></li>
+        <li><a href="#measuredendogenousDNA">measured endogenous DNA</a></li>
+        <li><a href="#measuredSNPcoverage">measured SNP coverage</a></li>
+        <li><a href="#samplemeasurements">sample measurements</a></li>
         <li><a href="#doi">doi</a></li>
-        <li><a href="#timeisdefinedby">time is defined by</a></li>
         <li><a href="#P3_has_note">has note</a></li>
         <li><a href="#asGeoJSON">as GeoJSON</a></li>
         <li><a href="#asWKT">as WKT</a></li>
         <li><a href="#hasserialization">has serialization</a></li>
         <li><a href="#inXSDgYear">in XSD gYear</a></li>
-        <li><a href="#year">year</a></li>
         <li><a href="#endedattime">ended at time</a></li>
         <li><a href="#startedattime">started at time</a></li>
         <li><a href="#name">name</a></li>
         <li><a href="#hasEDTFdatetimedescription">has EDTF datetime description</a></li>
-        <li><a href="#inEDTFdatetime">in EDTF datetime</a></li>
     </ul>
+    <div class="entity property" id="c14datinginformation">
+        <h3>c14 dating information<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#c14datinginformation" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://archaeonatural.cloud/ont/C14DatingInformation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>information related to a C14 dating</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#C14Dating">C14 Dating</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="aDNAsamplerelationshipproperties">
+        <h3>aDNA sample relationship properties<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#aDNAsamplerelationshipproperties" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://archaeonatural.cloud/ont/aDNASampleRelationshipProperties</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>properties of the node type created to represent an attributed relationship between two aDNA samples</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#aDNAsamplerelation">aDNA sample relation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="hasalternativeID">
         <h3>has alternative ID<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#hasalternativeID" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
@@ -6965,39 +6399,10 @@ This property is transitive and reflexive.</p>
                     <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasaveragevalue">
-        <h3>has average value<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasaveragevalue" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasAverageValue</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>the average value of multiple measured values</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#hasnumericvalue">has numeric value</a><sup class="sup-dp" title="datatype property">dp</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#SNPCoverage">SNP Coverage</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -7029,39 +6434,45 @@ This property is transitive and reflexive.</p>
                     <a href="#Sample">Sample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
         </table>
     </div>
-    <div class="entity property" id="hascount">
-        <h3>has count<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hascount" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+    <div class="entity property" id="hascontaminationerror">
+        <h3>has contamination error<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hascontaminationerror" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasCount</code></td>
+                <td><code>http://archaeonatural.cloud/ont/hasContaminationError</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>a count of instances</p>
+                    <p>(modern) contamination estimate error of the sample</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="#hasnumericvalue">has numeric value</a><sup class="sup-dp" title="datatype property">dp</sup>
+                    <a href="#haserror">has error</a><sup class="sup-dp" title="datatype property">dp</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="#Count">Count</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#Contamination">Contamination</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -7117,6 +6528,19 @@ This property is transitive and reflexive.</p>
                 </td>
             </tr>
             <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#c14datinginformation">c14 dating information</a><sup class="sup-dp" title="datatype property">dp</sup>
+                    <a href="#haserror">has error</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#C14Dating">C14 Dating</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
@@ -7124,138 +6548,31 @@ This property is transitive and reflexive.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasEDTFtemporalinformation">
-        <h3>has EDTF temporal information<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasEDTFtemporalinformation" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+    <div class="entity property" id="haserror">
+        <h3>has error<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#haserror" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasEDTFTemporalInformation</code></td>
+                <td><code>http://archaeonatural.cloud/ont/hasError</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>EDTF information assigned to temporal objects</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
+                    <p>quantified error of a measurement</p>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity">crm:E1_CRM_Entity</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://id.loc.gov/datatypes/edtf/EDTF">http://id.loc.gov/datatypes/edtf/EDTF</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasEDTFtimeperiod">
-        <h3>has EDTF time period<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasEDTFtimeperiod" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasEDTFTimePeriod</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>EDTF time interval description assigned to a time period</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription">edtf:hasEDTFDateTimeDescription</a><sup class="sup-dp" title="datatype property">dp</sup>
-                    <a href="#hasEDTFtemporalinformation">has EDTF temporal information</a><sup class="sup-dp" title="datatype property">dp</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#TimePeriod">Time Period</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://id.loc.gov/datatypes/edtf/EDTF">http://id.loc.gov/datatypes/edtf/EDTF</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasEDTFyear">
-        <h3>has EDTF year<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasEDTFyear" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasEDTFYear</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>EDTF year description assigned to a year</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime">edtf:inEDTFDateTime</a><sup class="sup-dp" title="datatype property">dp</sup>
-                    <a href="#hasEDTFtemporalinformation">has EDTF temporal information</a><sup class="sup-dp" title="datatype property">dp</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://id.loc.gov/datatypes/edtf/EDTF">http://id.loc.gov/datatypes/edtf/EDTF</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hashaplogroup">
-        <h3>has haplogroup<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hashaplogroup" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasHaplogroup</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>the haplogroup information obtained</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#hastextualvalue">has textual value</a><sup class="sup-dp" title="datatype property">dp</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="#HaplogroupMeasurement">Haplogroup Measurement</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -7324,25 +6641,66 @@ This property is transitive and reflexive.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="haskeywords">
-        <h3>has keywords<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#haskeywords" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+    <div class="entity property" id="haskeyword">
+        <h3>has keyword<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#haskeyword" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasKeywords</code></td>
+                <td><code>http://archaeonatural.cloud/ont/hasKeyword</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>(list of) keywords to specify an object</p>
+                    <p>keyword  to specify an object</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object">crm:E20_Biological_Object</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="haslabnumber">
+        <h3>has lab number<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#haslabnumber" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://archaeonatural.cloud/ont/hasLabNumber</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>the lab number lab numbers of a measurement allowing to identify it and the applied processes</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#c14datinginformation">c14 dating information</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#C14Dating">C14 Dating</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -7369,6 +6727,12 @@ This property is transitive and reflexive.</p>
                 </td>
             </tr>
             <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Domain(s)</th>
                 <td>
                     <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup>
@@ -7382,37 +6746,37 @@ This property is transitive and reflexive.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="haslabnumber">
-        <h3>has lab number<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#haslabnumber" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+    <div class="entity property" id="haslibrarycount">
+        <h3>has library count<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#haslibrarycount" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasLabnr</code></td>
+                <td><code>http://archaeonatural.cloud/ont/hasLibraryCount</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>the lab number lab numbers of a measurement allowing to identify it and the applied processes</p>
+                    <p>relating the number of libraries produced for an aDNA sample to the respective sample</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="#identifiedby">identified by</a><sup class="sup-dp" title="datatype property">dp</sup>
+                    <a href="#samplemeasurements">sample measurements</a><sup class="sup-dp" title="datatype property">dp</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E16_Measurement">crm:E16_Measurement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#ancientDNASample">ancient DNA Sample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -7436,6 +6800,12 @@ This property is transitive and reflexive.</p>
                 <th>Super-properties</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/P3_has_note">crm:P3_has_note</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity">crm:E1_CRM_Entity</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -7516,37 +6886,37 @@ This property is transitive and reflexive.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="haspercentage">
-        <h3>has percentage<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#haspercentage" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+    <div class="entity property" id="hasrelationshipdegree">
+        <h3>has relationship degree<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasrelationshipdegree" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasPercentage</code></td>
+                <td><code>http://archaeonatural.cloud/ont/hasRelationshipDegree</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>a percentage</p>
+                    <p>adds a textual relationship degree to each aDNA sample relation</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="#hasnumericvalue">has numeric value</a><sup class="sup-dp" title="datatype property">dp</sup>
+                    <a href="#aDNAsamplerelationshipproperties">aDNA sample relationship properties</a><sup class="sup-dp" title="datatype property">dp</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="#Percentage">Percentage</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#aDNAsamplerelation">aDNA sample relation</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -7567,6 +6937,12 @@ This property is transitive and reflexive.</p>
                 </td>
             </tr>
             <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#aDNAsamplerelationshipproperties">aDNA sample relationship properties</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
                 <th>Domain(s)</th>
                 <td>
                     <a href="#aDNAsamplerelation">aDNA sample relation</a><sup class="sup-c" title="class">c</sup>
@@ -7576,6 +6952,41 @@ This property is transitive and reflexive.</p>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasSNPcount">
+        <h3>has SNP count<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasSNPcount" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://archaeonatural.cloud/ont/hasSNPCount</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>number of non-missing SNPs to an aDNA sample</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#samplemeasurements">sample measurements</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ancientDNASample">ancient DNA Sample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -7650,41 +7061,6 @@ This property is transitive and reflexive.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hastypeexpression">
-        <h3>has type expression<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hastypeexpression" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasTypeExpression</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>one of the possible value expressing the instances of a type</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="#haslabel">has label</a><sup class="sup-dp" title="datatype property">dp</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E55_Type">crm:E55_Type</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="hasURL">
         <h3>has URL<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#hasURL" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
@@ -7720,9 +7096,9 @@ This property is transitive and reflexive.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasuncalibrateddates">
-        <h3>has uncalibrated dates<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasuncalibrateddates" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+    <div class="entity property" id="hasuncalibrateddate">
+        <h3>has uncalibrated date<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasuncalibrateddate" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
         </h3>
         <table>
             <tr>
@@ -7738,7 +7114,13 @@ This property is transitive and reflexive.</p>
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
+                    <a href="#c14datinginformation">c14 dating information</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#C14Dating">C14 Dating</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -7765,32 +7147,15 @@ This property is transitive and reflexive.</p>
                 </td>
             </tr>
             <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Domain(s)</th>
                 <td>
                     <a href="http://www.cidoc-crm.org/cidoc-crm/E16_Measurement">crm:E16_Measurement</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="hasversion">
-        <h3>has version<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hasversion" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/hasVersion</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>denotes the version (package version in Poseidon) of a dataset</p>
                 </td>
             </tr>
             <tr>
@@ -7830,37 +7195,136 @@ This property is transitive and reflexive.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="measurederror">
-        <h3>measured error<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#measurederror" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+    <div class="entity property" id="measureddamage">
+        <h3>measured damage<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#measureddamage" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
         </h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>http://archaeonatural.cloud/ont/measuredError</code></td>
+                <td><code>http://archaeonatural.cloud/ont/measuredDamage</code></td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>the measured error when obtainin a value</p>
+                    <p>measured % damage on the 5' end for the main shotgun library for an aDNA sample</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="#hasvalue">has value</a><sup class="sup-dp" title="datatype property">dp</sup>
+                    <a href="#samplemeasurements">sample measurements</a><sup class="sup-dp" title="datatype property">dp</sup>
                 </td>
             </tr>
             <tr>
                 <th>Domain(s)</th>
                 <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E16_Measurement">crm:E16_Measurement</a><sup class="sup-c" title="class">c</sup>
+                    <a href="#ancientDNASample">ancient DNA Sample</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="measuredendogenousDNA">
+        <h3>measured endogenous DNA<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#measuredendogenousDNA" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://archaeonatural.cloud/ont/measuredEndogenousDNA</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>measured % endogenous DNA for an aDNA sample</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#samplemeasurements">sample measurements</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ancientDNASample">ancient DNA Sample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="measuredSNPcoverage">
+        <h3>measured SNP coverage<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#measuredSNPcoverage" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://archaeonatural.cloud/ont/measuredSNPCoverage</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>measured average X-fold coverage across targeted SNP sites for an aDNA sample</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#samplemeasurements">sample measurements</a><sup class="sup-dp" title="datatype property">dp</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#ancientDNASample">ancient DNA Sample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="samplemeasurements">
+        <h3>sample measurements<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#samplemeasurements" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://archaeonatural.cloud/ont/sample_measurements</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>measured values for an (aDNA) sample</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Sample">Sample</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -7894,36 +7358,6 @@ This property is transitive and reflexive.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="timeisdefinedby">
-        <h3>time is defined by<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#timeisdefinedby" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://www.cidoc-crm.org/cidoc-crm/P170i_time_is_defined_by</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>Scope note for 'P170': This property associates an instance of E61 Time Primitive with the instance of E52 Time-Span that constitutes the interpretation of the terms of the time primitive as an extent in absolute, real time.
-The quantification allows several instances of E61 Time Primitive that are each expressed in different syntactic forms, to define the same instance of E52 Time-Span.</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span">crm:E52_Time-Span</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="P3_has_note">
         <h3>has note<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#P3_has_note" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
@@ -7940,6 +7374,12 @@ The quantification allows several instances of E61 Time Primitive that are each 
 In particular, it captures the characterisation of the item itself, its internal structures, appearance, etc.
 Like property P2 has type (is type of), this property is a consequence of the restricted focus of the CIDOC CRM. The aim is not to capture, in a structured form, everything that can be said about an item; indeed, the CIDOC CRM formalism is not regarded as sufficient to express everything that can be said. Good practice requires use of distinct note fields for different aspects of a characterisation. The P3.1 has type property of P3 has note allows differentiation of specific notes, e.g. “construction”, “decoration”, etc.
 An item may have many notes, but a note is attached to a specific item.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
                 </td>
             </tr>
             <tr>
@@ -8068,23 +7508,6 @@ An item may have many notes, but a note is attached to a specific item.</p>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://www.w3.org/2001/XMLSchema#gYear">xsd:gYear</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity property" id="year">
-        <h3>year<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#year" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>http://www.w3.org/2006/time#year</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>Year position in a calendar-clock system. The range of this property is not specified, so can be replaced by any specific representation of a calendar year from any calendar.</p>
                 </td>
             </tr>
         </table>
@@ -8223,41 +7646,6 @@ An item may have many notes, but a note is attached to a specific item.</p>
             </tr>
         </table>
     </div>
-    <div class="entity property" id="inEDTFdatetime">
-        <h3>in EDTF datetime<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#inEDTFdatetime" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
-        </h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    <p>Position of an instant, expressed using EDTF</p>
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="http://www.w3.org/2002/07/owl#topDataProperty">owl:topDataProperty</a>
-                </td>
-            </tr>
-            <tr>
-                <th>Domain(s)</th>
-                <td>
-                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-            <tr>
-                <th>Range(s)</th>
-                <td>
-                    <a href="http://id.loc.gov/datatypes/edtf/EDTF">http://id.loc.gov/datatypes/edtf/EDTF</a><sup class="sup-c" title="class">c</sup>
-                </td>
-            </tr>
-        </table>
-    </div>
 </section>
 
 <section id="annotationproperties">
@@ -8273,6 +7661,7 @@ An item may have many notes, but a note is attached to a specific item.</p>
         <li><a href="#subject">subject</a></li>
         <li><a href="#contributor1">contributor</a></li>
         <li><a href="#license">license</a></li>
+        <li><a href="#rightsHolder">rightsHolder</a></li>
         <li><a href="#source">source</a></li>
         <li><a href="#type">type</a></li>
         <li><a href="#type1">type</a></li>
@@ -8398,6 +7787,17 @@ An item may have many notes, but a note is attached to a specific item.</p>
             </tr>
         </table>
     </div>
+    <div class="entity property" id="rightsHolder">
+        <h3>rightsHolder<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#rightsHolder" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/rightsHolder</code></td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="source">
         <h3>source<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
             <a href="#source" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
@@ -8504,76 +7904,36 @@ An item may have many notes, but a note is attached to a specific item.</p>
     <section id="namedindividuals">
         <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
         <ul class="hlist">
+            <li><a href="#ExternalIdentifier_Wikidata">ExternalIdentifier_Wikidata</a></li>
             <li><a href="#Female">Female</a></li>
-            <li><a href="#Geonames">Geonames</a></li>
-            <li><a href="#Hair">Hair</a></li>
+            <li><a href="#GeneticSex_Female">GeneticSex_Female</a></li>
+            <li><a href="#GeneticSex_Male">GeneticSex_Male</a></li>
+            <li><a href="#GeneticSex_Unknown">GeneticSex_Unknown</a></li>
+            <li><a href="#GenotypePloidy_diploid">GenotypePloidy_diploid</a></li>
+            <li><a href="#GenotypePloidy_haploid">GenotypePloidy_haploid</a></li>
+            <li><a href="#LibraryStrandedness_ds">LibraryStrandedness_ds</a></li>
+            <li><a href="#LibraryStrandedness_mixed">LibraryStrandedness_mixed</a></li>
+            <li><a href="#LibraryStrandedness_other">LibraryStrandedness_other</a></li>
+            <li><a href="#LibraryStrandedness_ss">LibraryStrandedness_ss</a></li>
             <li><a href="#Male">Male</a></li>
-            <li><a href="#Petrous">Petrous</a></li>
-            <li><a href="#Tooth">Tooth</a></li>
-            <li><a href="#Unknown">Unknown</a></li>
-            <li><a href="#Wikidata">Wikidata</a></li>
-            <li><a href="#diploid">diploid</a></li>
-            <li><a href="#ds">ds</a></li>
-            <li><a href="#half">half</a></li>
-            <li><a href="#haploid">haploid</a></li>
-            <li><a href="#minus">minus</a></li>
-            <li><a href="#mixed">mixed</a></li>
-            <li><a href="#mixed1">mixed</a></li>
-            <li><a href="#other1">other</a></li>
-            <li><a href="#otherBone">otherBone</a></li>
-            <li><a href="#plus">plus</a></li>
-            <li><a href="#ss">ss</a></li>
+            <li><a href="#SourceTissueType_Hair">SourceTissueType_Hair</a></li>
+            <li><a href="#SourceTissueType_Petrous">SourceTissueType_Petrous</a></li>
+            <li><a href="#SourceTissueType_Tooth">SourceTissueType_Tooth</a></li>
+            <li><a href="#SourceTissueType_otherBone">SourceTissueType_otherBone</a></li>
+            <li><a href="#UDGTreatment_half">UDGTreatment_half</a></li>
+            <li><a href="#UDGTreatment_minus">UDGTreatment_minus</a></li>
+            <li><a href="#UDGTreatment_mixed">UDGTreatment_mixed</a></li>
+            <li><a href="#UDGTreatment_plus">UDGTreatment_plus</a></li>
+            <li><a href="#ont_Geonames">ont_Geonames</a></li>
         </ul>
-            <div class="entity named_individual" id="Unknown">
-        <h3>Unknown<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="ExternalIdentifier_Wikidata">
+        <h3>ExternalIdentifier_Wikidata<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/GeneticSex/Unknown
-                  
-                  </code>
-                </td>
-            </tr>
-        </table>
-    </div>
-            <div class="entity named_individual" id="diploid">
-        <h3>diploid<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td>
-                  <code>
-                      http://archaeonatural.cloud/ont/GenotypePloidy/diploid
-                  
-                  </code>
-                </td>
-            </tr>
-        </table>
-    </div>
-            <div class="entity named_individual" id="haploid">
-        <h3>haploid<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td>
-                  <code>
-                      http://archaeonatural.cloud/ont/GenotypePloidy/haploid
-                  
-                  </code>
-                </td>
-            </tr>
-        </table>
-    </div>
-            <div class="entity named_individual" id="Geonames">
-        <h3>Geonames<sup title="named individual" class="sup-ni">ni</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td>
-                  <code>
-                      http://archaeonatural.cloud/ont/Geonames
+                      http://archaeonatural.cloud/ExternalIdentifier_Wikidata
                   
                   </code>
                 </td>
@@ -8584,182 +7944,264 @@ An item may have many notes, but a note is attached to a specific item.</p>
             </dd>
         </table>
     </div>
-            <div class="entity named_individual" id="ds">
-        <h3>ds<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="GeneticSex_Female">
+        <h3>GeneticSex_Female<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/LibraryStrandedness/ds
+                      http://archaeonatural.cloud/ont/GeneticSex_Female
+                  
+                  </code>
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://schema.org/Female">schema:Female</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="GeneticSex_Male">
+        <h3>GeneticSex_Male<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://archaeonatural.cloud/ont/GeneticSex_Male
+                  
+                  </code>
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://schema.org/Male">schema:Male</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="GeneticSex_Unknown">
+        <h3>GeneticSex_Unknown<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://archaeonatural.cloud/ont/GeneticSex_Unknown
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="mixed">
-        <h3>mixed<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="GenotypePloidy_diploid">
+        <h3>GenotypePloidy_diploid<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/LibraryStrandedness/mixed
+                      http://archaeonatural.cloud/ont/GenotypePloidy_diploid
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="other1">
-        <h3>other<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="GenotypePloidy_haploid">
+        <h3>GenotypePloidy_haploid<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/LibraryStrandedness/other
+                      http://archaeonatural.cloud/ont/GenotypePloidy_haploid
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="ss">
-        <h3>ss<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="LibraryStrandedness_ds">
+        <h3>LibraryStrandedness_ds<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/LibraryStrandedness/ss
+                      http://archaeonatural.cloud/ont/LibraryStrandedness_ds
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="Hair">
-        <h3>Hair<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="LibraryStrandedness_mixed">
+        <h3>LibraryStrandedness_mixed<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/SourceTissueType/Hair
+                      http://archaeonatural.cloud/ont/LibraryStrandedness_mixed
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="Petrous">
-        <h3>Petrous<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="LibraryStrandedness_other">
+        <h3>LibraryStrandedness_other<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/SourceTissueType/Petrous
+                      http://archaeonatural.cloud/ont/LibraryStrandedness_other
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="Tooth">
-        <h3>Tooth<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="LibraryStrandedness_ss">
+        <h3>LibraryStrandedness_ss<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/SourceTissueType/Tooth
+                      http://archaeonatural.cloud/ont/LibraryStrandedness_ss
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="otherBone">
-        <h3>otherBone<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="SourceTissueType_Hair">
+        <h3>SourceTissueType_Hair<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/SourceTissueType/otherBone
+                      http://archaeonatural.cloud/ont/SourceTissueType_Hair
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="half">
-        <h3>half<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="SourceTissueType_Petrous">
+        <h3>SourceTissueType_Petrous<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/UDGTreatment/half
+                      http://archaeonatural.cloud/ont/SourceTissueType_Petrous
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="minus">
-        <h3>minus<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="SourceTissueType_Tooth">
+        <h3>SourceTissueType_Tooth<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/UDGTreatment/minus
+                      http://archaeonatural.cloud/ont/SourceTissueType_Tooth
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="mixed1">
-        <h3>mixed<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="SourceTissueType_otherBone">
+        <h3>SourceTissueType_otherBone<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/UDGTreatment/mixed
+                      http://archaeonatural.cloud/ont/SourceTissueType_otherBone
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="plus">
-        <h3>plus<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="UDGTreatment_half">
+        <h3>UDGTreatment_half<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/UDGTreatment/plus
+                      http://archaeonatural.cloud/ont/UDGTreatment_half
                   
                   </code>
                 </td>
             </tr>
         </table>
     </div>
-            <div class="entity named_individual" id="Wikidata">
-        <h3>Wikidata<sup title="named individual" class="sup-ni">ni</sup></h3>
+            <div class="entity named_individual" id="UDGTreatment_minus">
+        <h3>UDGTreatment_minus<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td>
                   <code>
-                      http://archaeonatural.cloud/ont/Wikidata
+                      http://archaeonatural.cloud/ont/UDGTreatment_minus
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="UDGTreatment_mixed">
+        <h3>UDGTreatment_mixed<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://archaeonatural.cloud/ont/UDGTreatment_mixed
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="UDGTreatment_plus">
+        <h3>UDGTreatment_plus<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://archaeonatural.cloud/ont/UDGTreatment_plus
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="ont_Geonames">
+        <h3>ont_Geonames<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://archaeonatural.cloud/ont_Geonames
                   
                   </code>
                 </td>
