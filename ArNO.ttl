@@ -81,6 +81,10 @@ dct:contributor rdf:type owl:AnnotationProperty .
 dct:license rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/source
 dct:source rdf:type owl:AnnotationProperty .
 
@@ -198,12 +202,13 @@ www:atSite rdf:type owl:ObjectProperty ;
            rdfs:label "at site"@en .
 
 
-###  http://archaeonatural.cloud/ont/counted
-www:counted rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf crm:P39_measured ;
-            rdfs:domain www:Count ;
-            rdfs:comment "counting a countable number of elements/parts of a physical thing"@en ;
-            rdfs:label "counted"@en .
+###  http://archaeonatural.cloud/ont/closeMatch
+www:closeMatch rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:closeMatch ;
+               rdfs:domain owl:Thing ;
+               rdfs:range owl:Thing ;
+               rdfs:comment "Matches nodes in the created namespace to nodes from other terminologies"@en ;
+               rdfs:label "close match"@en .
 
 
 ###  http://archaeonatural.cloud/ont/datedBy
@@ -230,13 +235,6 @@ www:externalIdentifier rdf:type owl:ObjectProperty ;
                        rdfs:label "external identifier"@en .
 
 
-###  http://archaeonatural.cloud/ont/first
-www:first rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf www:relatedToaDNASample ;
-          rdfs:comment "The two individuals are closely related – a first degree relationship (e.g. siblings, parent-offspring)"@en ;
-          rdfs:label "first"@en .
-
-
 ###  http://archaeonatural.cloud/ont/foundAtDiscoverySite
 www:foundAtDiscoverySite rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf crm:P53_has_former_or_current_location ;
@@ -255,15 +253,6 @@ www:fromGeneticSourceAccession rdf:type owl:ObjectProperty ;
                                rdfs:label "from genetic source accession"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasC14Dating
-www:hasC14Dating rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf www:datingInformation ;
-                 rdfs:domain www:Dating ;
-                 rdfs:range www:C14Dating ;
-                 rdfs:comment "assigned C14 dating information if a dating is a radiocarbon dating"@en ;
-                 rdfs:label "has C14 dating"@en .
-
-
 ###  http://archaeonatural.cloud/ont/hasCaptureType
 www:hasCaptureType rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf crm:P2_has_type ;
@@ -271,15 +260,6 @@ www:hasCaptureType rdf:type owl:ObjectProperty ;
                    rdfs:range www:CaptureType ;
                    rdfs:comment "capture type associated with an aDNA sample"@en ;
                    rdfs:label "has capture type"@en .
-
-
-###  http://archaeonatural.cloud/ont/hasDatingMedian
-www:hasDatingMedian rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf www:datingInformation ;
-                    rdfs:domain www:Dating ;
-                    rdfs:range www:DatingMedian ;
-                    rdfs:comment "the median date observed by a dating process"@en ;
-                    rdfs:label "has dating median"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasDatingType
@@ -310,15 +290,6 @@ www:hasGenotypePloidy rdf:type owl:ObjectProperty ;
                       rdfs:label "has genotype ploidy"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasLibraryCount
-www:hasLibraryCount rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf www:counted ;
-                    rdfs:domain www:LibraryCount ;
-                    rdfs:range www:aDNASample ;
-                    rdfs:comment "relating the number of libraries produced for an aDNA sample to the respective sample"@en ;
-                    rdfs:label "has library count"@en .
-
-
 ###  http://archaeonatural.cloud/ont/hasLibraryStrandedness
 www:hasLibraryStrandedness rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf crm:P2_has_type ;
@@ -326,6 +297,15 @@ www:hasLibraryStrandedness rdf:type owl:ObjectProperty ;
                            rdfs:range www:LibraryStrandedness ;
                            rdfs:comment "strandedness of the library of an aDNA sample"@en ;
                            rdfs:label "has library strandedness"@en .
+
+
+###  http://archaeonatural.cloud/ont/hasMedian
+www:hasMedian rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain time:TemporalEntity ;
+              rdfs:range time:Instant ;
+              rdfs:comment "Median of a temporal entity."@en ;
+              rdfs:label "has median"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasPrimaryContact
@@ -346,15 +326,6 @@ www:hasRepresentativePoint rdf:type owl:ObjectProperty ;
                            rdfs:label "has representative point"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasSNPCount
-www:hasSNPCount rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf www:counted ;
-                rdfs:domain www:SNPCount ;
-                rdfs:range www:aDNASample ;
-                rdfs:comment "number of non-missing SNPs to an aDNA sample"@en ;
-                rdfs:label "has SNP count"@en .
-
-
 ###  http://archaeonatural.cloud/ont/hasSourceTissueType
 www:hasSourceTissueType rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf crm:P2_has_type ;
@@ -364,14 +335,6 @@ www:hasSourceTissueType rdf:type owl:ObjectProperty ;
                         rdfs:label "has source tissue type"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasSpatiotemporalInformation
-www:hasSpatiotemporalInformation rdf:type owl:ObjectProperty ;
-                                 rdfs:domain www:Sample ;
-                                 rdfs:range www:SpatiotemporalInformation ;
-                                 rdfs:comment "spatiotemporal information that is accociated with a sample"@en ;
-                                 rdfs:label "has spatiotemporal information"@en .
-
-
 ###  http://archaeonatural.cloud/ont/hasUDGTreatment
 www:hasUDGTreatment rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf crm:P2_has_type ;
@@ -379,13 +342,6 @@ www:hasUDGTreatment rdf:type owl:ObjectProperty ;
                     rdfs:range www:UDGTreatment ;
                     rdfs:comment "the UDG treatment associated with an aDNA sample"@en ;
                     rdfs:label "has UDG treatment"@en .
-
-
-###  http://archaeonatural.cloud/ont/identical
-www:identical rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf www:relatedToaDNASample ;
-              rdfs:comment "The two samples are from the same individual or from identical twins"@en ;
-              rdfs:label "identical"@en .
 
 
 ###  http://archaeonatural.cloud/ont/inCountry
@@ -415,24 +371,6 @@ www:measuredContamination rdf:type owl:ObjectProperty ;
                           rdfs:label "measured contamination"@en .
 
 
-###  http://archaeonatural.cloud/ont/measuredDamage
-www:measuredDamage rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf www:measuredPercentage ;
-                   rdfs:domain www:Damage ;
-                   rdfs:range www:aDNASample ;
-                   rdfs:comment "measured % damage on the 5' end for the main shotgun library for an aDNA sample"@en ;
-                   rdfs:label "measured damage"@en .
-
-
-###  http://archaeonatural.cloud/ont/measuredEndogenousDNA
-www:measuredEndogenousDNA rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf www:measuredPercentage ;
-                          rdfs:domain www:EndogenousDNA ;
-                          rdfs:range www:aDNASample ;
-                          rdfs:comment "measured % endogenous DNA for an aDNA sample"@en ;
-                          rdfs:label "measured endogenous DNA"@en .
-
-
 ###  http://archaeonatural.cloud/ont/measuredHaplogroup
 www:measuredHaplogroup rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf crm:P39_measured ;
@@ -446,32 +384,16 @@ www:measuredHaplogroup rdf:type owl:ObjectProperty ;
 www:measuredMTHaplogroup rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf www:measuredHaplogroup ;
                          rdfs:domain www:MTHaplogroupMeasurement ;
+                         rdfs:range www:aDNASample ;
                          rdfs:comment "the measured MT-haplogroup of an aDNA sample"@en ;
                          rdfs:label "measured MT-haplogroup"@en .
-
-
-###  http://archaeonatural.cloud/ont/measuredPercentage
-www:measuredPercentage rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf crm:P39_measured ;
-                       rdfs:domain www:Percentage ;
-                       rdfs:range crm:E18_Physical_Thing ;
-                       rdfs:comment "measuring a percentage value for a physical object"@en ;
-                       rdfs:label "measured percentage"@en .
-
-
-###  http://archaeonatural.cloud/ont/measuredSNPCoverage
-www:measuredSNPCoverage rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf crm:P39_measured ;
-                        rdfs:domain www:SNPCoverage ;
-                        rdfs:range www:aDNASample ;
-                        rdfs:comment "measured average X-fold coverage across targeted SNP sites for an aDNA sample"@en ;
-                        rdfs:label "measured SNP coverage"@en .
 
 
 ###  http://archaeonatural.cloud/ont/measuredYHaplogroup
 www:measuredYHaplogroup rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf www:measuredHaplogroup ;
                         rdfs:domain www:YHaplogroupMeasurement ;
+                        rdfs:range www:aDNASample ;
                         rdfs:comment "the measured Y-haplogroup of an aDNA sample"@en ;
                         rdfs:label "measured Y-haplogroup"@en .
 
@@ -494,13 +416,6 @@ www:ofSourceTissue rdf:type owl:ObjectProperty ;
                    rdfs:label "of source tissue"@en .
 
 
-###  http://archaeonatural.cloud/ont/other
-www:other rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf www:relatedToaDNASample ;
-          rdfs:comment "Any other kind of relationship not covered by the aforementioned categories"@en ;
-          rdfs:label "other"@en .
-
-
 ###  http://archaeonatural.cloud/ont/partOfGeneticSourceAccession
 www:partOfGeneticSourceAccession rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf dct:isPartOf ;
@@ -512,7 +427,8 @@ www:partOfGeneticSourceAccession rdf:type owl:ObjectProperty ;
 
 ###  http://archaeonatural.cloud/ont/partOfGenomicLibrary
 www:partOfGenomicLibrary rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf crm:P46i_forms_part_of ;
+                         rdfs:subPropertyOf dct:isPartOf ,
+                                            crm:P46i_forms_part_of ;
                          rdfs:domain www:aDNASample ;
                          rdfs:range www:GenomicLibrary ;
                          rdfs:comment "relates an aDNA sample with the genomic library is it part of"@en ;
@@ -536,6 +452,14 @@ www:preparedByPreparationPipeline rdf:type owl:ObjectProperty ;
                                   rdfs:label "prepared by preparation pipeline"@en .
 
 
+###  http://archaeonatural.cloud/ont/publishedInYear
+www:publishedInYear rdf:type owl:ObjectProperty ;
+                    rdfs:domain www:Literature ;
+                    rdfs:range time:Instant ;
+                    rdfs:comment "Connects a publication to the year it was published"@en ;
+                    rdfs:label "published in year"@en .
+
+
 ###  http://archaeonatural.cloud/ont/publishedSample
 www:publishedSample rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf crm:P70_documents ;
@@ -545,43 +469,21 @@ www:publishedSample rdf:type owl:ObjectProperty ;
                     rdfs:label "published sample"@en .
 
 
-###  http://archaeonatural.cloud/ont/relatedToaDNASample
-www:relatedToaDNASample rdf:type owl:ObjectProperty ;
-                        rdfs:domain www:aDNASample ;
-                        rdfs:range www:aDNASample ,
-                                   www:aDNASampleRelation ;
-                        rdfs:comment """relates an aDNA sample to other samples that are related/identical to this sample
-since the object property itself cannot be associated with attributes, a Reification Class \"aDNASampleRelation\" is used to store them"""@en ;
-                        rdfs:label "related to aDNA sample"@en .
+###  http://archaeonatural.cloud/ont/relatedByaDNASample
+www:relatedByaDNASample rdf:type owl:ObjectProperty ;
+                        rdfs:domain www:aDNASampleRelation ;
+                        rdfs:range www:aDNASample ;
+                        rdfs:comment "this property is used to finish the connection between two aDNA samples using the Reification Class aDNASampleRelation"@en ;
+                        rdfs:label "related by  aDNA sample"@en .
 
 
 ###  http://archaeonatural.cloud/ont/relatesToaDNASample
 www:relatesToaDNASample rdf:type owl:ObjectProperty ;
-                        rdfs:domain www:aDNASampleRelation ;
-                        rdfs:range www:aDNASample ;
-                        rdfs:comment "this property is used to finish the connection between two aDNA samples using the Reification Class aDNASampleRelation"@en ;
+                        rdfs:domain www:aDNASample ;
+                        rdfs:range www:aDNASampleRelation ;
+                        rdfs:comment """relates an aDNA sample to other samples that are related/identical to this sample
+since the object property itself cannot be associated with attributes, a Reification Class \"aDNASampleRelation\" is used to store them"""@en ;
                         rdfs:label "relates to aDNA sample"@en .
-
-
-###  http://archaeonatural.cloud/ont/second
-www:second rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf www:relatedToaDNASample ;
-           rdfs:comment "A second degree relationship (e.g. cousins, grandparent to grandchild)"@en ;
-           rdfs:label "second"@en .
-
-
-###  http://archaeonatural.cloud/ont/sixthToTenth
-www:sixthToTenth rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf www:relatedToaDNASample ;
-                 rdfs:comment "A sixth to tenth degree relationship"@en ;
-                 rdfs:label "sixth to tenth"@en .
-
-
-###  http://archaeonatural.cloud/ont/thirdToFifth
-www:thirdToFifth rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf www:relatedToaDNASample ;
-                 rdfs:comment "A third to fifth degree relationship (e.g. great-grandparent to great-grandchild)"@en ;
-                 rdfs:label "third to fifth"@en .
 
 
 ###  http://archaeonatural.cloud/ont/usedContaminationMeasure
@@ -611,6 +513,8 @@ dct:creator rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/isPartOf
 dct:isPartOf rdf:type owl:ObjectProperty ;
+             rdfs:domain owl:Thing ;
+             rdfs:range owl:Thing ;
              rdfs:comment "A related resource in which the described resource is physically or logically included."@en ;
              rdfs:label "Is Part Of"@en .
 
@@ -655,6 +559,8 @@ crm:P39_measured rdf:type owl:ObjectProperty ;
 ###  http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of
 crm:P46_is_composed_of rdf:type owl:ObjectProperty ;
                        owl:inverseOf crm:P46i_forms_part_of ;
+                       rdfs:domain crm:E18_Physical_Thing ;
+                       rdfs:range crm:E18_Physical_Thing ;
                        rdfs:comment """This property associates an instance of E18 Physical Thing with another instance of Physical Thing that forms part of it. The spatial extent of the composing part is included in the spatial extent of the whole.
 Component elements, since they are themselves instances of E18 Physical Thing, may be further analysed into sub-components, thereby creating a hierarchy of part decomposition. An instance of E18 Physical Thing may be shared between multiple wholes, for example two buildings may share a common wall. This property does not specify when and for how long a component element resided in the respective whole. If a component is not part of a whole from the beginning of existence or until the end of existence of the whole, the classes E79 Part Addition and E90 Part Removal can be used to document when a component became part of a particular whole and/or when it stopped being a part of it. For the time-span of being part of the respective whole, the component is completely contained in the place the whole occupies.
 This property is intended to describe specific components that are individually documented, rather than general aspects. Overall descriptions of the structure of an instance of E18 Physical Thing are captured by the P3 has note property.
@@ -683,6 +589,8 @@ This property is a shortcut for the more detailed path from E18 Physical Thing t
 ###  http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper
 crm:P50_has_current_keeper rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf crm:P49_has_former_or_current_keeper ;
+                           rdfs:domain crm:E18_Physical_Thing ;
+                           rdfs:range crm:E39_Actor ;
                            rdfs:comment """This property identifies the instance of E39 Actor that had custody of an instance of E18 Physical Thing at the time of validity of the record or database containing the statement that uses this property.
 This property is a shortcut for the more detailed path from E18 Physical Thing through, P30i custody transferred through, E10 Transfer of Custody, P29 custody received by to E39 Actor, if and only if the custody has not been surrendered by the receiving actor at any later time"""@en ;
                            rdfs:label "has current keeper"@en .
@@ -731,6 +639,14 @@ geosparql:hasGeometry rdf:type owl:ObjectProperty ;
                       rdfs:range geosparql:Geometry ;
                       rdfs:comment "A spatial representation for a given Feature."@en ;
                       rdfs:label "has geometry"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:ObjectProperty ;
+                rdfs:domain owl:Thing ;
+                rdfs:range owl:Thing ;
+                rdfs:comment "Skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property."@en ;
+                rdfs:label "Has close match"@en .
 
 
 ###  http://www.w3.org/2006/time#hasBeginning
@@ -819,38 +735,47 @@ prov:wasInformedBy rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://archaeonatural.cloud/ont/C14DatingInformation
+www:C14DatingInformation rdf:type owl:DatatypeProperty ;
+                         rdfs:domain www:C14Dating ;
+                         rdfs:range rdfs:Literal ;
+                         rdfs:comment "information related to a C14 dating"@en ;
+                         rdfs:label "c14 dating information"@en .
+
+
+###  http://archaeonatural.cloud/ont/aDNASampleRelationshipProperties
+www:aDNASampleRelationshipProperties rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain www:aDNASampleRelation ;
+                                     rdfs:range xsd:string ;
+                                     rdfs:comment "properties of the node type created to represent an attributed relationship between two aDNA samples"@en ;
+                                     rdfs:label "aDNA sample relationship properties"@en .
+
+
 ###  http://archaeonatural.cloud/ont/hasAlternativeID
 www:hasAlternativeID rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf www:identifiedBy ;
                      rdfs:domain owl:Thing ;
+                     rdfs:range xsd:string ;
                      rdfs:comment "alternative identifiers of an object, e.g., in other systems"@en ;
                      rdfs:label "has alternative ID"@en .
-
-
-###  http://archaeonatural.cloud/ont/hasAverageValue
-www:hasAverageValue rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf www:hasNumericValue ;
-                    rdfs:domain www:SNPCoverage ;
-                    rdfs:range xsd:decimal ;
-                    rdfs:comment "the average value of multiple measured values"@en ;
-                    rdfs:label "has average value"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasCollectionID
 www:hasCollectionID rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf www:identifiedBy ;
                     rdfs:domain www:Sample ;
+                    rdfs:range xsd:string ;
                     rdfs:comment "alternative  identifier shared by the provider/owner of the data (in the original collection)"@en ;
                     rdfs:label "has collection ID"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasCount
-www:hasCount rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf www:hasNumericValue ;
-             rdfs:domain www:Count ;
-             rdfs:range xsd:integer ;
-             rdfs:comment "a count of instances"@en ;
-             rdfs:label "has count"@en .
+###  http://archaeonatural.cloud/ont/hasContaminationError
+www:hasContaminationError rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf www:hasError ;
+                          rdfs:domain www:Contamination ;
+                          rdfs:range xsd:decimal ;
+                          rdfs:comment "(modern) contamination estimate error of the sample"@en ;
+                          rdfs:label "has contamination error"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasDOI
@@ -864,46 +789,20 @@ www:hasDOI rdf:type owl:DatatypeProperty ;
 
 ###  http://archaeonatural.cloud/ont/hasDatingError
 www:hasDatingError rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf www:C14DatingInformation ,
+                                      www:hasError ;
+                   rdfs:domain www:C14Dating ;
                    rdfs:range xsd:decimal ;
                    rdfs:comment "a dating error considering the Uncalibrated Dating"@en ;
                    rdfs:label "has dating error"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasEDTFTemporalInformation
-www:hasEDTFTemporalInformation rdf:type owl:DatatypeProperty ;
-                               rdfs:subPropertyOf owl:topDataProperty ;
-                               rdfs:domain time:TemporalEntity ;
-                               rdfs:range <http://id.loc.gov/datatypes/edtf/EDTF> ;
-                               rdfs:comment "EDTF information assigned to temporal objects"@en ;
-                               rdfs:label "has EDTF temporal information"@en .
-
-
-###  http://archaeonatural.cloud/ont/hasEDTFTimePeriod
-www:hasEDTFTimePeriod rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf www:hasEDTFTemporalInformation ,
-                                         edtf:hasEDTFDateTimeDescription ;
-                      rdfs:domain www:TimePeriod ;
-                      rdfs:range <http://id.loc.gov/datatypes/edtf/EDTF> ;
-                      rdfs:comment "EDTF time interval description assigned to a time period"@en ;
-                      rdfs:label "has EDTF time period"@en .
-
-
-###  http://archaeonatural.cloud/ont/hasEDTFYear
-www:hasEDTFYear rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf www:hasEDTFTemporalInformation ,
-                                   edtf:inEDTFDateTime ;
-                rdfs:range <http://id.loc.gov/datatypes/edtf/EDTF> ;
-                rdfs:comment "EDTF year description assigned to a year"@en ;
-                rdfs:label "has EDTF year"@en .
-
-
-###  http://archaeonatural.cloud/ont/hasHaplogroup
-www:hasHaplogroup rdf:type owl:DatatypeProperty ;
-                  rdfs:subPropertyOf www:hasTextualValue ;
-                  rdfs:domain www:HaplogroupMeasurement ;
-                  rdfs:range xsd:string ;
-                  rdfs:comment "the haplogroup information obtained"@en ;
-                  rdfs:label "has haplogroup"@en .
+###  http://archaeonatural.cloud/ont/hasError
+www:hasError rdf:type owl:DatatypeProperty ;
+             rdfs:domain crm:E1_CRM_Entity ;
+             rdfs:range xsd:decimal ;
+             rdfs:comment "quantified error of a measurement"@en ;
+             rdfs:label "has error"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasID
@@ -923,34 +822,46 @@ www:hasISOCode rdf:type owl:DatatypeProperty ;
                rdfs:label "has ISO code"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasKeywords
-www:hasKeywords rdf:type owl:DatatypeProperty ;
-                rdfs:domain crm:E20_Biological_Object ;
-                rdfs:range xsd:string ;
-                rdfs:comment "(list of) keywords to specify an object"@en ;
-                rdfs:label "has keywords"@en .
+###  http://archaeonatural.cloud/ont/hasKeyword
+www:hasKeyword rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain crm:E20_Biological_Object ;
+               rdfs:range xsd:string ;
+               rdfs:comment "keyword  to specify an object"@en ;
+               rdfs:label "has keyword"@en .
+
+
+###  http://archaeonatural.cloud/ont/hasLabNumber
+www:hasLabNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf www:C14DatingInformation ;
+                 rdfs:domain www:C14Dating ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "the lab number lab numbers of a measurement allowing to identify it and the applied processes"@en ;
+                 rdfs:label "has lab number"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasLabel
 www:hasLabel rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:domain owl:Thing ;
              rdfs:range xsd:string ;
              rdfs:comment "label/name of an object"@en ;
              rdfs:label "has label"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasLabnr
-www:hasLabnr rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf www:identifiedBy ;
-             rdfs:domain crm:E16_Measurement ;
-             rdfs:range xsd:string ;
-             rdfs:comment "the lab number lab numbers of a measurement allowing to identify it and the applied processes"@en ;
-             rdfs:label "has lab number"@en .
+###  http://archaeonatural.cloud/ont/hasLibraryCount
+www:hasLibraryCount rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf www:sample_measurements ;
+                    rdfs:domain www:aDNASample ;
+                    rdfs:range xsd:decimal ;
+                    rdfs:comment "relating the number of libraries produced for an aDNA sample to the respective sample"@en ;
+                    rdfs:label "has library count"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasNote
 www:hasNote rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf crm:P3_has_note ;
+            rdfs:domain crm:E1_CRM_Entity ;
             rdfs:range xsd:string ;
             rdfs:comment "any additional information"@en ;
             rdfs:label "has note"@en .
@@ -974,21 +885,31 @@ www:hasORCID rdf:type owl:DatatypeProperty ;
              rdfs:label "has ORCID"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasPercentage
-www:hasPercentage rdf:type owl:DatatypeProperty ;
-                  rdfs:subPropertyOf www:hasNumericValue ;
-                  rdfs:domain www:Percentage ;
-                  rdfs:range xsd:decimal ;
-                  rdfs:comment "a percentage"@en ;
-                  rdfs:label "has percentage"@en .
+###  http://archaeonatural.cloud/ont/hasRelationshipDegree
+www:hasRelationshipDegree rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf www:aDNASampleRelationshipProperties ;
+                          rdfs:domain www:aDNASampleRelation ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "adds a textual relationship degree to each aDNA sample relation"@en ;
+                          rdfs:label "has relationship degree"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasRelationshipType
 www:hasRelationshipType rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf www:aDNASampleRelationshipProperties ;
                         rdfs:domain www:aDNASampleRelation ;
                         rdfs:range xsd:string ;
                         rdfs:comment "adds a textual relationship type to each aDNA sample relation"@en ;
                         rdfs:label "has relationship type"@en .
+
+
+###  http://archaeonatural.cloud/ont/hasSNPCount
+www:hasSNPCount rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf www:sample_measurements ;
+                rdfs:domain www:aDNASample ;
+                rdfs:range xsd:decimal ;
+                rdfs:comment "number of non-missing SNPs to an aDNA sample"@en ;
+                rdfs:label "has SNP count"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasTextualValue
@@ -1009,15 +930,6 @@ www:hasTitle rdf:type owl:DatatypeProperty ;
              rdfs:label "has title"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasTypeExpression
-www:hasTypeExpression rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf www:hasLabel ;
-                      rdfs:domain crm:E55_Type ;
-                      rdfs:range xsd:string ;
-                      rdfs:comment "one of the possible value expressing the instances of a type"@en ;
-                      rdfs:label "has type expression"@en .
-
-
 ###  http://archaeonatural.cloud/ont/hasURL
 www:hasURL rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf www:hasLabel ;
@@ -1029,25 +941,20 @@ www:hasURL rdf:type owl:DatatypeProperty ;
 
 ###  http://archaeonatural.cloud/ont/hasUncalibratedDate
 www:hasUncalibratedDate rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:subPropertyOf www:C14DatingInformation ;
+                        rdfs:domain www:C14Dating ;
                         rdfs:range xsd:decimal ;
                         rdfs:comment "an uncalibrated date in BP obtained by a dating process"@en ;
-                        rdfs:label "has uncalibrated dates"@en .
+                        rdfs:label "has uncalibrated date"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasValue
 www:hasValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:domain crm:E16_Measurement ;
              rdfs:range rdfs:Literal ;
              rdfs:comment "any measured value"@en ;
              rdfs:label "has value"@en .
-
-
-###  http://archaeonatural.cloud/ont/hasVersion
-www:hasVersion rdf:type owl:DatatypeProperty ;
-               rdfs:range rdfs:Literal ;
-               rdfs:comment "denotes the version (package version in Poseidon) of a dataset"@en ;
-               rdfs:label "has version"@en .
 
 
 ###  http://archaeonatural.cloud/ont/identifiedBy
@@ -1058,13 +965,39 @@ www:identifiedBy rdf:type owl:DatatypeProperty ;
                  rdfs:label "identified by"@en .
 
 
-###  http://archaeonatural.cloud/ont/measuredError
-www:measuredError rdf:type owl:DatatypeProperty ;
-                  rdfs:subPropertyOf www:hasValue ;
-                  rdfs:domain crm:E16_Measurement ;
-                  rdfs:range xsd:decimal ;
-                  rdfs:comment "the measured error when obtainin a value"@en ;
-                  rdfs:label "measured error"@en .
+###  http://archaeonatural.cloud/ont/measuredDamage
+www:measuredDamage rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf www:sample_measurements ;
+                   rdfs:domain www:aDNASample ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "measured % damage on the 5' end for the main shotgun library for an aDNA sample"@en ;
+                   rdfs:label "measured damage"@en .
+
+
+###  http://archaeonatural.cloud/ont/measuredEndogenousDNA
+www:measuredEndogenousDNA rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf www:sample_measurements ;
+                          rdfs:domain www:aDNASample ;
+                          rdfs:range xsd:decimal ;
+                          rdfs:comment "measured % endogenous DNA for an aDNA sample"@en ;
+                          rdfs:label "measured endogenous DNA"@en .
+
+
+###  http://archaeonatural.cloud/ont/measuredSNPCoverage
+www:measuredSNPCoverage rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf www:sample_measurements ;
+                        rdfs:domain www:aDNASample ;
+                        rdfs:range xsd:decimal ;
+                        rdfs:comment "measured average X-fold coverage across targeted SNP sites for an aDNA sample"@en ;
+                        rdfs:label "measured SNP coverage"@en .
+
+
+###  http://archaeonatural.cloud/ont/sample_measurements
+www:sample_measurements rdf:type owl:DatatypeProperty ;
+                        rdfs:domain www:Sample ;
+                        rdfs:range rdfs:Literal ;
+                        rdfs:comment "measured values for an (aDNA) sample"@en ;
+                        rdfs:label "sample measurements"@en .
 
 
 ###  http://prismstandard.org/namespaces/1.2/basic/doi
@@ -1074,17 +1007,9 @@ www:measuredError rdf:type owl:DatatypeProperty ;
                                                     rdfs:range xsd:string .
 
 
-###  http://www.cidoc-crm.org/cidoc-crm/P170i_time_is_defined_by
-crm:P170i_time_is_defined_by rdf:type owl:DatatypeProperty ;
-                             rdfs:domain crm:E52_Time-Span ;
-                             rdfs:range rdfs:Literal ;
-                             rdfs:comment """Scope note for 'P170': This property associates an instance of E61 Time Primitive with the instance of E52 Time-Span that constitutes the interpretation of the terms of the time primitive as an extent in absolute, real time.
-The quantification allows several instances of E61 Time Primitive that are each expressed in different syntactic forms, to define the same instance of E52 Time-Span."""@en ;
-                             rdfs:label "time is defined by"@en .
-
-
 ###  http://www.cidoc-crm.org/cidoc-crm/P3_has_note
 crm:P3_has_note rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
                 rdfs:domain crm:E1_CRM_Entity ;
                 rdfs:range rdfs:Literal ;
                 rdfs:comment """This property is a container for all informal descriptions about an object that have not been expressed in terms of CIDOC CRM constructs.
@@ -1126,12 +1051,6 @@ time:inXSDgYear rdf:type owl:DatatypeProperty ;
                 rdfs:label "in XSD gYear"@en .
 
 
-###  http://www.w3.org/2006/time#year
-time:year rdf:type owl:DatatypeProperty ;
-          rdfs:comment "Year position in a calendar-clock system. The range of this property is not specified, so can be replaced by any specific representation of a calendar year from any calendar."@en ;
-          rdfs:label "year"@en .
-
-
 ###  http://www.w3.org/ns/prov#endedAtTime
 prov:endedAtTime rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
@@ -1165,15 +1084,6 @@ edtf:hasEDTFDateTimeDescription rdf:type owl:DatatypeProperty ;
                                 rdfs:range <http://id.loc.gov/datatypes/edtf/EDTF> ;
                                 rdfs:comment "Value of an interval, expressed using EDTF"@en ;
                                 rdfs:label "has EDTF datetime description"@en .
-
-
-###  https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime
-edtf:inEDTFDateTime rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf owl:topDataProperty ;
-                    rdfs:domain time:Instant ;
-                    rdfs:range <http://id.loc.gov/datatypes/edtf/EDTF> ;
-                    rdfs:comment "Position of an instant, expressed using EDTF"@en ;
-                    rdfs:label "in EDTF datetime"@en .
 
 
 #################################################################
@@ -1239,7 +1149,7 @@ www:BiologicalSample rdf:type owl:Class ;
 
 ###  http://archaeonatural.cloud/ont/C14Dating
 www:C14Dating rdf:type owl:Class ;
-              rdfs:subClassOf crm:E16_Measurement ;
+              rdfs:subClassOf www:Dating ;
               rdfs:comment "Radiocarbon (C14) dating is a method for determining the age of an object containing organic material by using the properties of radiocarbon, a radioactive isotope of carbon."@en ;
               rdfs:label "C14 Dating"@en .
 
@@ -1266,13 +1176,6 @@ www:ContaminationMeasure rdf:type owl:Class ;
                          rdfs:label "Contamination Measure"@en .
 
 
-###  http://archaeonatural.cloud/ont/Count
-www:Count rdf:type owl:Class ;
-          rdfs:subClassOf crm:E16_Measurement ;
-          rdfs:comment "Simple measurements of obtaining a number of units."@en ;
-          rdfs:label "Count"@en .
-
-
 ###  http://archaeonatural.cloud/ont/Country
 www:Country rdf:type owl:Class ;
             rdfs:subClassOf lado:Place ;
@@ -1280,26 +1183,11 @@ www:Country rdf:type owl:Class ;
             rdfs:label "Country"@en .
 
 
-###  http://archaeonatural.cloud/ont/Damage
-www:Damage rdf:type owl:Class ;
-           rdfs:subClassOf www:Percentage ,
-                           obo:PATO_0001020 ;
-           rdfs:label "% damage on the 5' end for the main shotgun library used for sequencing and/or capture, in case of multiple libraries a value from the merged read alignment should be reported"@en ,
-                      "Damage"@en .
-
-
 ###  http://archaeonatural.cloud/ont/Dating
 www:Dating rdf:type owl:Class ;
            rdfs:subClassOf crm:E7_Activity ;
            rdfs:comment "The activity of dating a (aDNA) sample"@en ;
            rdfs:label "Dating"@en .
-
-
-###  http://archaeonatural.cloud/ont/DatingMedian
-www:DatingMedian rdf:type owl:Class ;
-                 rdfs:subClassOf crm:E16_Measurement ;
-                 rdfs:comment "median age of the sample in years BC/AD, for C14-dated samples median, for contextually dated samples simple mid-point of the archaeological intervals, 2000 for modern samples"@en ;
-                 rdfs:label "Dating Median"@en .
 
 
 ###  http://archaeonatural.cloud/ont/DatingType
@@ -1316,19 +1204,12 @@ www:DiscoverySite rdf:type owl:Class ;
                   rdfs:label "Discovery Site"@en .
 
 
-###  http://archaeonatural.cloud/ont/EndogenousDNA
-www:EndogenousDNA rdf:type owl:Class ;
-                  rdfs:subClassOf www:Percentage ;
-                  rdfs:comment "% endogenous DNA as estimated from SG libraries (before capture) as for example estimated by EAGER, not on target and no quality filter"@en ;
-                  rdfs:label "Endogenous DNA"@en .
-
-
 ###  http://archaeonatural.cloud/ont/GeneticSex
 www:GeneticSex rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Class ;
-                                     owl:oneOf ( <http://archaeonatural.cloud/ont/GeneticSex/Unknown>
-                                                 <http://schema.org/Female>
-                                                 <http://schema.org/Male>
+                                     owl:oneOf ( www:GeneticSex_Female
+                                                 www:GeneticSex_Male
+                                                 www:GeneticSex_Unknown
                                                )
                                    ] ;
                rdfs:subClassOf obo:GSSO_000114 ;
@@ -1353,8 +1234,8 @@ www:GenomicLibrary rdf:type owl:Class ;
 ###  http://archaeonatural.cloud/ont/GenotypePloidy
 www:GenotypePloidy rdf:type owl:Class ;
                    owl:equivalentClass [ rdf:type owl:Class ;
-                                         owl:oneOf ( <http://archaeonatural.cloud/ont/GenotypePloidy/diploid>
-                                                     <http://archaeonatural.cloud/ont/GenotypePloidy/haploid>
+                                         owl:oneOf ( www:GenotypePloidy_diploid
+                                                     www:GenotypePloidy_haploid
                                                    )
                                        ] ;
                    rdfs:subClassOf obo:PATO_0001374 ,
@@ -1385,20 +1266,13 @@ www:Journal rdf:type owl:Class ;
             rdfs:label "Journal"@en .
 
 
-###  http://archaeonatural.cloud/ont/LibraryCount
-www:LibraryCount rdf:type owl:Class ;
-                 rdfs:subClassOf www:Count ;
-                 rdfs:comment "number of libraries produced for the sample"@en ;
-                 rdfs:label "Library Count"@en .
-
-
 ###  http://archaeonatural.cloud/ont/LibraryStrandedness
 www:LibraryStrandedness rdf:type owl:Class ;
                         owl:equivalentClass [ rdf:type owl:Class ;
-                                              owl:oneOf ( <http://archaeonatural.cloud/ont/LibraryStrandedness/ds>
-                                                          <http://archaeonatural.cloud/ont/LibraryStrandedness/mixed>
-                                                          <http://archaeonatural.cloud/ont/LibraryStrandedness/other>
-                                                          <http://archaeonatural.cloud/ont/LibraryStrandedness/ss>
+                                              owl:oneOf ( www:LibraryStrandedness_ds
+                                                          www:LibraryStrandedness_mixed
+                                                          www:LibraryStrandedness_other
+                                                          www:LibraryStrandedness_ss
                                                         )
                                             ] ;
                         rdfs:subClassOf skos:Concept ;
@@ -1420,13 +1294,6 @@ www:MTHaplogroupMeasurement rdf:type owl:Class ;
                             rdfs:label "MT-Haplogroup Measurement"@en .
 
 
-###  http://archaeonatural.cloud/ont/Percentage
-www:Percentage rdf:type owl:Class ;
-               rdfs:subClassOf crm:E16_Measurement ;
-               rdfs:comment "Measurement obtaining a percentage value"@en ;
-               rdfs:label "Percentage"@en .
-
-
 ###  http://archaeonatural.cloud/ont/Person
 www:Person rdf:type owl:Class ;
            rdfs:subClassOf crm:E21_Person ;
@@ -1446,20 +1313,6 @@ www:PreparationPipeline rdf:type owl:Class ;
                         rdfs:subClassOf crm:E29_Design_or_Procedure ;
                         rdfs:comment "computational pipeline used to generate the genotype data from the source data"@en ;
                         rdfs:label "Preparation Pipeline"@en .
-
-
-###  http://archaeonatural.cloud/ont/SNPCount
-www:SNPCount rdf:type owl:Class ;
-             rdfs:subClassOf www:Count ;
-             rdfs:comment "number of non-missing SNPs for the sample, counted on the SNP-set stored in the Poseidon package"@en ;
-             rdfs:label "SNP Count"@en .
-
-
-###  http://archaeonatural.cloud/ont/SNPCoverage
-www:SNPCoverage rdf:type owl:Class ;
-                rdfs:subClassOf crm:E16_Measurement ;
-                rdfs:comment "average X-fold coverage across targeted SNP sites after quality filtering"@en ;
-                rdfs:label "SNP Coverage"@en .
 
 
 ###  http://archaeonatural.cloud/ont/Sample
@@ -1485,24 +1338,15 @@ www:SourceTissue rdf:type owl:Class ;
 ###  http://archaeonatural.cloud/ont/SourceTissueType
 www:SourceTissueType rdf:type owl:Class ;
                      owl:equivalentClass [ rdf:type owl:Class ;
-                                           owl:oneOf ( <http://archaeonatural.cloud/ont/SourceTissueType/Hair>
-                                                       <http://archaeonatural.cloud/ont/SourceTissueType/Petrous>
-                                                       <http://archaeonatural.cloud/ont/SourceTissueType/Tooth>
-                                                       <http://archaeonatural.cloud/ont/SourceTissueType/otherBone>
+                                           owl:oneOf ( www:SourceTissueType_Hair
+                                                       www:SourceTissueType_Petrous
+                                                       www:SourceTissueType_Tooth
+                                                       www:SourceTissueType_otherBone
                                                      )
                                          ] ;
                      rdfs:subClassOf skos:Concept ;
                      rdfs:comment "type of material sampled"@en ;
                      rdfs:label "Source Tissue Type"@en .
-
-
-###  http://archaeonatural.cloud/ont/SpatiotemporalInformation
-www:SpatiotemporalInformation rdf:type owl:Class ;
-                              rdfs:subClassOf crm:E92_Spacetime_Volume ,
-                                              geosparql:SpatialObject ,
-                                              time:TemporalEntity ;
-                              rdfs:comment "Information containing of time period and geolocation information, thus forming a point in a 4-dimensional spatiotemporal feature space"@en ;
-                              rdfs:label "Spatiotemporal Information"@en .
 
 
 ###  http://archaeonatural.cloud/ont/TimePeriod
@@ -1516,15 +1360,22 @@ www:TimePeriod rdf:type owl:Class ;
 ###  http://archaeonatural.cloud/ont/UDGTreatment
 www:UDGTreatment rdf:type owl:Class ;
                  owl:equivalentClass [ rdf:type owl:Class ;
-                                       owl:oneOf ( <http://archaeonatural.cloud/ont/LibraryStrandedness/mixed>
-                                                   <http://archaeonatural.cloud/ont/UDGTreatment/half>
-                                                   <http://archaeonatural.cloud/ont/UDGTreatment/minus>
-                                                   <http://archaeonatural.cloud/ont/UDGTreatment/plus>
+                                       owl:oneOf ( www:LibraryStrandedness_mixed
+                                                   www:UDGTreatment_half
+                                                   www:UDGTreatment_minus
+                                                   www:UDGTreatment_plus
                                                  )
                                      ] ;
                  rdfs:subClassOf skos:Concept ;
                  rdfs:comment "udg treatment for the libraries, mixed in case multiple libraries with different UDG treatment were merged"@en ;
                  rdfs:label "UDG Treatment"@en .
+
+
+###  http://archaeonatural.cloud/ont/Unknown
+www:Unknown rdf:type owl:Class ;
+            rdfs:subClassOf crm:E1_CRM_Entity ;
+            rdfs:comment "Entity type for blank nodes created for missing data values to allow transitive information modelling - e.g., connect Discovery Site and Location via a blank node Site if there is no Site information in the data"@en ;
+            rdfs:label "Unknown Entity"@en .
 
 
 ###  http://archaeonatural.cloud/ont/YHaplogroupMeasurement
@@ -1551,8 +1402,8 @@ www:aDNASampleRelation rdf:type owl:Class ;
 ###  http://archaeonatural.cloud/ont/externalIdentifierType
 www:externalIdentifierType rdf:type owl:Class ;
                            owl:equivalentClass [ rdf:type owl:Class ;
-                                                 owl:oneOf ( www:Geonames
-                                                             www:Wikidata
+                                                 owl:oneOf ( <http://archaeonatural.cloud/ExternalIdentifier_Wikidata>
+                                                             <http://archaeonatural.cloud/ont_Geonames>
                                                            )
                                                ] ;
                            rdfs:subClassOf skos:Concept ;
@@ -1600,13 +1451,6 @@ obo:PATO_0000141 rdf:type owl:Class ;
                  rdfs:subClassOf obo:PATO_0000051 ;
                  rdfs:comment "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form."@en ;
                  rdfs:label "PATO structure"@en .
-
-
-###  http://purl.obolibrary.org/obo/PATO_0001020
-obo:PATO_0001020 rdf:type owl:Class ;
-                 rdfs:subClassOf obo:PATO_0000141 ;
-                 rdfs:comment "A structural quality inhering in a bearer by virtue of whether the bearer has been harmed or injured or spoiled."@en ;
-                 rdfs:label "PATO damage"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0001241
@@ -1732,7 +1576,7 @@ crm:E18_Physical_Thing rdf:type owl:Class ;
 Depending on the existence of natural boundaries of such things, the CIDOC CRM distinguishes the instances of E19 Physical Object from instances of E26 Physical Feature, such as holes, rivers, pieces of land, etc. Most instances of E19 Physical Object can be moved (if not too heavy), whereas features are integral to the surrounding matter.
 An instance of E18 Physical Thing occupies not only a particular geometric space at any instant of its existence, but in the course of its existence it also forms a trajectory through spacetime, which occupies a real, that is phenomenal, volume in spacetime. We include in the occupied space the space filled by the matter of the physical thing and all its inner spaces, such as the interior of a box. For the purpose of more detailed descriptions of the presence of an instance of E18 Physical Thing in space and time it can be associated with its specific instance of E92 Spacetime Volume by the property P196 defines (is defined by).
 The CIDOC CRM is generally not concerned with amounts of matter in fluid or gaseous states, as long as they are not confined in an identifiable way for an identifiable minimal time-span."""@en ;
-                       rdfs:label "Physical Thing"@en .
+                       rdfs:label "E18 Physical Thing"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object
@@ -1742,7 +1586,7 @@ crm:E19_Physical_Object rdf:type owl:Class ;
 The class also includes all aggregates of objects made for functional purposes of whatever kind, independent of physical coherence, such as a set of chessmen. Typically, instances of E19 Physical Object can be moved (if not too heavy).
 In some contexts, such objects, except for aggregates, are also called “bona fide objects”, i.e. naturally defined objects (Smith &amp; Varzi, 2000).
 The decision as to what is documented as a complete item, rather than by its parts or components, may be purely administrative or may be a result of the order in which the item was acquired."""@en ;
-                        rdfs:label "Physical Object"@en .
+                        rdfs:label "E19 Physical Object"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity
@@ -1755,10 +1599,10 @@ crm:E1_CRM_Entity rdf:type owl:Class ;
     3.	Attachment of free text for the expression of anything not captured by formal properties
     With the exception of E59 Primitive Value, all other classes within the CRM are directly or indirectly specialisations of E1 CRM Entity.
     """ ;
-                  rdfs:label "CRM Entität"@de ,
-                             "CRM Сущность"@ru ,
+                  rdfs:label "CRM Сущность"@ru ,
                              "CRM实体"@zh ,
                              "E1 CRM Entity"@en ,
+                             "E1 CRM Entität"@de ,
                              "Entidade CRM"@pt ,
                              "Entité CRM"@fr ,
                              "Οντότητα CIDOC CRM"@el .
@@ -1769,7 +1613,7 @@ crm:E20_Biological_Object rdf:type owl:Class ;
                           rdfs:subClassOf crm:E19_Physical_Object ;
                           rdfs:comment """This class comprises individual items of a material nature, which live, have lived, or are natural products of or from living organisms.
 Artificial objects that incorporate biological elements, such as Victorian butterfly frames, can be documented as both instances of E20 Biological Object and E22 Human-Made Object."""@en ;
-                          rdfs:label "Biological Object"@en .
+                          rdfs:label "E20 Biological Object"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E21_Person
@@ -1789,7 +1633,7 @@ crm:E26_Physical_Feature rdf:type owl:Class ;
 Instances of E26 Physical Feature share many of the attributes of instances of E19 Physical Object. They may have a one-dimensional, two-dimensional, or three-dimensional geometric extent, but there are no natural borders that separate them completely in an objective way from the carrier objects. For example, a doorway is a feature but the door itself, being attached by hinges, is not.
 Instances of E26 Physical Feature can be features in a narrower sense, such as scratches, holes, reliefs, surface colours, reflection zones in an opal crystal or a density change in a piece of wood. In the wider sense, they are portions of particular objects with partially imaginary borders, such as the core of the Earth, an area of property on the surface of the Earth, a landscape or the head of a contiguous marble statue. They can be measured and dated, and it is sometimes possible to state who or what is or was responsible for them. They cannot be separated from the carrier object, but a segment of the carrier object may be identified (or sometimes removed) carrying the complete feature.
 This definition coincides with the definition of “fiat objects”, with the exception of aggregates of “bona fide objects” (Smith &amp; Varzi, 2000)."""@en ;
-                         rdfs:label "Physical Feature"@en .
+                         rdfs:label "E26 Physical Feature"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E27_Site
@@ -1798,7 +1642,7 @@ crm:E27_Site rdf:type owl:Class ;
              rdfs:comment """This class comprises pieces of land or sea floor.
 In contrast to the purely geometric notion of E53 Place, this class describes constellations of matter on the surface of the Earth or other celestial body, which can be represented by photographs, paintings, and maps.
 Instances of E27 Site are composed of relatively immobile material items and features in a particular configuration at a particular location."""@en ;
-             rdfs:label "Site"@en .
+             rdfs:label "E27 Site"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object
@@ -1807,7 +1651,7 @@ crm:E28_Conceptual_Object rdf:type owl:Class ;
                           rdfs:comment """This class comprises non-material products of our minds and other human produced data that have become objects of a discourse about their identity, circumstances of creation, or historical implication. The production of such information might have been supported by the use of technical devices such as cameras or computers.
 Characteristically, instances of this class are created, invented or thought by someone, and then may be documented or communicated between persons. Instances of E28 Conceptual Object have the ability to exist on more than one particular carrier at the same time, such as paper, electronic signals, marks, audio media, paintings, photos, human memories, etc.
 They cannot be destroyed. They exist as long as they can be found on at least one carrier or in at least one human memory. Their existence ends when the last carrier and the last memory are lost."""@en ;
-                          rdfs:label "Conceptual Object"@en .
+                          rdfs:label "E28 Conceptual Object"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E29_Design_or_Procedure
@@ -1821,7 +1665,7 @@ Designs or procedures can be seen as one of the following:
 2. A schema of the products that result from their application
 3. An independent intellectual product that may have never been applied, such as Leonardo da Vinci’s famous plans for flying machines
 Because designs or procedures may never be applied or only partially executed, the CIDOC CRM models a loose relationship between the plan and the respective product."""@en ;
-                            rdfs:label "Design or Procedure"@en .
+                            rdfs:label "E29 Design or Procedure"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity
@@ -1837,7 +1681,7 @@ crm:E31_Document rdf:type owl:Class ;
                  rdfs:subClassOf crm:E73_Information_Object ;
                  rdfs:comment """This class comprises identifiable immaterial items that make propositions about reality.
 These propositions may be expressed in text, graphics, images, audiograms, videograms, or by other similar means. Documentation databases are regarded as instances of E31 Document. This class should not be confused with the concept “document” in Information Technology, which is compatible with E73 Information Object."""@en ;
-                 rdfs:label "Document"@en .
+                 rdfs:label "E31 Document"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E39_Actor
@@ -1888,7 +1732,7 @@ crm:E55_Type rdf:type owl:Class ;
              rdfs:subClassOf crm:E28_Conceptual_Object ;
              rdfs:comment """This class comprises concepts denoted by terms from thesauri and controlled vocabularies used to characterize and classify instances of CIDOC CRM classes. Instances of E55 Type represent concepts, in contrast to instances of E41 Appellation which are used to name instances of CIDOC CRM classes.
 E55 Type provides an interface to domain specific ontologies and thesauri. These can be represented in the CIDOC CRM as subclasses of E55 Type, forming hierarchies of terms, i.e. instances of E55 Type linked via P127 has broader term (has narrower term): E55 Type. Such hierarchies may be extended with additional properties."""@en ;
-             rdfs:label "Type"@en .
+             rdfs:label "E55 Type"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E5_Event
@@ -1914,7 +1758,7 @@ crm:E70_Thing rdf:type owl:Class ;
               rdfs:subClassOf crm:E77_Persistent_Item ;
               rdfs:comment """This general class comprises discrete, identifiable, instances of E77 Persistent Item that are documented as single units, that either consist of matter or depend on being carried by matter and are characterized by relative stability.
 They may be intellectual products or physical things. They may, for instance, have a solid physical form, an electronic encoding, or they may be a logical concept or structure."""@en ;
-              rdfs:label "Thing"@en .
+              rdfs:label "E70 Thing"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing
@@ -1922,7 +1766,7 @@ crm:E71_Human-Made_Thing rdf:type owl:Class ;
                          rdfs:subClassOf crm:E70_Thing ;
                          rdfs:comment """This class comprises discrete, identifiable human-made items that are documented as single units.
 These items are either intellectual products or human-made physical things, and are characterized by relative stability. They may, for instance, have a solid physical form, an electronic encoding, or they may be logical concepts or structures."""@en ;
-                         rdfs:label "Human-Made Thing"@en .
+                         rdfs:label "E71 Human-Made Thing"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object
@@ -1930,7 +1774,7 @@ crm:E72_Legal_Object rdf:type owl:Class ;
                      rdfs:subClassOf crm:E70_Thing ;
                      rdfs:comment """This class comprises those material or immaterial items to which instances of E30 Right, such as the right of ownership or use, can be applied.
 This is generally true for all instances of E18 Physical Thing. In the case of instances of E28 Conceptual Object, however, the identity of an instance of E28 Conceptual Object or the method of its use may be too ambiguous to reliably establish instances of E30 Right, as in the case of taxa and inspirations. Ownership of corporations is currently regarded as out of scope of the CIDOC CRM."""@en ;
-                     rdfs:label "Legal Object"@en .
+                     rdfs:label "E72 Legal Object"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object
@@ -1940,7 +1784,7 @@ crm:E73_Information_Object rdf:type owl:Class ;
                            rdfs:comment """This class comprises identifiable immaterial items, such as poems, jokes, data sets, images, texts, multimedia objects, procedural prescriptions, computer program code, algorithm or mathematical formulae, that have an objectively recognizable structure and are documented as single units. The encoding structure known as a “named graph” also falls under this class, so that each “named graph” is an instance of E73 Information Object.
 An instance of E73 Information Object does not depend on a specific physical carrier, which can include human memory, and it can exist on one or more carriers simultaneously.
 Instances of E73 Information Object of a linguistic nature should be declared as instances of the E33 Linguistic Object subclass. Instances of E73 Information Object of a documentary nature should be declared as instances of the E31 Document subclass. Conceptual items such as types and classes are not instances of E73 Information Object, nor are ideas without a reproducible expression."""@en ;
-                           rdfs:label "Information Object"@en .
+                           rdfs:label "E73 Information Object"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item
@@ -1967,7 +1811,7 @@ crm:E89_Propositional_Object rdf:type owl:Class ;
                              rdfs:subClassOf crm:E28_Conceptual_Object ;
                              rdfs:comment """This class comprises immaterial items, including but not limited to stories, plots, procedural prescriptions, algorithms, laws of physics or images that are, or represent in some sense, sets of propositions about real or imaginary things and that are documented as single units or serve as topic of discourse.
 This class also comprises items that are “about” something in the sense of a subject. In the wider sense, this class includes expressions of psychological value such as non-figural art and musical themes. However, conceptual items such as types and classes are not instances of E89 Propositional Object. This should not be confused with the definition of a type, which is indeed an instance of E89 Propositional Object."""@en ;
-                             rdfs:label "Propositional Object"@en .
+                             rdfs:label "E89 Propositional Object"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object
@@ -1977,7 +1821,7 @@ crm:E90_Symbolic_Object rdf:type owl:Class ;
                         rdfs:comment """This class comprises identifiable symbols and any aggregation of symbols, such as characters, identifiers, traffic signs, emblems, texts, data sets, images, musical scores, multimedia objects, computer program code, or mathematical formulae that have an objectively recognizable structure and that are documented as single units.
 It includes sets of signs of any nature, which may serve to designate something, or to communicate some propositional content. An instance of E90 Symbolic Object may or may not have a specific meaning, for example an arbitrary character string.
 In some cases, the content of an instance of E90 Symbolic Object may completely be represented by a serialized digital content model, such as a sequence of ASCII-encoded characters, an XML or HTML document, or a TIFF image. The property P3 has note and its subproperty P190 has symbolic content allow for the description of this content model. In order to disambiguate which symbolic level is the carrier of the meaning, the property P3.1 has type can be used to specify the encoding (e.g. “bit”, “Latin character”, RGB pixel)."""@en ;
-                        rdfs:label "Symbolic Object"@en .
+                        rdfs:label "E90 Symbolic Object"@en .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume
@@ -2156,74 +2000,88 @@ crmdig:D7_Digital_Machine_Event rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://archaeonatural.cloud/ont/Geonames
-www:Geonames rdf:type owl:NamedIndividual ,
-                      www:externalIdentifierType .
+###  http://archaeonatural.cloud/ExternalIdentifier_Wikidata
+<http://archaeonatural.cloud/ExternalIdentifier_Wikidata> rdf:type owl:NamedIndividual ,
+                                                                   www:externalIdentifierType .
 
 
-###  http://archaeonatural.cloud/ont/Wikidata
-www:Wikidata rdf:type owl:NamedIndividual ,
-                      www:externalIdentifierType .
+###  http://archaeonatural.cloud/ont_Geonames
+<http://archaeonatural.cloud/ont_Geonames> rdf:type owl:NamedIndividual ,
+                                                    www:externalIdentifierType .
 
 
-###  http://archaeonatural.cloud/ont/GeneticSex/Unknown
-<http://archaeonatural.cloud/ont/GeneticSex/Unknown> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/GeneticSex_Female
+www:GeneticSex_Female rdf:type owl:NamedIndividual ;
+                      owl:sameAs <http://schema.org/Female> .
 
 
-###  http://archaeonatural.cloud/ont/GenotypePloidy/diploid
-<http://archaeonatural.cloud/ont/GenotypePloidy/diploid> rdf:type owl:NamedIndividual .
+###  http://schema.org/Female
+
+###  http://archaeonatural.cloud/ont/GeneticSex_Male
+www:GeneticSex_Male rdf:type owl:NamedIndividual ;
+                    owl:sameAs <http://schema.org/Male> .
 
 
-###  http://archaeonatural.cloud/ont/GenotypePloidy/haploid
-<http://archaeonatural.cloud/ont/GenotypePloidy/haploid> rdf:type owl:NamedIndividual .
+###  http://schema.org/Male
+
+###  http://archaeonatural.cloud/ont/GeneticSex_Unknown
+www:GeneticSex_Unknown rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/LibraryStrandedness/ds
-<http://archaeonatural.cloud/ont/LibraryStrandedness/ds> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/GenotypePloidy_diploid
+www:GenotypePloidy_diploid rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/LibraryStrandedness/mixed
-<http://archaeonatural.cloud/ont/LibraryStrandedness/mixed> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/GenotypePloidy_haploid
+www:GenotypePloidy_haploid rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/LibraryStrandedness/other
-<http://archaeonatural.cloud/ont/LibraryStrandedness/other> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/LibraryStrandedness_ds
+www:LibraryStrandedness_ds rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/LibraryStrandedness/ss
-<http://archaeonatural.cloud/ont/LibraryStrandedness/ss> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/LibraryStrandedness_mixed
+www:LibraryStrandedness_mixed rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/SourceTissueType/Hair
-<http://archaeonatural.cloud/ont/SourceTissueType/Hair> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/LibraryStrandedness_other
+www:LibraryStrandedness_other rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/SourceTissueType/Petrous
-<http://archaeonatural.cloud/ont/SourceTissueType/Petrous> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/LibraryStrandedness_ss
+www:LibraryStrandedness_ss rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/SourceTissueType/Tooth
-<http://archaeonatural.cloud/ont/SourceTissueType/Tooth> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/SourceTissueType_Hair
+www:SourceTissueType_Hair rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/SourceTissueType/otherBone
-<http://archaeonatural.cloud/ont/SourceTissueType/otherBone> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/SourceTissueType_Petrous
+www:SourceTissueType_Petrous rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/UDGTreatment/half
-<http://archaeonatural.cloud/ont/UDGTreatment/half> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/SourceTissueType_Tooth
+www:SourceTissueType_Tooth rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/UDGTreatment/minus
-<http://archaeonatural.cloud/ont/UDGTreatment/minus> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/SourceTissueType_otherBone
+www:SourceTissueType_otherBone rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/UDGTreatment/mixed
-<http://archaeonatural.cloud/ont/UDGTreatment/mixed> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/UDGTreatment_half
+www:UDGTreatment_half rdf:type owl:NamedIndividual .
 
 
-###  http://archaeonatural.cloud/ont/UDGTreatment/plus
-<http://archaeonatural.cloud/ont/UDGTreatment/plus> rdf:type owl:NamedIndividual .
+###  http://archaeonatural.cloud/ont/UDGTreatment_minus
+www:UDGTreatment_minus rdf:type owl:NamedIndividual .
+
+
+###  http://archaeonatural.cloud/ont/UDGTreatment_mixed
+www:UDGTreatment_mixed rdf:type owl:NamedIndividual .
+
+
+###  http://archaeonatural.cloud/ont/UDGTreatment_plus
+www:UDGTreatment_plus rdf:type owl:NamedIndividual .
 
 
 ###  http://schema.org/Female
