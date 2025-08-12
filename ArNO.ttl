@@ -18,7 +18,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@prefix crmdig: <https://transurbicide.gta.arch.ethz.ch/resource/crmdig:> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
 @prefix pleiades: <https://pleiades.stoa.org/places/vocab#> .
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
 @base <http://archaeonatural.cloud/ont/> .
@@ -262,6 +262,14 @@ www:hasCaptureType rdf:type owl:ObjectProperty ;
                    rdfs:label "has capture type"@en .
 
 
+###  http://archaeonatural.cloud/ont/hasDOI
+www:hasDOI rdf:type owl:ObjectProperty ;
+           rdfs:domain www:Literature ;
+           rdfs:range owl:Thing ;
+           rdfs:comment "the DOI allowing to identify a document"@en ;
+           rdfs:label "has DOI"@en .
+
+
 ###  http://archaeonatural.cloud/ont/hasDatingType
 www:hasDatingType rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf www:datingInformation ,
@@ -306,6 +314,14 @@ www:hasMedian rdf:type owl:ObjectProperty ;
               rdfs:range time:Instant ;
               rdfs:comment "Median of a temporal entity."@en ;
               rdfs:label "has median"@en .
+
+
+###  http://archaeonatural.cloud/ont/hasORCID
+www:hasORCID rdf:type owl:ObjectProperty ;
+             rdfs:domain www:Person ;
+             rdfs:range owl:Thing ;
+             rdfs:comment "the ORCID ID allowing to identify an author"@en ;
+             rdfs:label "has ORCID"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasPrimaryContact
@@ -776,15 +792,6 @@ www:hasContaminationError rdf:type owl:DatatypeProperty ;
                           rdfs:label "has contamination error"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasDOI
-www:hasDOI rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf www:identifiedBy ;
-           rdfs:domain www:Literature ;
-           rdfs:range xsd:anyURI ;
-           rdfs:comment "the DOI allowing to identify a document"@en ;
-           rdfs:label "has DOI"@en .
-
-
 ###  http://archaeonatural.cloud/ont/hasDatingError
 www:hasDatingError rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf www:C14DatingInformation ,
@@ -874,15 +881,6 @@ www:hasNumericValue rdf:type owl:DatatypeProperty ;
                     rdfs:label "has numeric value"@en .
 
 
-###  http://archaeonatural.cloud/ont/hasORCID
-www:hasORCID rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf www:identifiedBy ;
-             rdfs:domain www:Person ;
-             rdfs:range xsd:anyURI ;
-             rdfs:comment "the ORCID ID allowing to identify an author"@en ;
-             rdfs:label "has ORCID"@en .
-
-
 ###  http://archaeonatural.cloud/ont/hasRelationshipDegree
 www:hasRelationshipDegree rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf www:aDNASampleRelationshipProperties ;
@@ -953,6 +951,14 @@ www:hasValue rdf:type owl:DatatypeProperty ;
              rdfs:range rdfs:Literal ;
              rdfs:comment "any measured value"@en ;
              rdfs:label "has value"@en .
+
+
+###  http://archaeonatural.cloud/ont/hasVersion
+www:hasVersion rdf:type owl:DatatypeProperty ;
+               rdfs:domain www:Dataset ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "Denotes the version of a dataset (package version in Poseidon)"@en ;
+               rdfs:label "has version"@en .
 
 
 ###  http://archaeonatural.cloud/ont/identifiedBy
@@ -1172,6 +1178,13 @@ www:Country rdf:type owl:Class ;
             rdfs:subClassOf lado:Place ;
             rdfs:comment "Country according to ISO 3166"@en ;
             rdfs:label "Country"@en .
+
+
+###  http://archaeonatural.cloud/ont/Dataset
+www:Dataset rdf:type owl:Class ;
+            rdfs:subClassOf crmdig:D1_Digital_Object ;
+            rdfs:comment "Dataset containing information used to create RDF data"@en ;
+            rdfs:label "Dataset"@en .
 
 
 ###  http://archaeonatural.cloud/ont/Dating
@@ -1836,6 +1849,38 @@ crm:E92_Spacetime_Volume rdf:type owl:Class ;
                          rdfs:label "E92 Spacetime Volume"@en .
 
 
+###  http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution
+crmdig:D10_Software_Execution rdf:type owl:Class ;
+                              rdfs:subClassOf crmdig:D7_Digital_Machine_Event ;
+                              rdfs:comment """his class comprises events by which a digital device runs a software program or a series of
+computing operations on a digital object as a single task, which is completely determined by its
+digital input, the software and the generic properties of the device."""@en ;
+                              rdfs:label "D10 Software Execution"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object
+crmdig:D1_Digital_Object rdf:type owl:Class ;
+                         rdfs:subClassOf crm:E73_Information_Object ;
+                         rdfs:comment """This class comprises identifiable immaterial items that can be represented as sets of bit sequences,
+such as data sets, e-texts, images, audio or video items, software, etc., and are documented as
+single units.
+Any aggregation of instances of D1 Digital Object into a whole treated as single unit is also
+regarded as an instance of D1 Digital Object.
+This means that for instance, the content of a DVD, an XML file on it, and an element of this file,
+are regarded as distinct instances of D1 Digital Object, mutually related by the P106 is composed
+of (forms part of) property.
+A D1 Digital Object does not depend on a specific physical carrier, and it can exist on one or more
+carriers simultaneously."""@en ;
+                         rdfs:label "D1 Digital Object"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event
+crmdig:D7_Digital_Machine_Event rdf:type owl:Class ;
+                                rdfs:subClassOf crm:E11_Modification ;
+                                rdfs:comment "This class comprises events that happen on physical digital devices following a human activity that intentionally caused its immediate or delayed initiation and results in the creation of a new instance of D1 Digital Object on behalf of the human actor. The input of a D7 Digital Machine Event may be parameter settings and/or data to be processed. Some D7 Digital Machine Events may form part of a wider E65 Creation event. In this case, all machine output of the partial events is regarded as creation of the overall activity."@en ;
+                                rdfs:label "D7 Digital Machine Event"@en .
+
+
 ###  http://www.opengis.net/ont/geosparql#Feature
 geosparql:Feature rdf:type owl:Class ;
                   rdfs:subClassOf geosparql:SpatialObject ;
@@ -1978,22 +2023,6 @@ pleiades:Place rdf:type owl:Class ;
                rdfs:subClassOf crm:E1_CRM_Entity ;
                rdfs:comment "Places are instances of skos:Concept as well as contexts for Locations and Names."@en ;
                rdfs:label "Pleiades Place"@en .
-
-
-###  https://transurbicide.gta.arch.ethz.ch/resource/crmdig:D10_Software_Execution
-crmdig:D10_Software_Execution rdf:type owl:Class ;
-                              rdfs:subClassOf crmdig:D7_Digital_Machine_Event ;
-                              rdfs:comment """his class comprises events by which a digital device runs a software program or a series of
-computing operations on a digital object as a single task, which is completely determined by its
-digital input, the software and the generic properties of the device."""@en ;
-                              rdfs:label "D10 Software Execution"@en .
-
-
-###  https://transurbicide.gta.arch.ethz.ch/resource/crmdig:D7_Digital_Machine_Event
-crmdig:D7_Digital_Machine_Event rdf:type owl:Class ;
-                                rdfs:subClassOf crm:E11_Modification ;
-                                rdfs:comment "This class comprises events that happen on physical digital devices following a human activity that intentionally caused its immediate or delayed initiation and results in the creation of a new instance of D1 Digital Object on behalf of the human actor. The input of a D7 Digital Machine Event may be parameter settings and/or data to be processed. Some D7 Digital Machine Events may form part of a wider E65 Creation event. In this case, all machine output of the partial events is regarded as creation of the overall activity."@en ;
-                                rdfs:label "D7 Digital Machine Event"@en .
 
 
 ###  https://www.w3.org/2000/01/rdf-schema#Resource
