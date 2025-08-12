@@ -780,9 +780,9 @@ www:hasContaminationError rdf:type owl:DatatypeProperty ;
 
 ###  http://archaeonatural.cloud/ont/hasDOI
 www:hasDOI rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf <http://prismstandard.org/namespaces/1.2/basic/doi> ;
+           rdfs:subPropertyOf www:identifiedBy ;
            rdfs:domain www:Literature ;
-           rdfs:range xsd:string ;
+           rdfs:range xsd:anyURI ;
            rdfs:comment "the DOI allowing to identify a document"@en ;
            rdfs:label "has DOI"@en .
 
@@ -792,7 +792,7 @@ www:hasDatingError rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf www:C14DatingInformation ,
                                       www:hasError ;
                    rdfs:domain www:C14Dating ;
-                   rdfs:range xsd:decimal ;
+                   rdfs:range xsd:integer ;
                    rdfs:comment "a dating error considering the Uncalibrated Dating"@en ;
                    rdfs:label "has dating error"@en .
 
@@ -800,7 +800,7 @@ www:hasDatingError rdf:type owl:DatatypeProperty ;
 ###  http://archaeonatural.cloud/ont/hasError
 www:hasError rdf:type owl:DatatypeProperty ;
              rdfs:domain crm:E1_CRM_Entity ;
-             rdfs:range xsd:decimal ;
+             rdfs:range rdfs:Literal ;
              rdfs:comment "quantified error of a measurement"@en ;
              rdfs:label "has error"@en .
 
@@ -853,7 +853,7 @@ www:hasLabel rdf:type owl:DatatypeProperty ;
 www:hasLibraryCount rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf www:sample_measurements ;
                     rdfs:domain www:aDNASample ;
-                    rdfs:range xsd:decimal ;
+                    rdfs:range xsd:integer ;
                     rdfs:comment "relating the number of libraries produced for an aDNA sample to the respective sample"@en ;
                     rdfs:label "has library count"@en .
 
@@ -880,7 +880,7 @@ www:hasNumericValue rdf:type owl:DatatypeProperty ;
 www:hasORCID rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf www:identifiedBy ;
              rdfs:domain www:Person ;
-             rdfs:range xsd:string ;
+             rdfs:range xsd:anyURI ;
              rdfs:comment "the ORCID ID allowing to identify an author"@en ;
              rdfs:label "has ORCID"@en .
 
@@ -907,7 +907,7 @@ www:hasRelationshipType rdf:type owl:DatatypeProperty ;
 www:hasSNPCount rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf www:sample_measurements ;
                 rdfs:domain www:aDNASample ;
-                rdfs:range xsd:decimal ;
+                rdfs:range xsd:integer ;
                 rdfs:comment "number of non-missing SNPs to an aDNA sample"@en ;
                 rdfs:label "has SNP count"@en .
 
@@ -934,7 +934,7 @@ www:hasTitle rdf:type owl:DatatypeProperty ;
 www:hasURL rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf www:hasLabel ;
            rdfs:domain crm:E73_Information_Object ;
-           rdfs:range xsd:string ;
+           rdfs:range xsd:anyURI ;
            rdfs:comment "the URL where the information can be found"@en ;
            rdfs:label "has URL"@en .
 
@@ -943,7 +943,7 @@ www:hasURL rdf:type owl:DatatypeProperty ;
 www:hasUncalibratedDate rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf www:C14DatingInformation ;
                         rdfs:domain www:C14Dating ;
-                        rdfs:range xsd:decimal ;
+                        rdfs:range xsd:integer ;
                         rdfs:comment "an uncalibrated date in BP obtained by a dating process"@en ;
                         rdfs:label "has uncalibrated date"@en .
 
@@ -998,13 +998,6 @@ www:sample_measurements rdf:type owl:DatatypeProperty ;
                         rdfs:range rdfs:Literal ;
                         rdfs:comment "measured values for an (aDNA) sample"@en ;
                         rdfs:label "sample measurements"@en .
-
-
-###  http://prismstandard.org/namespaces/1.2/basic/doi
-<http://prismstandard.org/namespaces/1.2/basic/doi> rdf:type owl:DatatypeProperty ;
-                                                    rdfs:subPropertyOf www:identifiedBy ;
-                                                    rdfs:domain crm:E70_Thing ;
-                                                    rdfs:range xsd:string .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P3_has_note
@@ -1402,8 +1395,8 @@ www:aDNASampleRelation rdf:type owl:Class ;
 ###  http://archaeonatural.cloud/ont/externalIdentifierType
 www:externalIdentifierType rdf:type owl:Class ;
                            owl:equivalentClass [ rdf:type owl:Class ;
-                                                 owl:oneOf ( <http://archaeonatural.cloud/ExternalIdentifier_Wikidata>
-                                                             <http://archaeonatural.cloud/ont_Geonames>
+                                                 owl:oneOf ( <http://archaeonatural.cloud/ExternalIdentifier_Geonames>
+                                                             <http://archaeonatural.cloud/ExternalIdentifier_Wikidata>
                                                            )
                                                ] ;
                            rdfs:subClassOf skos:Concept ;
@@ -2000,96 +1993,134 @@ crmdig:D7_Digital_Machine_Event rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  http://archaeonatural.cloud/ExternalIdentifier_Geonames
+<http://archaeonatural.cloud/ExternalIdentifier_Geonames> rdf:type owl:NamedIndividual ,
+                                                                   www:externalIdentifierType .
+
+
 ###  http://archaeonatural.cloud/ExternalIdentifier_Wikidata
 <http://archaeonatural.cloud/ExternalIdentifier_Wikidata> rdf:type owl:NamedIndividual ,
                                                                    www:externalIdentifierType .
 
 
-###  http://archaeonatural.cloud/ont_Geonames
-<http://archaeonatural.cloud/ont_Geonames> rdf:type owl:NamedIndividual ,
-                                                    www:externalIdentifierType .
-
-
 ###  http://archaeonatural.cloud/ont/GeneticSex_Female
 www:GeneticSex_Female rdf:type owl:NamedIndividual ;
-                      owl:sameAs <http://schema.org/Female> .
+                      owl:sameAs <http://schema.org/Female> ;
+                      rdfs:label "Female"@en ;
+                      skos:prefLabel "Female"@en .
 
 
 ###  http://schema.org/Female
 
 ###  http://archaeonatural.cloud/ont/GeneticSex_Male
 www:GeneticSex_Male rdf:type owl:NamedIndividual ;
-                    owl:sameAs <http://schema.org/Male> .
+                    owl:sameAs <http://schema.org/Male> ;
+                    rdfs:label "Male"@en ;
+                    skos:prefLabel "Male"@en .
 
 
 ###  http://schema.org/Male
 
 ###  http://archaeonatural.cloud/ont/GeneticSex_Unknown
-www:GeneticSex_Unknown rdf:type owl:NamedIndividual .
+www:GeneticSex_Unknown rdf:type owl:NamedIndividual ;
+                       rdfs:label "Unknown"@en ;
+                       skos:prefLabel "Unknown"@en .
 
 
 ###  http://archaeonatural.cloud/ont/GenotypePloidy_diploid
-www:GenotypePloidy_diploid rdf:type owl:NamedIndividual .
+www:GenotypePloidy_diploid rdf:type owl:NamedIndividual ;
+                           rdfs:label "diploid"@en ;
+                           skos:prefLabel "diploid"@en .
 
 
 ###  http://archaeonatural.cloud/ont/GenotypePloidy_haploid
-www:GenotypePloidy_haploid rdf:type owl:NamedIndividual .
+www:GenotypePloidy_haploid rdf:type owl:NamedIndividual ;
+                           rdfs:label "haploid"@en ;
+                           skos:prefLabel "haploid"@en .
 
 
 ###  http://archaeonatural.cloud/ont/LibraryStrandedness_ds
-www:LibraryStrandedness_ds rdf:type owl:NamedIndividual .
+www:LibraryStrandedness_ds rdf:type owl:NamedIndividual ;
+                           rdfs:label "ds"@en ;
+                           skos:prefLabel "ds"@en .
 
 
 ###  http://archaeonatural.cloud/ont/LibraryStrandedness_mixed
-www:LibraryStrandedness_mixed rdf:type owl:NamedIndividual .
+www:LibraryStrandedness_mixed rdf:type owl:NamedIndividual ;
+                              rdfs:label "mixed"@en ;
+                              skos:prefLabel "mixed"@en .
 
 
 ###  http://archaeonatural.cloud/ont/LibraryStrandedness_other
-www:LibraryStrandedness_other rdf:type owl:NamedIndividual .
+www:LibraryStrandedness_other rdf:type owl:NamedIndividual ;
+                              rdfs:label "other"@en ;
+                              skos:prefLabel "other"@en .
 
 
 ###  http://archaeonatural.cloud/ont/LibraryStrandedness_ss
-www:LibraryStrandedness_ss rdf:type owl:NamedIndividual .
+www:LibraryStrandedness_ss rdf:type owl:NamedIndividual ;
+                           rdfs:label "ss"@en ;
+                           skos:prefLabel "ss"@en .
 
 
 ###  http://archaeonatural.cloud/ont/SourceTissueType_Hair
-www:SourceTissueType_Hair rdf:type owl:NamedIndividual .
+www:SourceTissueType_Hair rdf:type owl:NamedIndividual ;
+                          rdfs:label "Hair"@en ;
+                          skos:prefLabel "Hair"@en .
 
 
 ###  http://archaeonatural.cloud/ont/SourceTissueType_Petrous
-www:SourceTissueType_Petrous rdf:type owl:NamedIndividual .
+www:SourceTissueType_Petrous rdf:type owl:NamedIndividual ;
+                             rdfs:label "Petrous"@en ;
+                             skos:prefLabel "Petrous"@en .
 
 
 ###  http://archaeonatural.cloud/ont/SourceTissueType_Tooth
-www:SourceTissueType_Tooth rdf:type owl:NamedIndividual .
+www:SourceTissueType_Tooth rdf:type owl:NamedIndividual ;
+                           rdfs:label "Tooth"@en ;
+                           skos:prefLabel "Tooth"@en .
 
 
 ###  http://archaeonatural.cloud/ont/SourceTissueType_otherBone
-www:SourceTissueType_otherBone rdf:type owl:NamedIndividual .
+www:SourceTissueType_otherBone rdf:type owl:NamedIndividual ;
+                               rdfs:label "other bone"@en ;
+                               skos:prefLabel "other bone"@en .
 
 
 ###  http://archaeonatural.cloud/ont/UDGTreatment_half
-www:UDGTreatment_half rdf:type owl:NamedIndividual .
+www:UDGTreatment_half rdf:type owl:NamedIndividual ;
+                      rdfs:label "half"@en ;
+                      skos:prefLabel "half"@en .
 
 
 ###  http://archaeonatural.cloud/ont/UDGTreatment_minus
-www:UDGTreatment_minus rdf:type owl:NamedIndividual .
+www:UDGTreatment_minus rdf:type owl:NamedIndividual ;
+                       rdfs:label "minus"@en ;
+                       skos:prefLabel "minus"@en .
 
 
 ###  http://archaeonatural.cloud/ont/UDGTreatment_mixed
-www:UDGTreatment_mixed rdf:type owl:NamedIndividual .
+www:UDGTreatment_mixed rdf:type owl:NamedIndividual ;
+                       rdfs:label "mixed"@en ;
+                       skos:prefLabel "mixed"@en .
 
 
 ###  http://archaeonatural.cloud/ont/UDGTreatment_plus
-www:UDGTreatment_plus rdf:type owl:NamedIndividual .
+www:UDGTreatment_plus rdf:type owl:NamedIndividual ;
+                      rdfs:label "plus"@en ;
+                      skos:prefLabel "plus"@en .
 
 
 ###  http://schema.org/Female
-<http://schema.org/Female> rdf:type owl:NamedIndividual .
+<http://schema.org/Female> rdf:type owl:NamedIndividual ;
+                           rdfs:label "Female"@en ;
+                           skos:prefLabel "Female"@en .
 
 
 ###  http://schema.org/Male
-<http://schema.org/Male> rdf:type owl:NamedIndividual .
+<http://schema.org/Male> rdf:type owl:NamedIndividual ;
+                         rdfs:label "Male"@en ;
+                         skos:prefLabel "Male"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
