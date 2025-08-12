@@ -685,9 +685,7 @@ prov:actedOnBehalfOf rdf:type owl:ObjectProperty ;
 ###  http://www.w3.org/ns/prov#used
 prov:used rdf:type owl:ObjectProperty ;
           rdfs:domain prov:Activity ;
-          rdfs:range prov:Entity ;
-          rdfs:comment "Usage is the beginning of utilizing an entity by an activity. Before usage, the activity had not begun to utilize this entity and could not have been affected by the entity."@en ;
-          rdfs:label "used"@en .
+          rdfs:range prov:Entity .
 
 
 ###  http://www.w3.org/ns/prov#wasAssociatedWith
@@ -1525,6 +1523,20 @@ bibo:Periodical rdf:type owl:Class ;
                 rdfs:label "BIBO Periodical"@en .
 
 
+###  http://schema.org/SoftwareApplication
+<http://schema.org/SoftwareApplication> rdf:type owl:Class ;
+                                        rdfs:subClassOf prov:SoftwareAgent ;
+                                        rdfs:comment "A software application."@en ;
+                                        rdfs:label "Software Application"@en .
+
+
+###  http://schema.org/SoftwareSourceCode
+<http://schema.org/SoftwareSourceCode> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://schema.org/SoftwareApplication> ;
+                                       rdfs:comment "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."@en ;
+                                       rdfs:label "Software Source Code"@en .
+
+
 ###  http://schema.org/Thing
 <http://schema.org/Thing> rdf:type owl:Class ;
                           rdfs:subClassOf prov:Entity ;
@@ -2063,6 +2075,14 @@ www:LibraryStrandedness_ss rdf:type owl:NamedIndividual ;
                            skos:prefLabel "ss"@en .
 
 
+###  http://archaeonatural.cloud/ont/SoftwareSourceCode_Poseidon_LOD
+www:SoftwareSourceCode_Poseidon_LOD rdf:type owl:NamedIndividual ,
+                                             <http://schema.org/SoftwareSourceCode> ,
+                                             prov:Agent ;
+                                    rdfs:label "Poseidon_LOD.py"@en ;
+                                    skos:prefLabel "Poseidon_LOD.py"@en .
+
+
 ###  http://archaeonatural.cloud/ont/SourceTissueType_Hair
 www:SourceTissueType_Hair rdf:type owl:NamedIndividual ;
                           rdfs:label "Hair"@en ;
@@ -2109,6 +2129,22 @@ www:UDGTreatment_mixed rdf:type owl:NamedIndividual ;
 www:UDGTreatment_plus rdf:type owl:NamedIndividual ;
                       rdfs:label "plus"@en ;
                       skos:prefLabel "plus"@en .
+
+
+###  http://orcid.org/0000-0002-3246-3531
+<http://orcid.org/0000-0002-3246-3531> rdf:type owl:NamedIndividual ,
+                                                www:Person ,
+                                                prov:Agent ;
+                                       rdfs:label "Florian Thiery" ;
+                                       skos:prefLabel "Florian Thiery" .
+
+
+###  http://orcid.org/0009-0005-1140-3352
+<http://orcid.org/0009-0005-1140-3352> rdf:type owl:NamedIndividual ,
+                                                www:Person ,
+                                                prov:Agent ;
+                                       rdfs:label "Mattis thor Straten"@en ;
+                                       skos:prefLabel "Mattis thor Straten" .
 
 
 ###  http://schema.org/Female
