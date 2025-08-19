@@ -227,14 +227,6 @@ www:datingInformation rdf:type owl:ObjectProperty ;
                       rdfs:label "dating information"@en .
 
 
-###  http://archaeonatural.cloud/ont/externalIdentifier
-www:externalIdentifier rdf:type owl:ObjectProperty ;
-                       rdfs:domain owl:Thing ;
-                       rdfs:range <https://www.w3.org/2000/01/rdf-schema#Resource> ;
-                       rdfs:comment "links a node to a resource in the LOD cloud"@en ;
-                       rdfs:label "external identifier"@en .
-
-
 ###  http://archaeonatural.cloud/ont/foundAtDiscoverySite
 www:foundAtDiscoverySite rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf crm:P53_has_former_or_current_location ;
@@ -278,6 +270,22 @@ www:hasDatingType rdf:type owl:ObjectProperty ;
                   rdfs:range www:DatingType ;
                   rdfs:comment "the dating type that a dating is of"@en ;
                   rdfs:label "has dating type"@en .
+
+
+###  http://archaeonatural.cloud/ont/hasExternalIdentifier
+www:hasExternalIdentifier rdf:type owl:ObjectProperty ;
+                          rdfs:domain owl:Thing ;
+                          rdfs:range <https://www.w3.org/2000/01/rdf-schema#Resource> ;
+                          rdfs:comment "links a node to a resource in the LOD cloud"@en ;
+                          rdfs:label "has external identifier"@en .
+
+
+###  http://archaeonatural.cloud/ont/hasExternalIdentifierType
+www:hasExternalIdentifierType rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://www.w3.org/2000/01/rdf-schema#Resource> ;
+                              rdfs:range www:externalIdentifierType ;
+                              rdfs:comment "links a resource in the LOD cloud to the domain it comes from"@en ;
+                              rdfs:label "has external identifier type"@en .
 
 
 ###  http://archaeonatural.cloud/ont/hasGeneticSex
@@ -969,6 +977,14 @@ www:identifiedBy rdf:type owl:DatatypeProperty ;
                  rdfs:label "identified by"@en .
 
 
+###  http://archaeonatural.cloud/ont/inYear
+www:inYear rdf:type owl:DatatypeProperty ;
+           rdfs:domain time:Instant ;
+           rdfs:range geosparql:WKTLiteral ;
+           rdfs:comment "Position of an instant, expressed using WKT:Literal as it can be a xsd:string for years <= 0 or xsd:gYear for years >0"@en ;
+           rdfs:label "in year"@en .
+
+
 ###  http://archaeonatural.cloud/ont/measuredDamage
 www:measuredDamage rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf www:sample_measurements ;
@@ -1042,6 +1058,7 @@ geosparql:hasSerialization rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2006/time#inXSDgYear
 time:inXSDgYear rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf www:inYear ;
                 rdfs:domain time:Instant ;
                 rdfs:range xsd:gYear ;
                 rdfs:comment "Position of an instant, expressed using xsd:gYear"@en ;
@@ -2036,12 +2053,16 @@ pleiades:Place rdf:type owl:Class ;
 
 ###  http://archaeonatural.cloud/ExternalIdentifier_Geonames
 <http://archaeonatural.cloud/ExternalIdentifier_Geonames> rdf:type owl:NamedIndividual ,
-                                                                   www:externalIdentifierType .
+                                                                   www:externalIdentifierType ;
+                                                          rdfs:label "Geonames"@en ;
+                                                          skos:prefLabel "Geonames"@en .
 
 
 ###  http://archaeonatural.cloud/ExternalIdentifier_Wikidata
 <http://archaeonatural.cloud/ExternalIdentifier_Wikidata> rdf:type owl:NamedIndividual ,
-                                                                   www:externalIdentifierType .
+                                                                   www:externalIdentifierType ;
+                                                          rdfs:label "Wikidata"@en ;
+                                                          skos:prefLabel "Wikidata" .
 
 
 ###  http://archaeonatural.cloud/ont/GeneticSex_Female
