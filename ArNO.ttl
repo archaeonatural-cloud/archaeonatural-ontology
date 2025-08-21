@@ -1315,6 +1315,14 @@ www:MTHaplogroupMeasurement rdf:type owl:Class ;
                             rdfs:label "MT-Haplogroup Measurement"@en .
 
 
+###  http://archaeonatural.cloud/ont/NoInformation
+www:NoInformation rdf:type owl:Class ;
+                  rdfs:subClassOf crm:E1_CRM_Entity ;
+                  rdfs:comment """Entity type for blank nodes created for missing (Discovery Site) data values to indicate there is no information about this entity and no transitively reachable information
+This is needed to ease obtaining such information using SPARQL queries as each entry has some geo information, it is just not entered."""@en ;
+                  rdfs:label "No Information About Entity"@en .
+
+
 ###  http://archaeonatural.cloud/ont/Person
 www:Person rdf:type owl:Class ;
            rdfs:subClassOf crm:E21_Person ;
